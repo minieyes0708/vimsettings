@@ -25,6 +25,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'dbeecham/ctrlp-commandpalette.vim'
 call vundle#end()
 
 syntax on
@@ -82,4 +83,5 @@ source ~/.vimrc.d/OmniSharp.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/asyncomplete.vim
 source ~/.vimrc.d/multiple-cursors.vim
+source ~/.vimrc.d/ctrlp-commandpalette.vim
 
