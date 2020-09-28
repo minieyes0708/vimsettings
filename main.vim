@@ -9,7 +9,6 @@ filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
 Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'Townk/vim-autoclose'
 Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
@@ -20,9 +19,9 @@ Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jreybert/vimagit'
+Plugin 'mg979/vim-visual-multi'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'preservim/nerdtree'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
