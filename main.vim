@@ -8,24 +8,25 @@ set backspace=indent,eol,start
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
-Plugin 'jreybert/vimagit'
-Plugin 'ervandew/supertab'
-Plugin 'preservim/nerdtree'
-Plugin 'tpope/vim-surround'
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'Townk/vim-autoclose'
 Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'wadackel/vim-dogrun'
-Plugin 'jiangmiao/auto-pairs'
-" Plugin 'Townk/vim-autoclose'
+Plugin 'dbeecham/ctrlp-commandpalette.vim'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
-Plugin 'OmniSharp/omnisharp-vim'
-" Plugin 'ryanoasis/vim-devicons'
+Plugin 'ervandew/supertab'
+Plugin 'haya14busa/incsearch-easymotion.vim'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'jreybert/vimagit'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'preservim/nerdtree'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'dbeecham/ctrlp-commandpalette.vim'
+Plugin 'wadackel/vim-dogrun'
 call vundle#end()
 
 syntax on
@@ -57,15 +58,6 @@ nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 nmap <C-k> <C-w>k
 nmap <C-j> <C-w>j
-nmap <M-1> :b1<CR>
-nmap <M-2> :b2<CR>
-nmap <M-3> :b3<CR>
-nmap <M-4> :b4<CR>
-nmap <M-5> :b5<CR>
-nmap <M-6> :b6<CR>
-nmap <M-7> :b7<CR>
-nmap <M-8> :b8<CR>
-nmap <M-9> :b9<CR>
 
 " cscope
 if has("cscope")
@@ -74,14 +66,14 @@ endif
 
 au GUIEnter * simalt ~x " startup maximized window
 
-source ~/.vimrc.d/ctrlp.vim
-source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/NERDTree.vim
-source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/OmniSharp.vim
-source ~/.vimrc.d/localvimrc.vim
+source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/asyncomplete.vim
-source ~/.vimrc.d/multiple-cursors.vim
+source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
-
+source ~/.vimrc.d/ctrlp.vim
+source ~/.vimrc.d/incsearch-easymotion.vim
+source ~/.vimrc.d/localvimrc.vim
+source ~/.vimrc.d/multiple-cursors.vim
