@@ -8,6 +8,7 @@ set backspace=indent,eol,start
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
+Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -15,6 +16,7 @@ Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
 Plugin 'ervandew/supertab'
+Plugin 'garbas/vim-snipmate'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -22,6 +24,7 @@ Plugin 'jreybert/vimagit'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'preservim/nerdtree'
+Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
