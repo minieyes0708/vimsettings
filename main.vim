@@ -4,12 +4,12 @@ set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+let &pythonthreedll='C:\Users\minieyes\AppData\Local\Programs\Python\Python36-32\python36.dll'
 
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
@@ -22,13 +22,13 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jreybert/vimagit'
 Plugin 'mg979/vim-visual-multi'
-Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wadackel/vim-dogrun'
+Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()
 
 syntax on
