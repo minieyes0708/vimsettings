@@ -1,10 +1,9 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-let &pythonthreedll='C:\Users\minieyes\AppData\Local\Programs\Python\Python36-32\python36.dll'
+let &pythonthreedll='C:/Users/minieyes/AppData/Local/Programs/Python/Python36-32/python36.dll'
 
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
@@ -71,6 +70,7 @@ au GUIEnter * simalt ~x " startup maximized window
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/OmniSharp.vim
+source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/asyncomplete.vim
 source ~/.vimrc.d/closetag.vim
