@@ -1,8 +1,6 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
 let &pythonthreedll='C:/Users/minieyes/AppData/Local/Programs/Python/Python36-32/python36.dll'
 
 filetype off 						" required before Vundle
@@ -32,23 +30,24 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
-set hlsearch
-set nobackup		" do not keep a backup file, use versions instead
+set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set clipboard=unnamed
+set confirm
+set encoding=utf8
+set exrc
+set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
 set history=50		" keep 50 lines of command line history
-set ruler			" show the cursor position all the time
-set showcmd			" display incomplete commands
+set hlsearch
 set incsearch		" do incremental searching
 set mouse=a
-set tabstop=4
-set shiftwidth=4
+set nobackup
+set nobackup		" do not keep a backup file, use versions instead
 set number
 set relativenumber
-set nobackup
-set confirm
-set exrc
-set encoding=utf8
-set clipboard=unnamed
-set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
+set ruler			" show the cursor position all the time
+set shiftwidth=4
+set showcmd			" display incomplete commands
+set tabstop=4
 if has("gui_running")
 	colorscheme dogrun
 else
@@ -69,7 +68,6 @@ au GUIEnter * simalt ~x " startup maximized window
 
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
-source ~/.vimrc.d/OmniSharp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/asyncomplete.vim
