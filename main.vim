@@ -25,6 +25,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'wadackel/vim-dogrun'
 Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()
