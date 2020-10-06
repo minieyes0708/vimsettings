@@ -79,3 +79,4 @@ source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
+source ~/.vimrc.d/syntatic.vim
