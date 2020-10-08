@@ -1,6 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+let mapleader=','
 let &pythonthreedll='C:/Users/minieyes/AppData/Local/Programs/Python/Python36-32/python36.dll'
 
 filetype off 						" required before Vundle
@@ -46,6 +47,7 @@ set nobackup
 set number
 set relativenumber
 set ruler
+set shellslash
 set shiftwidth=4
 set showcmd
 set tabstop=4
@@ -54,7 +56,6 @@ if has("gui_running")
 else
 	colorscheme desert
 endif
-" colorscheme torte
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 nmap <C-k> <C-w>k
