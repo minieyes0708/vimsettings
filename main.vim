@@ -38,17 +38,16 @@ set confirm
 set encoding=utf8
 set exrc
 set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
-set history=50		" keep 50 lines of command line history
+set history=50
 set hlsearch
-set incsearch		" do incremental searching
+set incsearch
 set mouse=a
 set nobackup
-set nobackup		" do not keep a backup file, use versions instead
 set number
 set relativenumber
-set ruler			" show the cursor position all the time
+set ruler
 set shiftwidth=4
-set showcmd			" display incomplete commands
+set showcmd
 set tabstop=4
 if has("gui_running")
 	colorscheme dogrun
