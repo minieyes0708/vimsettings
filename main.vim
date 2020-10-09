@@ -50,6 +50,7 @@ set ruler
 set shellslash
 set shiftwidth=4
 set showcmd
+set splitright
 set tabstop=4
 if has("gui_running")
 	colorscheme dogrun
