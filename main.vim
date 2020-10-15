@@ -11,6 +11,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
+Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
 Plugin 'ervandew/supertab'
@@ -53,9 +54,9 @@ set showcmd
 set splitright
 set tabstop=4
 if has("gui_running")
-	colorscheme dogrun
+	colorscheme dracula
 else
-	colorscheme desert
+	colorscheme default
 endif
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
