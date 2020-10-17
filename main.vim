@@ -34,6 +34,7 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
+set -o vi
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set confirm
@@ -56,7 +57,7 @@ set tabstop=4
 if has("gui_running")
 	colorscheme dracula
 else
-	colorscheme default
+	colorscheme desert
 endif
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
