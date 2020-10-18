@@ -34,7 +34,6 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
-set -o vi
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set confirm
