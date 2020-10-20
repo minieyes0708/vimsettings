@@ -13,6 +13,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
+Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
 Plugin 'ervandew/supertab'
@@ -20,6 +21,8 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
@@ -43,27 +46,29 @@ set confirm
 set encoding=utf8
 set exrc
 set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
-set history=50		" keep 50 lines of command line history
+set history=50
 set hlsearch
-set incsearch		" do incremental searching
+set incsearch
 set mouse=a
 set nobackup
 set number
 set relativenumber
-set ruler			" show the cursor position all the time
+set ruler
+set shellslash
 set shiftwidth=4
-set showcmd			" display incomplete commands
+set showcmd
+set splitright
 set tabstop=4
 if has("gui_running")
-	colorscheme dogrun
+	colorscheme dracula
 else
 	colorscheme desert
 endif
-" colorscheme torte
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 nmap <C-k> <C-w>k
 nmap <C-j> <C-w>j
+nnoremap <leader>w <C-w>
 
 " cscope
 if has("cscope")
