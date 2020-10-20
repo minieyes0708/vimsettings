@@ -24,6 +24,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
+Plugin 'pseewald/vim-anyfold'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -36,6 +37,7 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
+set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set confirm
