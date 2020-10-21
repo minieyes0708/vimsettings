@@ -39,7 +39,7 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
-set autoindent		" always set autoindenting on
+set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set confirm
