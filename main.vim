@@ -54,7 +54,7 @@ set nobackup
 set number
 set relativenumber
 set ruler
-set shellslash
+" set shellslash
 set shiftwidth=4
 set showcmd
 set splitright
