@@ -1,7 +1,6 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-
 let mapleader=','
 let &pythonthreedll='C:/Users/nvt02863/AppData/Local/Programs/Python/Python36-32/python36.dll'
 
@@ -91,4 +90,5 @@ source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
+source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/syntastic.vim
