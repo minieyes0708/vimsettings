@@ -73,6 +73,8 @@ if has("cscope")
 	set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
 
+au GUIEnter * source $VIMRUNTIME\delmenu.vim
+au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
 
 source ~/.vimrc.d/NERDTree.vim
