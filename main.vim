@@ -2,8 +2,13 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 let mapleader=','
-let &pythonthreedll='C:/Users/minieyes/AppData/Local/Programs/Python/Python36-32/python36.dll'
+if has("gui_running")
+	let &pythonthreedll='C:/Users/$USERNAME/AppData/Local/Programs/Python/Python36-32/python36.dll'
+else
+	let &pythonthreedll='/c/Users/$USERNAME/AppData/Local/Programs/Python/Python36-32/python36.dll'
+endif
 
+let $GIT_SSL_NO_VERIFY = 'true'
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
@@ -32,7 +37,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wadackel/vim-dogrun'
-Plugin 'ycm-core/YouCompleteMe'
+" Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()
 
 syntax on
@@ -52,7 +57,7 @@ set nobackup
 set number
 set relativenumber
 set ruler
-set shellslash
+" set shellslash
 set shiftwidth=4
 set showcmd
 set splitright
@@ -81,6 +86,7 @@ source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
+source ~/.vimrc.d/anyfold.vim
 source ~/.vimrc.d/asyncomplete.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
@@ -88,4 +94,5 @@ source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
+source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/syntastic.vim
