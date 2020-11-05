@@ -15,7 +15,7 @@ Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
@@ -38,11 +38,13 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
+" set shellslash
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set confirm
 set encoding=utf8
+set expandtab
 set exrc
 set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
 set history=50
@@ -53,7 +55,6 @@ set nobackup
 set number
 set relativenumber
 set ruler
-" set shellslash
 set shiftwidth=4
 set showcmd
 set splitright
