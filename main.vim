@@ -42,7 +42,6 @@ call vundle#end()
 
 syntax on
 filetype plugin indent on
-" set shellslash
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
