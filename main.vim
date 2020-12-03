@@ -2,7 +2,11 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 let mapleader=','
-let &pythonthreedll='C:/Users/nvt02863/AppData/Local/Programs/Python/Python36-32/python36.dll'
+if has("gui_running")
+	let &pythonthreedll='C:/Users/$USERNAME/AppData/Local/Programs/Python/Python36-32/python36.dll'
+else
+	let &pythonthreedll='/c/Users/$USERNAME/AppData/Local/Programs/Python/Python36-32/python36.dll'
+endif
 
 let $GIT_SSL_NO_VERIFY = 'true'
 filetype off 						" required before Vundle
@@ -55,6 +59,7 @@ set nobackup
 set number
 set relativenumber
 set ruler
+" set shellslash
 set shiftwidth=4
 set showcmd
 set splitright
