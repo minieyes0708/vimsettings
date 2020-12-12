@@ -19,7 +19,6 @@ Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
-" Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
@@ -27,9 +26,11 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mg979/vim-visual-multi'
+Plugin 'mnishz/colorscheme-preview.vim'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'pseewald/vim-anyfold'
+Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -37,7 +38,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wadackel/vim-dogrun'
-" Plugin 'ycm-core/YouCompleteMe'
+Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'xolox/vim-misc'
 call vundle#end()
 
 syntax on
@@ -82,6 +84,7 @@ endif
 au GUIEnter * source $VIMRUNTIME\delmenu.vim
 au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
+au GUIEnter * RandomColorScheme
 
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
