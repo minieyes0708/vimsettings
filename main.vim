@@ -31,12 +31,15 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'pseewald/vim-anyfold'
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'reedes/vim-thematic'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wadackel/vim-dogrun'
+Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'xolox/vim-misc'
 call vundle#end()
 
 syntax on
@@ -63,7 +66,7 @@ set showcmd
 set splitright
 set tabstop=4
 if has("gui_running")
-	colorscheme dracula
+	colorscheme angr
 else
 	colorscheme desert
 endif
@@ -81,6 +84,7 @@ endif
 au GUIEnter * source $VIMRUNTIME\delmenu.vim
 au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
+au GUIEnter * RandomColorScheme
 
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
@@ -95,4 +99,3 @@ source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
-source ~/.vimrc.d/syntastic.vim
