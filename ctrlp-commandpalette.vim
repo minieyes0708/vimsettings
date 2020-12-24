@@ -7,4 +7,6 @@ let g:commandPalette = {
 	\ 'Source Current File'     : 'source %',
 	\ 'Show Invisible Chars'    : 'set list',
 	\ 'Hide Invisible Chars'    : 'set nolist',
+    \ 'Toggle Indent Lines'     : 'IndentLinesToggle',
+    \ 'Buffer Only'             : '%bd | e# | NERDTree | wincmd p',
 \}
