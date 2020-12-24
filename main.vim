@@ -88,6 +88,9 @@ au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
 au GUIEnter * RandomColorScheme
 
+au Filetype lua set foldmethod=indent
+au Filetype cpp set foldmethod=syntax
+
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
