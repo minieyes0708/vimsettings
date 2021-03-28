@@ -30,7 +30,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mnishz/colorscheme-preview.vim'
 Plugin 'preservim/nerdcommenter'
-Plugin 'preservim/nerdtree'
+" Plugin 'preservim/nerdtree'
 Plugin 'pseewald/vim-anyfold'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
@@ -68,11 +68,11 @@ set shiftwidth=4
 set showcmd
 set splitright
 set tabstop=4
-if has("gui_running")
-	colorscheme angr
-else
-	colorscheme desert
-endif
+" if has("gui_running")
+	" colorscheme angr
+" else
+	" colorscheme desert
+" endif
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 nmap <C-k> <C-w>k
@@ -92,7 +92,7 @@ au GUIEnter * RandomColorScheme
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
 
-source ~/.vimrc.d/NERDTree.vim
+" source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
