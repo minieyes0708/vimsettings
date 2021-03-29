@@ -93,8 +93,8 @@ au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
 au GUIEnter * RandomColorScheme
 
-let g:netrw_winsize = 25
-au GUIEnter * Lex
+" let g:netrw_winsize = 20
+" au GUIEnter * Lex
 
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
