@@ -73,10 +73,14 @@ if has("gui_running")
 else
 	colorscheme desert
 endif
-nmap <C-h> <C-w>h
-nmap <C-l> <C-w>l
-nmap <C-k> <C-w>k
-nmap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-S-Right> :vertical resize +5<cr>
+nnoremap <C-S-Left> :vertical resize -5<cr>
+nnoremap <C-S-Up> :resize +5<cr>
+nnoremap <C-S-Down> :resize -5<cr>
 nnoremap <leader>w <C-w>
 
 " cscope
@@ -88,6 +92,9 @@ au GUIEnter * source $VIMRUNTIME\delmenu.vim
 au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
 au GUIEnter * RandomColorScheme
+
+let g:netrw_winsize = 25
+au GUIEnter * Lex
 
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
