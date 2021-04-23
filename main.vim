@@ -8,6 +8,7 @@ else
 	let &pythonthreedll='/c/Users/$USERNAME/AppData/Local/Programs/Python/Python36-32/python36.dll'
 endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
+set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
 
 let $GIT_SSL_NO_VERIFY = 'true'
 filetype off 						" required before Vundle
