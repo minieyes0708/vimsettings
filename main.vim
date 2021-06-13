@@ -37,6 +37,7 @@ Plugin 'pseewald/vim-anyfold'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/quickmenu.vim'
+Plugin 'skywind3000/vim-quickui'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
@@ -114,3 +115,4 @@ source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickmenu.vim
+source ~/.vimrc.d/quickui.vim
