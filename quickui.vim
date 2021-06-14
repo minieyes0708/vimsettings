@@ -7,6 +7,7 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&1] python',                 'cd ~/AppData/Local/Programs/Python/Python39/minieyes | edit .' ],"..
             \ "[ '[&2] .bashrc.d',              'cd ~/.bashrc.d | edit .' ],"..
             \ "[ '[&3] .vimrc.d',               'cd ~/.vimrc.d | edit .' ],"..
+            \ "[ '[&3] .vifm',                  'cd ~/.vifm | edit .' ],"..
             \ "[ '[&4] docs',                   'cd ~/OneDrive/文件/docs | edit .' ],"..
             \"], {'title': 'go to project'})" ],
             \ ])
@@ -24,7 +25,7 @@ call quickui#menu#install('&Terminal', [
             \ ['&cmd',                          'call quickui#terminal#open("cmd.exe", {"title": "cmd.exe"})' ],
             \ ['&py',                           'call quickui#terminal#open("py.exe",  {"title": "py.exe"})' ],
             \ ])
-call quickui#menu#install('&Python', [
+call quickui#menu#install('P&ython', [
             \ ['&run',                          'call quickui#terminal#open("py.exe "..expand("%"), {"title": expand("%")})' ],
             \ ['run and -&i',                   'call quickui#terminal#open("py.exe -i "..expand("%"), {"title": expand("%")})' ],
             \ ], '<auto>', 'python')
