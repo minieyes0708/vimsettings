@@ -7,8 +7,9 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&1] python',                 'cd ~/AppData/Local/Programs/Python/Python39/minieyes | edit .' ],"..
             \ "[ '[&2] .bashrc.d',              'cd ~/.bashrc.d | edit .' ],"..
             \ "[ '[&3] .vimrc.d',               'cd ~/.vimrc.d | edit .' ],"..
-            \ "[ '[&3] .vifm',                  'cd ~/.vifm | edit .' ],"..
-            \ "[ '[&4] docs',                   'cd ~/OneDrive/文件/docs | edit .' ],"..
+            \ "[ '[&4] .vifm',                  'cd ~/.vifm | edit .' ],"..
+            \ "[ '[&5] docs',                   'cd ~/OneDrive/文件/docs | edit .' ],"..
+            \ "[ '[&6] 桌面',                   'cd ~/OneDrive/桌面 | edit .' ],"..
             \"], {'title': 'go to project'})" ],
             \ ])
 call quickui#menu#install('&Git', [
