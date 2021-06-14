@@ -27,5 +27,5 @@ call quickui#menu#install('&Terminal', [
 call quickui#menu#install('&Python', [
             \ ['&run',                          'call quickui#terminal#open("py.exe '..expand('%')..'", {"title": "${expand("%")}"})' ],
             \ ['run and -&i',                   'call quickui#terminal#open("py.exe -i '..expand('%')..'", {"title": "${expand("%")}"})' ],
-            \ ], '<auto>', 'py')
+            \ ], '<auto>', 'python')
 noremap <space><space> :call quickui#menu#open()<cr>
