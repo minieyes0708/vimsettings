@@ -4,12 +4,12 @@ let g:quickui_show_tip = 1"
 call quickui#menu#reset()
 call quickui#menu#install('&Projects', [
             \ [ "&Open", "call quickui#listbox#open(["..
-            \ "[ '[&1] python',                 'cd ~/AppData/Local/Programs/Python/Python39/minieyes | edit .' ],"..
-            \ "[ '[&2] .bashrc.d',              'cd ~/.bashrc.d | edit .' ],"..
-            \ "[ '[&3] .vimrc.d',               'cd ~/.vimrc.d | edit .' ],"..
-            \ "[ '[&4] .vifm',                  'cd ~/.vifm | edit .' ],"..
-            \ "[ '[&5] docs',                   'cd ~/OneDrive/文件/docs | edit .' ],"..
-            \ "[ '[&6] 桌面',                   'cd ~/OneDrive/桌面 | edit .' ],"..
+            \ "[ '[&1] python',                 'cd ~/AppData/Local/Programs/Python/Python39/minieyes | Files' ],"..
+            \ "[ '[&2] .bashrc.d',              'cd ~/.bashrc.d | Files' ],"..
+            \ "[ '[&3] .vimrc.d',               'cd ~/.vimrc.d | Files' ],"..
+            \ "[ '[&4] .vifm',                  'cd ~/.vifm | Files' ],"..
+            \ "[ '[&5] docs',                   'cd ~/OneDrive/文件/docs | Files' ],"..
+            \ "[ '[&6] 桌面',                   'cd ~/OneDrive/桌面 | Files' ],"..
             \"], {'title': 'go to project'})" ],
             \ ])
 call quickui#menu#install('&Git', [
