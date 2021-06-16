@@ -8,8 +8,9 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&2] .bashrc.d',              'cd ~/.bashrc.d | Files' ],"..
             \ "[ '[&3] .vimrc.d',               'cd ~/.vimrc.d | Files' ],"..
             \ "[ '[&4] .vifm',                  'cd ~/.vifm | Files' ],"..
-            \ "[ '[&5] docs',                   'cd ~/OneDrive/文件/docs | Files' ],"..
-            \ "[ '[&6] 桌面',                   'cd ~/OneDrive/桌面 | Files' ],"..
+            \ "[ '[&5] .vim',                   'cd ~/.vim | Files' ],"..
+            \ "[ '[&6] docs',                   'cd ~/OneDrive/文件/docs | Files' ],"..
+            \ "[ '[&7] 桌面',                   'cd ~/OneDrive/桌面 | Files' ],"..
             \"], {'title': 'go to project'})" ],
             \ ])
 call quickui#menu#install('&Git', [
