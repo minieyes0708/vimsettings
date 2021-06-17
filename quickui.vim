@@ -8,28 +8,29 @@ call quickui#menu#install('&Projects', [
             \ "['[&1] .bashrc.d',                   'cd ~/.bashrc.d | Files'],"..
             \ "['[&2] .vimrc.d',                    'cd ~/.vimrc.d | Files'],"..
             \ "['[&3] .vifm',                       'cd ~/.vifm | Files'],"..
-            \ "['[&4] Pattern Editor',              'cd D:/minieyes_chen/program/PatternEditor | Files'],"..
-            \ "['[&5] python',                      'cd D:/minieyes_chen/program/python | Files'],"..
-            \ "['[&6] IVE4',                        'cd D:/minieyes_chen/program/IVE4_SW | Files'],"..
-            \ "['[&7] RGB LUT',                     'cd D:/minieyes_chen/program/RGBLUT | Files'],"..
-            \ "['[&8] CUP',                         'cd D:/minieyes_chen/program/CUP/CUP | Files'],"..
-            \ "['[&9] MCR2FlashBMP',                'cd D:/minieyes_chen/program/MCR2FlashBmp | Files'],"..
-            \ "['[&a] FPGA NewABTable For P.E.',    'cd D:/minieyes_chen/fpga/nora/NewABTable_ForPatternEditor/rtl | Files'],"..
-            \ "['[&b] IVE4S_FPGA',                  'cd D:/minieyes_chen/fpga/IVE4S_FPGA/rtl | Files'],"..
-            \ "['[&c] IVE4S_FW',                    'cd D:/minieyes_chen/firmware/IVE4S_FW | Files'],"..
-            \ "['[&d] WebDocs',                     'cd G:/MD/Projects/IVE/WebDocs | Files'],"..
-            \ "['[&e] eACT2.0',                     'cd D:/minieyes_chen/program/eACT2.0 | Files'],"..
-            \ "['[&f] miniCSLibrary',               'cd D:/minieyes_chen/program/miniCSLibrary | Files'],"..
-            \ "['[&g] IE Tuning ProjectDlls',       'cd D:/minieyes_chen/program/IETuning/ProjectDlls | Files'],"..
-            \ "['[&h] miniLibrary',                 'cd D:/minieyes_chen/program/miniLibrary | Files'],"..
-            \ "['[&i] MCR2V',                       'cd D:/minieyes_chen/program/MCR2V | Files'],"..
-            \ "['[&l] GenInfo',                     'cd D:/minieyes_chen/program/GenInfo | Files'],"..
-            \ "['[&m] CheckRegisterTable',          'cd D:/minieyes_chen/program/CheckRegisterTable | Files'],"..
-            \ "['[&n] credential_dll_VC',           'cd D:/minieyes_chen/program/credential_dll_VC | Files'],"..
-            \ "['[&o] ColorSenseVC',                'cd D:/minieyes_chen/program/ColorSenseVC | Files'],"..
-            \ "['[&p] LightIVE-IdealModel',         'cd D:/minieyes_chen/program/LightIVE-IdealModel | Files'],"..
-            \ "['[&o] V1.x',                        'cd C:/Users/nvt02863/Desktop/V1.x | Files'],"..
-            \ "['[&r] matlab',                      'cd D:/minieyes_chen/program/matlab | Files'],"..
+            \ "['[&4] .vim',                        'cd ~/.vim | Files'],"..
+            \ "['[&5] Pattern Editor',              'cd D:/minieyes_chen/program/PatternEditor | Files'],"..
+            \ "['[&6] python',                      'cd D:/minieyes_chen/program/python | Files'],"..
+            \ "['[&7] IVE4',                        'cd D:/minieyes_chen/program/IVE4_SW | Files'],"..
+            \ "['[&8] RGB LUT',                     'cd D:/minieyes_chen/program/RGBLUT | Files'],"..
+            \ "['[&9] CUP',                         'cd D:/minieyes_chen/program/CUP/CUP | Files'],"..
+            \ "['[&a] MCR2FlashBMP',                'cd D:/minieyes_chen/program/MCR2FlashBmp | Files'],"..
+            \ "['[&b] FPGA NewABTable For P.E.',    'cd D:/minieyes_chen/fpga/nora/NewABTable_ForPatternEditor/rtl | Files'],"..
+            \ "['[&c] IVE4S_FPGA',                  'cd D:/minieyes_chen/fpga/IVE4S_FPGA/rtl | Files'],"..
+            \ "['[&d] IVE4S_FW',                    'cd D:/minieyes_chen/firmware/IVE4S_FW | Files'],"..
+            \ "['[&e] WebDocs',                     'cd G:/MD/Projects/IVE/WebDocs | Files'],"..
+            \ "['[&f] eACT2.0',                     'cd D:/minieyes_chen/program/eACT2.0 | Files'],"..
+            \ "['[&g] miniCSLibrary',               'cd D:/minieyes_chen/program/miniCSLibrary | Files'],"..
+            \ "['[&i] IE Tuning ProjectDlls',       'cd D:/minieyes_chen/program/IETuning/ProjectDlls | Files'],"..
+            \ "['[&m] miniLibrary',                 'cd D:/minieyes_chen/program/miniLibrary | Files'],"..
+            \ "['[&n] MCR2V',                       'cd D:/minieyes_chen/program/MCR2V | Files'],"..
+            \ "['[&o] GenInfo',                     'cd D:/minieyes_chen/program/GenInfo | Files'],"..
+            \ "['[&p] CheckRegisterTable',          'cd D:/minieyes_chen/program/CheckRegisterTable | Files'],"..
+            \ "['[&q] credential_dll_VC',           'cd D:/minieyes_chen/program/credential_dll_VC | Files'],"..
+            \ "['[&r] ColorSenseVC',                'cd D:/minieyes_chen/program/ColorSenseVC | Files'],"..
+            \ "['[&s] LightIVE-IdealModel',         'cd D:/minieyes_chen/program/LightIVE-IdealModel | Files'],"..
+            \ "['[&t] V1.x',                        'cd C:/Users/nvt02863/Desktop/V1.x | Files'],"..
+            \ "['[&u] matlab',                      'cd D:/minieyes_chen/program/matlab | Files'],"..
             \ "], {'title': 'Projects'})"
             \ ],
             \])
