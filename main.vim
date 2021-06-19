@@ -33,6 +33,7 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'kiteco/vim-plugin'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'preservim/nerdcommenter'
 Plugin 'rafi/awesome-vim-colorschemes'
@@ -100,6 +101,7 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/NERDTree.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
+source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
@@ -108,6 +110,7 @@ source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
+source ~/.vimrc.d/kite.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
