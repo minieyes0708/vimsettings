@@ -15,7 +15,6 @@ filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
 " Plugin 'mnishz/colorscheme-preview.vim'
-" Plugin 'preservim/nerdtree'
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
@@ -36,6 +35,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'kiteco/vim-plugin'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'preservim/nerdcommenter'
+Plugin 'preservim/nerdtree'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/quickmenu.vim'
@@ -98,10 +98,10 @@ au GUIEnter * RandomColorScheme
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
 
-" source ~/.vimrc.d/NERDTree.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 source ~/.vimrc.d/AutoComplPop.vim
+source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim

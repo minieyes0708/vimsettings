@@ -11,6 +11,8 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&5] .vim',                   'cd ~/.vim | Files' ],"..
             \ "[ '[&6] docs',                   'cd ~/OneDrive/文件/docs | Files' ],"..
             \ "[ '[&7] 桌面',                   'cd ~/OneDrive/桌面 | Files' ],"..
+            \ "[ '[&8] htdocs',                 'cd L:/XAMPPPortable/htdocs | Files' ],"..
+            \ "[ '[&9] cgi-bin',                'cd L:/XAMPPPortable/cgi-bin | Files' ],"..
             \"], {'title': 'go to project'})" ],
             \ ])
 call quickui#menu#install('&Git', [
