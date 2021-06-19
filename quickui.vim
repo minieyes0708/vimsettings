@@ -33,4 +33,7 @@ call quickui#menu#install('P&ython', [
             \ ['&run',                          'call quickui#terminal#open("py.exe "..expand("%"), {"title": expand("%")})' ],
             \ ['run and -&i',                   'call quickui#terminal#open("py.exe -i "..expand("%"), {"title": expand("%")})' ],
             \ ], '<auto>', 'python')
+call quickui#menu#install('&Vim', [
+            \ ['&source',                       'source %' ],
+            \ ], '<auto>', 'vim')
 noremap <space><space> :call quickui#menu#open()<cr>
