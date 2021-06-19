@@ -1,5 +1,6 @@
 let g:NERDTreeShowHidden = 1
-nnoremap <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeAutoDeleteBuffer = 1
+nnoremap <silent> <expr> <leader>n g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
