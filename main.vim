@@ -18,11 +18,11 @@ call vundle#begin()
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
@@ -100,14 +100,14 @@ au Filetype cpp set foldmethod=syntax
 
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
+" source ~/.vimrc.d/ctrlp-commandpalette.vim
+" source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
-source ~/.vimrc.d/ctrlp-commandpalette.vim
-source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/kite.vim
