@@ -13,6 +13,7 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&7] 桌面',                   'cd ~/OneDrive/桌面 | Files' ],"..
             \ "[ '[&8] htdocs',                 'cd L:/XAMPPPortable/htdocs | Files' ],"..
             \ "[ '[&9] cgi-bin',                'cd L:/XAMPPPortable/cgi-bin | Files' ],"..
+            \ "[ '[&a] doc programs',           'cd ~/OneDrive/文件/programs | Files' ],"..
             \"], {'title': 'go to project'})" ],
             \ ])
 call quickui#menu#install('&Git', [
