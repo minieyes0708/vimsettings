@@ -3,9 +3,9 @@
 set nocompatible
 let mapleader=','
 if has("gui_running")
-	let &pythonthreedll='C:/Users/$USERNAME/AppData/Local/Programs/Python/Python36-32/python36.dll'
+	let &pythonthreedll='C:/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
 else
-	let &pythonthreedll='/c/Users/$USERNAME/AppData/Local/Programs/Python/Python36-32/python36.dll'
+	let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
 endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
 set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
@@ -20,9 +20,11 @@ call vundle#begin()
 " Plugin 'vim-scripts/indentpython.vim'
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dbeecham/ctrlp-commandpalette.vim'
+" Plugin 'kiteco/vim-plugin'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
+Plugin 'codota/tabnine-vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
@@ -32,7 +34,6 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'kiteco/vim-plugin'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
@@ -102,15 +103,15 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/ctrlp-commandpalette.vim
 " source ~/.vimrc.d/ctrlp.vim
+" source ~/.vimrc.d/kite.vim
+" source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
-source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
-source ~/.vimrc.d/kite.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
