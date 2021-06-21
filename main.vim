@@ -107,6 +107,7 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/ctrlp.vim
+" source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/airline.vim
@@ -118,5 +119,4 @@ source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
-source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/quickui.vim
