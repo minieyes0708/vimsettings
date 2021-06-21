@@ -16,6 +16,7 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&a] doc programs',           'cd ~/OneDrive/文件/programs | Files' ],"..
             \"], {'title': 'go to project'})" ],
             \ ])
+
 call quickui#menu#install('&Git', [
             \ ['git l&og',                      '!TortoiseGitProc.exe -command log' ],
             \ ['git &diff',                     '!TortoiseGitProc.exe -command diff' ],
@@ -26,15 +27,30 @@ call quickui#menu#install('&Git', [
             \ ['git &revert',                   '!TortoiseGitProc.exe -command revert' ],
             \ ['git log current f&ile',         '!TortoiseGitProc.exe -command log -path %' ],
             \ ])
+
 call quickui#menu#install('&Terminal', [
             \ ['&cmd',                          'call quickui#terminal#open("cmd.exe", {"title": "cmd.exe"})' ],
             \ ['&py',                           'call quickui#terminal#open("py.exe",  {"title": "py.exe"})' ],
             \ ])
+
 call quickui#menu#install('P&ython', [
             \ ['&run',                          'call quickui#terminal#open("py.exe "..expand("%"), {"title": expand("%")})' ],
             \ ['run and -&i',                   'call quickui#terminal#open("py.exe -i "..expand("%"), {"title": expand("%")})' ],
             \ ], '<auto>', 'python')
+
 call quickui#menu#install('&Vim', [
             \ ['&source',                       'source %' ],
             \ ], '<auto>', 'vim')
+
 noremap <space><space> :call quickui#menu#open()<cr>
+
+function! DisplayMessages()
+    let x = ''
+    redir => x
+    silent! messages
+    redir END
+    let x = substitute(x, '[\n\r]\+\%$', '', 'g')
+    let content = filter(split(x, "\n"), 'v:key != ""')
+    let opts = {"close":"button", "title":"Vim Messages"}
+    call quickui#textbox#open(content, opts)
+endfunc

@@ -37,6 +37,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
+Plugin 'mhinz/vim-grepper'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/quickmenu.vim'
@@ -80,10 +81,14 @@ set viewdir=~/.vim/viewdir
 " else
 	" colorscheme desert
 " endif
-nmap <C-h> <C-w>h
-nmap <C-l> <C-w>l
-nmap <C-k> <C-w>k
-nmap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-S-Right> :vertical resize +5<cr>
+nnoremap <C-S-Left> :vertical resize -5<cr>
+nnoremap <C-S-Up> :resize +5<cr>
+nnoremap <C-S-Down> :resize -5<cr>
 nnoremap <leader>w <C-w>
 
 " cscope
@@ -111,6 +116,7 @@ source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/fzf.vim
+source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
