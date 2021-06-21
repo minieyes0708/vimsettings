@@ -107,6 +107,7 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/ctrlp.vim
+source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
