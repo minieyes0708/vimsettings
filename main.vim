@@ -16,6 +16,7 @@ call vundle#begin()
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'mnishz/colorscheme-preview.vim'
+" Plugin 'skywind3000/quickmenu.vim'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -32,12 +33,12 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mg979/vim-visual-multi'
+Plugin 'mhinz/vim-grepper'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'pseewald/vim-anyfold'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
-Plugin 'skywind3000/quickmenu.vim'
 Plugin 'skywind3000/vim-quickui'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-surround'
@@ -112,6 +113,7 @@ source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/fzf.vim
+source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
