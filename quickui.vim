@@ -42,7 +42,7 @@ call quickui#menu#install('&Buffer', [
 call quickui#menu#install('&Git', [
             \ ['git l&og',                          '!TortoiseGitProc.exe -command log' ],
             \ ['git &diff',                         '!TortoiseGitProc.exe -command diff' ],
-            \ ['git &pull',                         '!TortoiseGitProc.exe -command pull' ],
+            \ ['git p&ull',                         '!TortoiseGitProc.exe -command pull' ],
             \ ['git &push',                         '!TortoiseGitProc.exe -command push' ],
             \ ['git &blame',                        '!TortoiseGitProc.exe -command blame -path %' ],
             \ ['git &commit',                       '!TortoiseGitProc.exe -command commit' ],
@@ -59,6 +59,10 @@ call quickui#menu#install('P&ython', [
             \ ['&run',                              'call quickui#terminal#open("py.exe "..expand("%"), {"title": expand("%")})' ],
             \ ['run and -&i',                       'call quickui#terminal#open("py.exe -i "..expand("%"), {"title": expand("%")})' ],
             \ ], '<auto>', 'python')
+
+call quickui#menu#install('&Vim', [
+            \ ['&Source',                           'source %' ],
+            \ ], '<auto>', 'vim')
 
 noremap <space><space> :call quickui#menu#open()<cr>
 
