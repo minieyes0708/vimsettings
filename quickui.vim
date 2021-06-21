@@ -38,8 +38,8 @@ call quickui#menu#install('&Projects', [
 call quickui#menu#install('&Git', [
             \ ['git l&og',                          '!TortoiseGitProc.exe -command log' ],
             \ ['git &diff',                         '!TortoiseGitProc.exe -command diff' ],
-            \ ['git &pull',                         '!TortoiseGitProc.exe -command pull' ],
-            \ ['git &push',                         '!TortoiseGitProc.exe -command push' ],
+            \ ['git p&ull',                         '!TortoiseGitProc.exe -command pull' ],
+            \ ['git pus&h',                         '!TortoiseGitProc.exe -command push' ],
             \ ['git &blame',                        '!TortoiseGitProc.exe -command blame -path %' ],
             \ ['git &commit',                       '!TortoiseGitProc.exe -command commit' ],
             \ ['git &revert',                       '!TortoiseGitProc.exe -command revert' ],
@@ -47,8 +47,8 @@ call quickui#menu#install('&Git', [
             \])
 
 call quickui#menu#install('&Terminal', [
-            \ ['cmd',                               'call quickui#terminal#open("cmd.exe", {"title": "cmd.exe"})' ],
-            \ ['py',                                'call quickui#terminal#open("py.exe",  {"title": "py.exe"})' ],
+            \ ['&cmd',                               'call quickui#terminal#open("cmd.exe", {"title": "cmd.exe"})' ],
+            \ ['&py',                                'call quickui#terminal#open("py.exe",  {"title": "py.exe"})' ],
             \])
 
 call quickui#menu#install('P&ython', [
