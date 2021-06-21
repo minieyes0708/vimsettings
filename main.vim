@@ -16,7 +16,6 @@ call vundle#begin()
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'mnishz/colorscheme-preview.vim'
-" Plugin 'preservim/nerdtree'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -34,6 +33,7 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'preservim/nerdcommenter'
+Plugin 'preservim/nerdtree'
 Plugin 'pseewald/vim-anyfold'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
@@ -97,9 +97,6 @@ endif
 " au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
 au GUIEnter * RandomColorScheme
-
-" let g:netrw_winsize = 20
-" au GUIEnter * Lex
 
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax

@@ -35,14 +35,10 @@ call quickui#menu#install('&Projects', [
             \ ],
             \])
 
-call quickui#menu#install('&Buffer', [
-            \ ['&Only',                             'call BufOnly']
-            \])
-
 call quickui#menu#install('&Git', [
             \ ['git l&og',                          '!TortoiseGitProc.exe -command log' ],
             \ ['git &diff',                         '!TortoiseGitProc.exe -command diff' ],
-            \ ['git p&ull',                         '!TortoiseGitProc.exe -command pull' ],
+            \ ['git &pull',                         '!TortoiseGitProc.exe -command pull' ],
             \ ['git &push',                         '!TortoiseGitProc.exe -command push' ],
             \ ['git &blame',                        '!TortoiseGitProc.exe -command blame -path %' ],
             \ ['git &commit',                       '!TortoiseGitProc.exe -command commit' ],
