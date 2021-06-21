@@ -42,11 +42,6 @@ call quickui#menu#install('&Vim', [
             \ ['&source',                       'source %' ],
             \ ], '<auto>', 'vim')
 
-call quickui#menu#install('&Typescript', [
-            \ ['&setup compiler',               'set makeprg=tsc | set errorformat=%f:%l:%c\ -\ %m' ],
-            \ ['&make',                         'make %' ],
-            \ ], '<auto>', 'typescript')
-
 noremap <space><space> :call quickui#menu#open()<cr>
 
 function! DisplayMessages()
