@@ -33,7 +33,7 @@ call quickui#menu#install('&Projects', [
             \ "['[&u] matlab',                      'cd D:/minieyes_chen/program/matlab | Files'],"..
             \ "], {'title': 'Projects'})"
             \ ],
-            \])
+            \ ])
 
 call quickui#menu#install('&Git', [
             \ ['git l&og',                          '!TortoiseGitProc.exe -command log' ],
@@ -44,12 +44,16 @@ call quickui#menu#install('&Git', [
             \ ['git &commit',                       '!TortoiseGitProc.exe -command commit' ],
             \ ['git &revert',                       '!TortoiseGitProc.exe -command revert' ],
             \ ['git log current &file',             '!TortoiseGitProc.exe -command log -path %' ],
-            \])
+            \ ])
 
 call quickui#menu#install('&Terminal', [
             \ ['&cmd',                               'call quickui#terminal#open("cmd.exe", {"title": "cmd.exe"})' ],
             \ ['&py',                                'call quickui#terminal#open("py.exe",  {"title": "py.exe"})' ],
-            \])
+            \ ])
+
+call quickui#menu#install('&Compiler', [
+            \ ['setup &msbuild',                   'set errorformat=\ %#%f(%l):\ %m | set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true' ],
+            \ ])
 
 call quickui#menu#install('P&ython', [
             \ ['&run',                              'call quickui#terminal#open("py.exe "..expand("%"), {"title": expand("%")})' ],
@@ -57,7 +61,7 @@ call quickui#menu#install('P&ython', [
             \ ], '<auto>', 'python')
 
 call quickui#menu#install('&Vim', [
-            \ ['&Source',                           'source %' ],
+            \ ['&source',                           'source %' ],
             \ ], '<auto>', 'vim')
 
 noremap <space><space> :call quickui#menu#open()<cr>
