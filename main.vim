@@ -14,17 +14,16 @@ let $GIT_SSL_NO_VERIFY = 'true'
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
+" Plugin 'codota/tabnine-vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
-" Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'dbeecham/ctrlp-commandpalette.vim'
-" Plugin 'kiteco/vim-plugin'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
-Plugin 'codota/tabnine-vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
@@ -34,7 +33,9 @@ Plugin 'haya14busa/incsearch.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'kiteco/vim-plugin'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
 Plugin 'preservim/nerdcommenter'
@@ -91,6 +92,7 @@ nnoremap <C-S-Left> :vertical resize -5<cr>
 nnoremap <C-S-Up> :resize +5<cr>
 nnoremap <C-S-Down> :resize -5<cr>
 nnoremap <leader>w <C-w>
+inoremap <C-CR> <ESC>o
 
 " cscope
 if has("cscope")
@@ -105,20 +107,21 @@ au GUIEnter * RandomColorScheme
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
 
+" source ~/.vimrc.d/YouCompleteMe.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/ctrlp-commandpalette.vim
 " source ~/.vimrc.d/ctrlp.vim
-" source ~/.vimrc.d/kite.vim
-" source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
+source ~/.vimrc.d/emmit.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
+source ~/.vimrc.d/kite.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
