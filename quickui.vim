@@ -14,7 +14,21 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&8] htdocs',                 'cd L:/XAMPPPortable/htdocs | Files' ],"..
             \ "[ '[&9] cgi-bin',                'cd L:/XAMPPPortable/cgi-bin | Files' ],"..
             \ "[ '[&a] doc programs',           'cd ~/OneDrive/文件/programs | Files' ],"..
-            \"], {'title': 'go to project'})" ],
+            \ "[ '[&b] snippets',               'cd ~/.vim/bundle/vim-snippets/snippets | Files' ],"..
+            \ "], {'title': 'go to project'})" ],
+            \ [ "&Peek", "call quickui#listbox#open(["..
+            \ "[ '[&1] python',                 'Files ~/AppData/Local/Programs/Python/Python39/minieyes' ],"..
+            \ "[ '[&2] .bashrc.d',              'Files ~/.bashrc.d' ],"..
+            \ "[ '[&3] .vimrc.d',               'Files ~/.vimrc.d' ],"..
+            \ "[ '[&4] .vifm',                  'Files ~/.vifm' ],"..
+            \ "[ '[&5] .vim',                   'Files ~/.vim' ],"..
+            \ "[ '[&6] docs',                   'Files ~/OneDrive/文件/docs' ],"..
+            \ "[ '[&7] 桌面',                   'Files ~/OneDrive/桌面' ],"..
+            \ "[ '[&8] htdocs',                 'Files L:/XAMPPPortable/htdocs' ],"..
+            \ "[ '[&9] cgi-bin',                'Files L:/XAMPPPortable/cgi-bin' ],"..
+            \ "[ '[&a] doc programs',           'Files ~/OneDrive/文件/programs' ],"..
+            \ "[ '[&b] snippets',               'Files ~/.vim/bundle/vim-snippets/snippets' ],"..
+            \ "], {'title': 'browse project'})" ],
             \ ])
 
 call quickui#menu#install('&Git', [
