@@ -33,6 +33,36 @@ call quickui#menu#install('&Projects', [
             \ "['[&u] matlab',                      'cd D:/minieyes_chen/program/matlab | Files'],"..
             \ "], {'title': 'Projects'})"
             \ ],
+            \ [ "&Peek",
+            \ "call quickui#listbox#open(["..
+            \ "['[&1] .bashrc.d',                   'File ~/.bashrc.d'],"..
+            \ "['[&2] .vimrc.d',                    'File ~/.vimrc.d'],"..
+            \ "['[&3] .vifm',                       'File ~/.vifm'],"..
+            \ "['[&4] .vim',                        'File ~/.vim'],"..
+            \ "['[&5] Pattern Editor',              'File D:/minieyes_chen/program/PatternEditor'],"..
+            \ "['[&6] python',                      'File D:/minieyes_chen/program/python'],"..
+            \ "['[&7] IVE4',                        'File D:/minieyes_chen/program/IVE4_SW'],"..
+            \ "['[&8] RGB LUT',                     'File D:/minieyes_chen/program/RGBLUT'],"..
+            \ "['[&9] CUP',                         'File D:/minieyes_chen/program/CUP/CUP'],"..
+            \ "['[&a] MCR2FlashBMP',                'File D:/minieyes_chen/program/MCR2FlashBmp'],"..
+            \ "['[&b] FPGA NewABTable For P.E.',    'File D:/minieyes_chen/fpga/nora/NewABTable_ForPatternEditor/rtl'],"..
+            \ "['[&c] IVE4S_FPGA',                  'File D:/minieyes_chen/fpga/IVE4S_FPGA/rtl'],"..
+            \ "['[&d] IVE4S_FW',                    'File D:/minieyes_chen/firmware/IVE4S_FW'],"..
+            \ "['[&e] WebDocs',                     'File G:/MD/Projects/IVE/WebDocs'],"..
+            \ "['[&f] eACT2.0',                     'File D:/minieyes_chen/program/eACT2.0'],"..
+            \ "['[&g] miniCSLibrary',               'File D:/minieyes_chen/program/miniCSLibrary'],"..
+            \ "['[&i] IE Tuning ProjectDlls',       'File D:/minieyes_chen/program/IETuning/ProjectDlls'],"..
+            \ "['[&m] miniLibrary',                 'File D:/minieyes_chen/program/miniLibrary'],"..
+            \ "['[&n] MCR2V',                       'File D:/minieyes_chen/program/MCR2V'],"..
+            \ "['[&o] GenInfo',                     'File D:/minieyes_chen/program/GenInfo'],"..
+            \ "['[&p] CheckRegisterTable',          'File D:/minieyes_chen/program/CheckRegisterTable'],"..
+            \ "['[&q] credential_dll_VC',           'File D:/minieyes_chen/program/credential_dll_VC'],"..
+            \ "['[&r] ColorSenseVC',                'File D:/minieyes_chen/program/ColorSenseVC'],"..
+            \ "['[&s] LightIVE-IdealModel',         'File D:/minieyes_chen/program/LightIVE-IdealModel'],"..
+            \ "['[&t] V1.x',                        'File C:/Users/nvt02863/Desktop/V1.x'],"..
+            \ "['[&u] matlab',                      'File D:/minieyes_chen/program/matlab'],"..
+            \ "], {'title': 'Browser Projects'})"
+            \ ],
             \ ])
 
 call quickui#menu#install('&Git', [
