@@ -90,6 +90,7 @@ nnoremap <C-S-Left> :vertical resize -5<cr>
 nnoremap <C-S-Up> :resize +5<cr>
 nnoremap <C-S-Down> :resize -5<cr>
 nnoremap <leader>w <C-w>
+inoremap <C-CR> <ESC>o
 
 " cscope
 if has("cscope")
