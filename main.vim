@@ -17,17 +17,18 @@ call vundle#begin()
 " Plugin 'codota/tabnine-vim'
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dbeecham/ctrlp-commandpalette.vim'
+" Plugin 'garbas/vim-snipmate'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
-Plugin 'garbas/vim-snipmate'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
@@ -93,7 +94,11 @@ nnoremap <C-S-Left> :vertical resize -5<cr>
 nnoremap <C-S-Up> :resize +5<cr>
 nnoremap <C-S-Down> :resize -5<cr>
 nnoremap <leader>w <C-w>
+nnoremap <leader>yf :let @* = expand('%:p')<cr>
+nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
 inoremap <C-CR> <ESC>o
+inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 
 " cscope
 if has("cscope")
