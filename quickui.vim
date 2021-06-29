@@ -66,14 +66,14 @@ call quickui#menu#install('&Projects', [
             \ ])
 
 call quickui#menu#install('&Git', [
-            \ ['git l&og',                          '!TortoiseGitProc.exe -command log&' ],
-            \ ['git &diff',                         '!TortoiseGitProc.exe -command diff&' ],
-            \ ['git p&ull',                         '!TortoiseGitProc.exe -command pull&' ],
-            \ ['git pus&h',                         '!TortoiseGitProc.exe -command push&' ],
-            \ ['git &blame',                        '!TortoiseGitProc.exe -command blame -path %&' ],
-            \ ['git &commit',                       '!TortoiseGitProc.exe -command commit&' ],
-            \ ['git &revert',                       '!TortoiseGitProc.exe -command revert&' ],
-            \ ['git log current &file',             '!TortoiseGitProc.exe -command log -path %&' ],
+            \ ['git l&og',                          '!START TortoiseGitProc.exe -command log' ],
+            \ ['git &diff',                         '!START TortoiseGitProc.exe -command diff' ],
+            \ ['git p&ull',                         '!START TortoiseGitProc.exe -command pull' ],
+            \ ['git pus&h',                         '!START TortoiseGitProc.exe -command push' ],
+            \ ['git &blame',                        '!START TortoiseGitProc.exe -command blame -path %' ],
+            \ ['git &commit',                       '!START TortoiseGitProc.exe -command commit' ],
+            \ ['git &revert',                       '!START TortoiseGitProc.exe -command revert' ],
+            \ ['git log current &file',             '!START TortoiseGitProc.exe -command log -path %' ],
             \ ])
 
 call quickui#menu#install('&Terminal', [
