@@ -14,7 +14,7 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&8] htdocs',                 'cd L:/XAMPPPortable/htdocs | Files' ],"..
             \ "[ '[&9] cgi-bin',                'cd L:/XAMPPPortable/cgi-bin | Files' ],"..
             \ "[ '[&a] doc programs',           'cd ~/OneDrive/文件/programs | Files' ],"..
-            \ "[ '[&b] snippets',               'cd ~/.vim/bundle/vim-snippets/snippets | Files' ],"..
+            \ "[ '[&b] snippets',               'cd ~/.vim/bundle/vim-snippets/ultisnips | Files' ],"..
             \ "], {'title': 'go to project'})" ],
             \ [ "&Peek", "call quickui#listbox#open(["..
             \ "[ '[&1] python',                 'Files ~/AppData/Local/Programs/Python/Python39/minieyes' ],"..
@@ -27,7 +27,7 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&8] htdocs',                 'Files L:/XAMPPPortable/htdocs' ],"..
             \ "[ '[&9] cgi-bin',                'Files L:/XAMPPPortable/cgi-bin' ],"..
             \ "[ '[&a] doc programs',           'Files ~/OneDrive/文件/programs' ],"..
-            \ "[ '[&b] snippets',               'Files ~/.vim/bundle/vim-snippets/snippets' ],"..
+            \ "[ '[&b] snippets',               'Files ~/.vim/bundle/vim-snippets/ultisnips' ],"..
             \ "], {'title': 'browse project'})" ],
             \ ])
 
