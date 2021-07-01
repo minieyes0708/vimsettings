@@ -7,7 +7,7 @@ call quickui#menu#install('&Projects', [
             \ "call quickui#listbox#open(["..
             \ "['[&1] .bashrc.d',                   'cd ~/.bashrc.d | Files'],"..
             \ "['[&2] .vimrc.d',                    'cd ~/.vimrc.d | Files'],"..
-            \ "['[&3] .vifm',                       'cd ~/.vifm | Files'],"..
+            \ "['[&3] .vifm',                       'cd D:/Program Files/msys64/home/NVT02863/.vifm | Files'],"..
             \ "['[&4] .vim',                        'cd ~/.vim | Files'],"..
             \ "['[&5] Pattern Editor',              'cd D:/minieyes_chen/program/PatternEditor | Files'],"..
             \ "['[&6] python',                      'cd D:/minieyes_chen/program/python | Files'],"..
