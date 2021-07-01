@@ -111,7 +111,6 @@ au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
 
 " source ~/.vimrc.d/OmniCpp.vim
-" source ~/.vimrc.d/YouCompleteMe.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/ctrlp-commandpalette.vim
@@ -119,6 +118,7 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
+source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/emmet.vim
