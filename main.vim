@@ -14,6 +14,7 @@ filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
 " Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'skywind3000/quickmenu.vim'
@@ -24,7 +25,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
 Plugin 'codota/tabnine-vim'
-Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
@@ -91,7 +91,11 @@ nnoremap <C-S-Left> :vertical resize -5<cr>
 nnoremap <C-S-Up> :resize +5<cr>
 nnoremap <C-S-Down> :resize -5<cr>
 nnoremap <leader>w <C-w>
+nnoremap <leader>yf :let @* = expand('%:p')<cr>
+nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
 inoremap <C-CR> <ESC>o
+inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 
 " cscope
 if has("cscope")
@@ -110,13 +114,13 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/YouCompleteMe.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
+" source ~/.vimrc.d/ctrlp-commandpalette.vim
 " source ~/.vimrc.d/ctrlp.vim
 " source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
-source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/emmet.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
