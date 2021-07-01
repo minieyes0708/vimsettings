@@ -61,6 +61,7 @@ call quickui#menu#install('&Projects', [
             \ "['[&s] LightIVE-IdealModel',         'Files D:/minieyes_chen/program/LightIVE-IdealModel'],"..
             \ "['[&t] V1.x',                        'Files C:/Users/nvt02863/Desktop/V1.x'],"..
             \ "['[&u] matlab',                      'Files D:/minieyes_chen/program/matlab'],"..
+            \ "['[&v] Ultisnips snippets',          'Files ~/.vim/bundle/vim-snippets/UltiSnips'],"..
             \ "], {'title': 'Browser Projects'})"
             \ ],
             \ ])

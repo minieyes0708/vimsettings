@@ -129,3 +129,4 @@ source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickui.vim
+source ~/.vimrc.d/ultisnips.vim
