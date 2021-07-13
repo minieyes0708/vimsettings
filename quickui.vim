@@ -4,8 +4,10 @@ let g:quickui_show_tip = 1"
 function! quickui#miniFiles(folder)
     if g:quickmenu#mini_is_peek == 0
         execute 'cd ' .. expand(a:folder)
+        call fzf#run(fzf#wrap({'source': $FZF_DEFAULT_COMMAND .. ' --type f --base-directory ' .. g:quickmenu#mini_root_folder .. '/' .. a:folder, 'center': 10, 'sink': 'e'}))
+    else
+        call fzf#run(fzf#wrap({'source': $FZF_DEFAULT_COMMAND .. ' --type f --absolute-path --base-directory ' .. g:quickmenu#mini_root_folder .. '/' .. a:folder, 'center': 10, 'sink': 'e'}))
     endif
-    call fzf#run(fzf#wrap({'source': $FZF_DEFAULT_COMMAND .. ' --type f --base-directory ' .. g:quickmenu#mini_root_folder .. '/' .. a:folder, 'center': 10, 'sink': 'e'}))
 endfunc
 
 function! quickui#miniProject(folder, is_peek)
