@@ -1,6 +1,8 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" {{{ Environment
 let mapleader=','
 if has("gui_running")
 	let &pythonthreedll='C:/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
@@ -8,8 +10,10 @@ else
 	let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
 endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
-
 let $GIT_SSL_NO_VERIFY = 'true'
+" }}}
+
+" {{{ Plugins
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
@@ -53,7 +57,9 @@ Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 Plugin 'zacanger/angr.vim'
 call vundle#end()
+" }}}
 
+" {{{ Settings
 syntax on
 filetype plugin indent on
 set autoindent
@@ -82,6 +88,9 @@ if has("gui_running")
 else
 	colorscheme desert
 endif
+" }}}
+
+" {{{ Mappings
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-k> <C-w>k
@@ -93,15 +102,18 @@ nnoremap <C-S-Down> :resize -5<cr>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
+inoremap jk <ESC>
 inoremap <C-CR> <ESC>o
 inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+" }}}
 
 " cscope
 if has("cscope")
 	set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
 
+" {{{ Auto Commands
 " au GUIEnter * source $VIMRUNTIME\delmenu.vim
 " au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
@@ -109,7 +121,9 @@ au GUIEnter * RandomColorScheme
 
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
+" }}}
 
+" {{{ Sources
 " source ~/.vimrc.d/OmniCpp.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
@@ -130,3 +144,6 @@ source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/ultisnips.vim
+" }}}
+
+" vim: foldmethod=marker
