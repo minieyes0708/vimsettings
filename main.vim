@@ -115,6 +115,7 @@ au GUIEnter * RandomColorScheme
 
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
+au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" ? "<cr><esc>O" : "<cr>"
 
 " source ~/.vimrc.d/YouCompleteMe.vim
 " source ~/.vimrc.d/anyfold.vim
