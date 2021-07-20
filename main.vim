@@ -1,6 +1,8 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" {{{ Environment
 let mapleader=','
 if has("gui_running")
 	let &pythonthreedll='C:/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
@@ -9,15 +11,17 @@ else
 endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
 set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
-
 let $GIT_SSL_NO_VERIFY = 'true'
+" }}}
+
+" {{{ Plugins
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
-" Plugin 'codota/tabnine-vim'
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'garbas/vim-snipmate'
+" Plugin 'kiteco/vim-plugin'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'tpope/vim-fugitive'
@@ -26,6 +30,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
+Plugin 'codota/tabnine-vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
@@ -36,7 +41,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'kiteco/vim-plugin'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
@@ -56,7 +60,9 @@ Plugin 'wadackel/vim-dogrun'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 call vundle#end()
+" }}}
 
+" {{{ Settings
 syntax on
 filetype plugin indent on
 set autoindent
@@ -86,6 +92,9 @@ set viewdir=~/.vim/viewdir
 " else
 	" colorscheme desert
 " endif
+" }}}
+
+" {{{ Mappings
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-k> <C-w>k
@@ -102,12 +111,14 @@ inoremap kj <ESC>
 inoremap <C-CR> <ESC>o
 inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+" }}}
 
 " cscope
 if has("cscope")
 	set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
 
+" {{{ Auto Commands
 au GUIEnter * source $VIMRUNTIME\delmenu.vim
 au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
@@ -116,7 +127,9 @@ au GUIEnter * RandomColorScheme
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
 au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" ? "<cr><esc>O" : "<cr>"
+" }}}
 
+" {{{ Sources
 " source ~/.vimrc.d/YouCompleteMe.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
@@ -138,3 +151,4 @@ source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
+" }}}
