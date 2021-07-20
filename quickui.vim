@@ -32,7 +32,7 @@ call quickui#menu#install('&Projects', [
             \ "['[&6] IVE4S_FPGA',                  'cd D:/minieyes_chen/fpga/IVE4S_FPGA/rtl | Files'],"..
             \ "['[&7] IVE4S_FW',                    'cd D:/minieyes_chen/firmware/IVE4S_FW | Files'],"..
             \ "['[&8] WebDocs',                     'cd G:/MD/Projects/IVE/WebDocs | Files'],"..
-            \ "['[&9] V1.x',                        'cd C:/Users/nvt02863/Desktop/V1.x | Files'],"..
+            \ "['[&9] Charles_RGBLUTv2',            'cd C:/Users/nvt02863/Desktop/Charles_RGBLUTv2 | Files'],"..
             \ "], {'title': 'Projects'})"
             \ ],
             \ [ "&Peek",
@@ -46,7 +46,7 @@ call quickui#menu#install('&Projects', [
             \ "['[&6] IVE4S_FPGA',                  'Files D:/minieyes_chen/fpga/IVE4S_FPGA/rtl'],"..
             \ "['[&7] IVE4S_FW',                    'Files D:/minieyes_chen/firmware/IVE4S_FW'],"..
             \ "['[&8] WebDocs',                     'Files G:/MD/Projects/IVE/WebDocs'],"..
-            \ "['[&9] V1.x',                        'Files C:/Users/nvt02863/Desktop/V1.x'],"..
+            \ "['[&9] Charles_RGBLUTv2',            'Files C:/Users/nvt02863/Desktop/Charles_RGBLUTv2'],"..
             \ "['[&a] Ultisnips snippets',          'Files ~/.vim/bundle/vim-snippets/UltiSnips'],"..
             \ "], {'title': 'Browser Projects'})"
             \ ],

@@ -32,6 +32,7 @@ Plugin 'codota/tabnine-vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
+Plugin 'frazrepo/vim-rainbow'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
@@ -145,6 +146,7 @@ source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/ultisnips.vim
+source ~/.vimrc.d/rainbow.vim
 " }}}
 
 " vim: foldmethod=marker
