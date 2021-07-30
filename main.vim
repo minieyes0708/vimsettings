@@ -141,12 +141,13 @@ source ~/.vimrc.d/emmet.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
+source ~/.vimrc.d/indentLine.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickui.vim
-source ~/.vimrc.d/ultisnips.vim
 source ~/.vimrc.d/rainbow.vim
+source ~/.vimrc.d/ultisnips.vim
 " }}}
 
 " vim: foldmethod=marker
