@@ -21,16 +21,15 @@ call vundle#begin()
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'garbas/vim-snipmate'
-" Plugin 'kiteco/vim-plugin'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
+" Plugin 'codota/tabnine-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
-Plugin 'codota/tabnine-vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
@@ -41,6 +40,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'kiteco/vim-plugin'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
@@ -130,7 +130,6 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " }}}
 
 " {{{ Sources
-" source ~/.vimrc.d/YouCompleteMe.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/ctrlp-commandpalette.vim
@@ -138,6 +137,7 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
+source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/emmit.vim
@@ -151,4 +151,5 @@ source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
+source ~/.vimrc.d/ultisnips.vim
 " }}}
