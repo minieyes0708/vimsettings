@@ -5,9 +5,9 @@ set nocompatible
 " {{{ Environment
 let mapleader=','
 if has("gui_running")
-	let &pythonthreedll='C:/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
-else
-	let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
+    let &pythonthreedll='C:/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
+elseif !has('nvim')
+    let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
 endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
 set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
@@ -15,8 +15,8 @@ let $GIT_SSL_NO_VERIFY = 'true'
 " }}}
 
 " {{{ Plugins
-filetype off 						" required before Vundle
-set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
+filetype off                        " required before Vundle
+set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dbeecham/ctrlp-commandpalette.vim'
@@ -72,7 +72,11 @@ set confirm
 set encoding=utf8
 set expandtab
 set exrc
-set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
+if has('nvim')
+    set guifont=Consolas:h14
+else
+    set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
+endif
 set history=50
 set hlsearch
 set incsearch
@@ -88,9 +92,9 @@ set splitright
 set tabstop=4
 set viewdir=~/.vim/viewdir
 " if has("gui_running")
-	" colorscheme angr
+    " colorscheme angr
 " else
-	" colorscheme desert
+    " colorscheme desert
 " endif
 " }}}
 
@@ -109,13 +113,14 @@ nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
 inoremap jk <ESC>
 inoremap kj <ESC>
 inoremap <C-CR> <ESC>o
+inoremap <leader>m <C-o>
 inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 " }}}
 
 " cscope
 if has("cscope")
-	set cscopequickfix=s-,c-,d-,i-,t-,e-
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
 
 " {{{ Auto Commands
@@ -126,6 +131,7 @@ au GUIEnter * RandomColorScheme
 
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
+au Filetype vim set foldmethod=marker
 au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" ? "<cr><esc>O" : "<cr>"
 " }}}
 
