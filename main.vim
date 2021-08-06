@@ -73,7 +73,7 @@ set encoding=utf8
 set expandtab
 set exrc
 if has('nvim')
-    set guifont=Consolas:h14
+    set guifont=Fira\ Mono\ for\ Powerline:h16:cANSI:qDRAFT
 else
     set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
 endif
@@ -96,6 +96,9 @@ set viewdir=~/.vim/viewdir
 " else
     " colorscheme desert
 " endif
+if has("cscope")
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+endif
 " }}}
 
 " {{{ Mappings
@@ -118,10 +121,14 @@ inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : 
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 " }}}
 
-" cscope
-if has("cscope")
-    set cscopequickfix=s-,c-,d-,i-,t-,e-
+" {{{ NVIM Specific
+if has('nvim')
+    GuiTabline 0
+    function Config()
+        exe 'edit ' . stdpath('config') . '\\init.vim'
+    endfunction
 endif
+" }}}
 
 " {{{ Auto Commands
 au GUIEnter * source $VIMRUNTIME\delmenu.vim
