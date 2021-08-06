@@ -17,6 +17,7 @@ let $GIT_SSL_NO_VERIFY = 'true'
 filetype off 						" required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
 call vundle#begin()
+" Plugin 'codota/tabnine-vim'
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'garbas/vim-snipmate'
@@ -28,7 +29,6 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
-Plugin 'codota/tabnine-vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
@@ -39,6 +39,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'kiteco/vim-plugin'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
