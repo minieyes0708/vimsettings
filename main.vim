@@ -1,6 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+let g:colors_name = 'default'
 
 " {{{ Environment
 let mapleader=','
@@ -123,7 +124,6 @@ inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" 
 
 " {{{ NVIM Specific
 if has('nvim')
-    GuiTabline 0
     function Config()
         exe 'edit ' . stdpath('config') . '\\init.vim'
     endfunction
