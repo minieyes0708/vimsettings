@@ -73,11 +73,7 @@ set confirm
 set encoding=utf8
 set expandtab
 set exrc
-if has('nvim')
-    set guifont=Fira\ Mono\ for\ Powerline:h16:cANSI:qDRAFT
-else
-    set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
-endif
+set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
 set history=50
 set hlsearch
 set incsearch
@@ -154,6 +150,7 @@ source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/emmit.vim
+source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
