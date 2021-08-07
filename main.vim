@@ -19,14 +19,13 @@ let $GIT_SSL_NO_VERIFY = 'true'
 filetype off                        " required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
+" Plugin 'codota/tabnine-vim'
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'pseewald/vim-anyfold'
-" Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
-" Plugin 'codota/tabnine-vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
@@ -53,6 +52,7 @@ Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/quickmenu.vim'
 Plugin 'skywind3000/vim-quickui'
 Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -73,7 +73,9 @@ set confirm
 set encoding=utf8
 set expandtab
 set exrc
-set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
+if !has('nvim')
+    set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
+endif
 set history=50
 set hlsearch
 set incsearch

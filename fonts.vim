@@ -8,6 +8,6 @@
 " set guifont=Inconsolata-g\ for\ Powerline:h16:cANSI:qDRAFT
 " set guifont=Source\ Code\ Pro\ for\ Powerline:h16:cANSI:qDRAFT
 " set guifont=Monofur\ for\ Powerline:h16:cANSI:qDRAFT
-set guifont=Noto\ Mono\ for\ Powerline:h16:cANSI:qDRAFT
+set guifont=Noto\ Mono\ for\ Powerline:h14:cANSI:qDRAFT
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16:cANSI:qDRAFT
 " set guifont=Space\ Mono\ for\ Powerline:h16
