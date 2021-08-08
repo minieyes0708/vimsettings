@@ -15,6 +15,7 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&9] cgi-bin',                'cd L:/XAMPPPortable/cgi-bin | Files' ],"..
             \ "[ '[&a] doc programs',           'cd ~/OneDrive/文件/programs | Files' ],"..
             \ "[ '[&b] snippets',               'cd ~/.vim/bundle/vim-snippets/ultisnips | Files' ],"..
+            \ "[ '[&c] neovim',                 'cd ~/AppData/Local/nvim | Files' ],"..
             \ "], {'title': 'go to project'})" ],
             \ [ "&Peek", "call quickui#listbox#open(["..
             \ "[ '[&1] python',                 'Files ~/AppData/Local/Programs/Python/Python39/minieyes' ],"..
@@ -28,6 +29,7 @@ call quickui#menu#install('&Projects', [
             \ "[ '[&9] cgi-bin',                'Files L:/XAMPPPortable/cgi-bin' ],"..
             \ "[ '[&a] doc programs',           'Files ~/OneDrive/文件/programs' ],"..
             \ "[ '[&b] snippets',               'Files ~/.vim/bundle/vim-snippets/ultisnips' ],"..
+            \ "[ '[&c] neovim',                 'Files ~/AppData/Local/nvim' ],"..
             \ "], {'title': 'browse project'})" ],
             \ ])
 
