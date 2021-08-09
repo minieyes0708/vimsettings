@@ -5,25 +5,25 @@ set nocompatible
 " {{{ Environment
 let mapleader=','
 if has("gui_running")
-	let &pythonthreedll='C:/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
-else
-	let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
+    let &pythonthreedll='C:/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
+elseif !has('nvim')
+    let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
 endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
 let $GIT_SSL_NO_VERIFY = 'true'
 " }}}
 
 " {{{ Plugins
-filetype off 						" required before Vundle
-set rtp+=~/.vim/bundle/Vundle.vim	" set runtime path
+filetype off                        " required before Vundle
+set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
+" (
 " Plugin 'codota/tabnine-vim'
 " Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'skywind3000/quickmenu.vim'
-" Plugin 'tpope/vim-fugitive'
 " Plugin 'vim-scripts/indentpython.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
@@ -50,6 +50,7 @@ Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/vim-quickui'
 Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -58,6 +59,7 @@ Plugin 'wadackel/vim-dogrun'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 Plugin 'zacanger/angr.vim'
+" )
 call vundle#end()
 " }}}
 
@@ -71,7 +73,11 @@ set confirm
 set encoding=utf8
 set expandtab
 set exrc
-set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
+if has('nvim')
+    source ~/.vimrc.d/fonts.vim
+else
+    set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
+endif
 set history=50
 set hlsearch
 set incsearch
@@ -86,9 +92,12 @@ set showcmd
 set splitright
 set tabstop=4
 if has("gui_running")
-	colorscheme angr
+    colorscheme angr
 else
-	colorscheme desert
+    colorscheme desert
+endif
+if has("cscope")
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
 " }}}
 
@@ -110,11 +119,6 @@ inoremap <C-CR> <ESC>o
 inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 " }}}
-
-" cscope
-if has("cscope")
-	set cscopequickfix=s-,c-,d-,i-,t-,e-
-endif
 
 " {{{ Auto Commands
 " au GUIEnter * source $VIMRUNTIME\delmenu.vim
