@@ -70,12 +70,10 @@ set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set confirm
+set cursorline
 set encoding=utf8
 set expandtab
 set exrc
-if !has('nvim')
-    set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
-endif
 set history=50
 set hlsearch
 set incsearch
@@ -84,17 +82,11 @@ set nobackup
 set number
 set relativenumber
 set ruler
-" set shellslash
 set shiftwidth=4
 set showcmd
 set splitright
 set tabstop=4
 set viewdir=~/.vim/viewdir
-" if has("gui_running")
-    " colorscheme angr
-" else
-    " colorscheme desert
-" endif
 if has("cscope")
     set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
