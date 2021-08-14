@@ -1,5 +1,5 @@
 " enable to display tips in the cmdline
-let g:quickui_show_tip = 1"
+let g:quickui_show_tip = 1
 
 call quickui#menu#reset()
 call quickui#menu#install('&Projects', [
@@ -46,8 +46,10 @@ call quickui#menu#install('&Git', [
             \ ])
 
 call quickui#menu#install('&Terminal', [
-            \ ['&cmd',                          'call quickui#terminal#open("cmd.exe", {"title": "cmd.exe"})' ],
-            \ ['&py',                           'call quickui#terminal#open("py.exe",  {"title": "py.exe"})' ],
+            \ ['&bash',                         'call quickui#terminal#open("bash.exe", {"title": "bash.exe"})' ],
+            \ ['&cmd',                          'call quickui#terminal#open("cmd.exe",  {"title": "cmd.exe"})' ],
+            \ ['&py',                           'call quickui#terminal#open("py.exe",   {"title": "py.exe"})' ],
+            \ ['&vifm',                         'edit term://bash -c vifm' ],
             \ ])
 
 call quickui#menu#install('P&ython', [
