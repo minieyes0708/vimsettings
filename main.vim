@@ -19,9 +19,8 @@ let $GIT_SSL_NO_VERIFY = 'true'
 filetype off                        " required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
+" (
 " Plugin 'codota/tabnine-vim'
-" Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'pseewald/vim-anyfold'
@@ -30,6 +29,8 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
@@ -60,6 +61,7 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'wadackel/vim-dogrun'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
+" )
 call vundle#end()
 " }}}
 
@@ -135,14 +137,14 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " {{{ Sources
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
-" source ~/.vimrc.d/ctrlp-commandpalette.vim
-" source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
+source ~/.vimrc.d/ctrlp-commandpalette.vim
+source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/emmit.vim
 source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/fzf.vim

@@ -61,7 +61,7 @@ call quickui#menu#install('&Vim', [
             \ ['&source',                       'source %' ],
             \ ], '<auto>', 'vim')
 
-noremap <space><space> :call quickui#menu#open()<cr>
+noremap <space> :call quickui#menu#open()<cr>
 
 function! DisplayMessages()
     let x = ''
