@@ -107,7 +107,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <leader>m :edit term://bash -c vifm<CR>i:only<CR>
+nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
@@ -127,6 +127,8 @@ au GUIEnter * source $VIMRUNTIME\delmenu.vim
 au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
 au GUIEnter * RandomColorScheme
+
+au BufWinEnter,WinEnter term://* startinsert
 
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
