@@ -94,7 +94,8 @@ if has("cscope")
 endif
 " }}}
 
-" {{{ Mappings inoremap <C-CR> <ESC>o
+" {{{ Mappings
+inoremap <C-CR> <ESC>o
 inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap jk <ESC>
@@ -111,7 +112,8 @@ nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
-tnoremap <leader>m yf<C-\><C-N>:edit <C-R>*<CR>
+tnoremap <leader>cd yp<C-\><C-N>:cd <C-R>*<CR>
+tnoremap <leader>e yf<C-\><C-N>:edit <C-R>*<CR>
 " }}}
 
 " {{{ NVIM Specific
