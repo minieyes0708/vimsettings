@@ -2,7 +2,9 @@ nmap <space><space> :CtrlPCommandPalette<CR>
 
 let g:ctrlp_commandpalette_autoload_commands = 0
 let g:commandPalette = {
-            \ 'bash'                    : 'edit term://bash',
+            \ 'cmd terminal'            : 'edit term://cmd',
+            \ 'bash terminal'           : 'edit term://bash',
+            \ 'python terminal'         : 'edit term://py',
             \ 'git log'                 : '!START TortoiseGitProc.exe -command log',
             \ 'git diff'                : '!START TortoiseGitProc.exe -command diff',
             \ 'git pull'                : '!START TortoiseGitProc.exe -command pull',
