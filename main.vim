@@ -94,8 +94,7 @@ if has("cscope")
 endif
 " }}}
 
-" {{{ Mappings
-inoremap <C-CR> <ESC>o
+" {{{ Mappings inoremap <C-CR> <ESC>o
 inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap jk <ESC>
@@ -108,7 +107,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <leader>m :edit term://bash -c vifm<CR>i
+nnoremap <leader>m :edit term://bash -c vifm<CR>i:only<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>

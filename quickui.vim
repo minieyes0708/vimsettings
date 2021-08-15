@@ -49,7 +49,6 @@ call quickui#menu#install('&Terminal', [
             \ ['&bash',                         'call quickui#terminal#open("bash.exe", {"title": "bash.exe"})' ],
             \ ['&cmd',                          'call quickui#terminal#open("cmd.exe",  {"title": "cmd.exe"})' ],
             \ ['&py',                           'call quickui#terminal#open("py.exe",   {"title": "py.exe"})' ],
-            \ ['&vifm',                         'edit term://bash -c vifm' ],
             \ ])
 
 call quickui#menu#install('P&ython', [
