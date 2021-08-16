@@ -18,10 +18,8 @@ filetype off                        " required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
 " (
-" Plugin 'codota/tabnine-vim'
-" Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'dbeecham/ctrlp-commandpalette.vim'
 " Plugin 'garbas/vim-snipmate'
+" Plugin 'kiteco/vim-plugin'
 " Plugin 'mnishz/colorscheme-preview.vim'
 " Plugin 'skywind3000/quickmenu.vim'
 " Plugin 'vim-scripts/indentpython.vim'
@@ -29,9 +27,13 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
+Plugin 'codota/tabnine-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
+Plugin 'ervandew/supertab'
 Plugin 'frazrepo/vim-rainbow'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
@@ -39,7 +41,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'kiteco/vim-plugin'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
@@ -102,22 +103,25 @@ endif
 " }}}
 
 " {{{ Mappings
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-nnoremap <C-k> <C-w>k
-nnoremap <C-j> <C-w>j
-nnoremap <C-S-Right> :vertical resize +5<cr>
-nnoremap <C-S-Left> :vertical resize -5<cr>
-nnoremap <C-S-Up> :resize +5<cr>
-nnoremap <C-S-Down> :resize -5<cr>
-nnoremap <leader>w <C-w>
-nnoremap <leader>yf :let @* = expand('%:p')<cr>
-nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
-inoremap jk <ESC>
-inoremap kj <ESC>
 inoremap <C-CR> <ESC>o
 inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+inoremap jk <ESC>
+inoremap kj <ESC>
+nnoremap <C-S-Down> :resize -5<cr>
+nnoremap <C-S-Left> :vertical resize -5<cr>
+nnoremap <C-S-Right> :vertical resize +5<cr>
+nnoremap <C-S-Up> :resize +5<cr>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
+nnoremap <leader>w <C-w>
+nnoremap <leader>yf :let @* = expand('%:p')<cr>
+nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
+tnoremap <leader>d yp<C-\><C-N>:sleep 700m<CR>:cd <C-R>+<CR>i
+tnoremap <leader>e yf<C-\><C-N>:sleep 700m<CR>:edit <C-R>+<CR>
 " }}}
 
 " {{{ Auto Commands
@@ -125,6 +129,8 @@ inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" 
 " au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
 au GUIEnter * RandomColorScheme
+
+au BufWinEnter,WinEnter term://* startinsert
 
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
@@ -134,14 +140,14 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/OmniCpp.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
-" source ~/.vimrc.d/ctrlp-commandpalette.vim
-" source ~/.vimrc.d/ctrlp.vim
 " source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
+source ~/.vimrc.d/ctrlp-commandpalette.vim
+source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/emmet.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim

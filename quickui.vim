@@ -64,8 +64,9 @@ call quickui#menu#install('&Git', [
             \ ])
 
 call quickui#menu#install('&Terminal', [
-            \ ['&cmd',                               'call quickui#terminal#open("cmd.exe", {"title": "cmd.exe"})' ],
-            \ ['&py',                                'call quickui#terminal#open("py.exe",  {"title": "py.exe"})' ],
+            \ ['&bash',                              'call quickui#terminal#open("bash",    {"title": "bash"})' ],
+            \ ['&cmd',                               'call quickui#terminal#open("cmd.exe", {"title": "cmd"})' ],
+            \ ['&py',                                'call quickui#terminal#open("py.exe",  {"title": "py"})' ],
             \ ])
 
 call quickui#menu#install('&Compiler', [
@@ -81,7 +82,7 @@ call quickui#menu#install('&Vim', [
             \ ['&source',                           'source %' ],
             \ ], '<auto>', 'vim')
 
-noremap <space><space> :call quickui#menu#open()<cr>
+noremap <space> :call quickui#menu#open()<cr>
 
 function! DisplayMessages()
     let x = ''
