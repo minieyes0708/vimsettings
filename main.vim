@@ -120,8 +120,8 @@ nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
-tnoremap <leader>d yp<C-\><C-N>:sleep 700m<CR>:cd <C-R>+<CR>i
-tnoremap <leader>e yf<C-\><C-N>:sleep 700m<CR>:edit <C-R>+<CR>
+tnoremap <leader>d yp<C-\><C-N>:sleep 800m<CR>:cd <C-R>+<CR>i
+tnoremap <leader>e yf<C-\><C-N>:sleep 800m<CR>:edit <C-R>+<CR>
 " }}}
 
 " {{{ Auto Commands
