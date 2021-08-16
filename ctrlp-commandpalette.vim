@@ -17,4 +17,5 @@ let g:commandPalette = {
             \ 'Show Invisible Chars'    : 'set list',
             \ 'Hide Invisible Chars'    : 'set nolist',
             \ 'Toggle Indent Lines'     : 'IndentLinesToggle',
+            \ 'run programs'            : "call fzf#run(fzf#wrap({'source': 'type C:\\Users\\chenv\\.bashrc.d\\user\\programs.txt', 'center': 10, 'sink': {cmd -> execute('!' .. cmd)}}))"
 \}

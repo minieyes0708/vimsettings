@@ -1,7 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-let g:colors_name = 'default'
+let g:colors_name = 'one-dark'
 
 " {{{ Environment
 let mapleader=','
