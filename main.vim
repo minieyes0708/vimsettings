@@ -96,6 +96,7 @@ endif
 
 " {{{ Mappings
 inoremap <C-CR> <ESC>o
+inoremap <C-F> <ESC>la
 inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap jk <ESC>
