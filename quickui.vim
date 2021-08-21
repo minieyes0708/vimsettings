@@ -1,36 +1,25 @@
 " enable to display tips in the cmdline
 let g:quickui_show_tip = 1
 
+function quickui#SelectProject(callback)
+    call fzf#run({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'sink': function(a:callback)})
+endfunction
+function quickui#OpenProject(name)
+    execute 'cd ' .. a:name
+    execute 'Files'
+endfunction
+function quickui#PeekProject(name)
+    execute 'Files ' .. a:name
+endfunction
+function quickui#GotoProject(name)
+    execute 'cd ' .. a:name
+endfunction
+
 call quickui#menu#reset()
 call quickui#menu#install('&Projects', [
-            \ [ "&Open", "call quickui#listbox#open(["..
-            \ "[ '[&1] python',                 'cd ~/AppData/Local/Programs/Python/Python39/minieyes | Files' ],"..
-            \ "[ '[&2] .bashrc.d',              'cd ~/.bashrc.d | Files' ],"..
-            \ "[ '[&3] .vimrc.d',               'cd ~/.vimrc.d | Files' ],"..
-            \ "[ '[&4] .vifm',                  'cd ~/.vifm | Files' ],"..
-            \ "[ '[&5] .vim',                   'cd ~/.vim | Files' ],"..
-            \ "[ '[&6] docs',                   'cd ~/OneDrive/文件/docs | Files' ],"..
-            \ "[ '[&7] 桌面',                   'cd ~/OneDrive/桌面 | Files' ],"..
-            \ "[ '[&8] htdocs',                 'cd L:/XAMPPPortable/htdocs | Files' ],"..
-            \ "[ '[&9] cgi-bin',                'cd L:/XAMPPPortable/cgi-bin | Files' ],"..
-            \ "[ '[&a] doc programs',           'cd ~/OneDrive/文件/programs | Files' ],"..
-            \ "[ '[&b] snippets',               'cd ~/.vim/bundle/vim-snippets/ultisnips | Files' ],"..
-            \ "[ '[&c] neovim',                 'cd ~/AppData/Local/nvim | Files' ],"..
-            \ "], {'title': 'go to project'})" ],
-            \ [ "&Peek", "call quickui#listbox#open(["..
-            \ "[ '[&1] python',                 'Files ~/AppData/Local/Programs/Python/Python39/minieyes' ],"..
-            \ "[ '[&2] .bashrc.d',              'Files ~/.bashrc.d' ],"..
-            \ "[ '[&3] .vimrc.d',               'Files ~/.vimrc.d' ],"..
-            \ "[ '[&4] .vifm',                  'Files ~/.vifm' ],"..
-            \ "[ '[&5] .vim',                   'Files ~/.vim' ],"..
-            \ "[ '[&6] docs',                   'Files ~/OneDrive/文件/docs' ],"..
-            \ "[ '[&7] 桌面',                   'Files ~/OneDrive/桌面' ],"..
-            \ "[ '[&8] htdocs',                 'Files L:/XAMPPPortable/htdocs' ],"..
-            \ "[ '[&9] cgi-bin',                'Files L:/XAMPPPortable/cgi-bin' ],"..
-            \ "[ '[&a] doc programs',           'Files ~/OneDrive/文件/programs' ],"..
-            \ "[ '[&b] snippets',               'Files ~/.vim/bundle/vim-snippets/ultisnips' ],"..
-            \ "[ '[&c] neovim',                 'Files ~/AppData/Local/nvim' ],"..
-            \ "], {'title': 'browse project'})" ],
+            \ ["&Open", "call quickui#SelectProject('quickui#OpenProject')"],
+            \ ["&Peek", "call quickui#SelectProject('quickui#PeekProject')"],
+            \ ["&Goto", "call quickui#SelectProject('quickui#GotoProject')"],
             \ ])
 
 call quickui#menu#install('&Git', [
