@@ -1,55 +1,40 @@
 " enable to display tips in the cmdline
-let g:quickui_show_tip = 1"
+let g:quickui_show_tip = 1
 
-function! quickui#miniFiles(folder)
-    if g:quickmenu#mini_is_peek == 0
-        execute 'cd ' .. expand(a:folder)
-        call fzf#run(fzf#wrap({'source': $FZF_DEFAULT_COMMAND .. ' --type f --base-directory ' .. g:quickmenu#mini_root_folder .. '/' .. a:folder, 'center': 10, 'sink': 'e'}))
+function! quickui#SelectProject(callback)
+    call fzf#run(fzf#wrap({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'center': 10, 'sink': function(a:callback)}))
+endfunction
+
+function! quickui#OpenProject(name)
+    if a:name == 'D:/minieyes_chen/program'
+        call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#OpenProject')}))
     else
-        call fzf#run(fzf#wrap({'source': $FZF_DEFAULT_COMMAND .. ' --type f --absolute-path --base-directory ' .. g:quickmenu#mini_root_folder .. '/' .. a:folder, 'center': 10, 'sink': 'e'}))
+        execute 'cd ' .. a:name
+        execute 'Files'
     endif
-endfunc
+endfunction
 
-function! quickui#miniProject(folder, is_peek)
-    let g:quickmenu#mini_root_folder = a:folder
-    let g:quickmenu#mini_is_peek = a:is_peek
-    if g:quickmenu#mini_is_peek == 0
-        execute 'cd ' .. expand(a:folder)
+function! quickui#PeekProject(name)
+    if a:name == 'D:/minieyes_chen/program'
+        call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#PeekProject')}))
+    else
+        execute 'Files ' .. a:name
+    end
+endfunction
+
+function! quickui#GotoProject(name)
+    if a:name == 'D:/minieyes_chen/program'
+        call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#GotoProject')}))
+    else
+        execute 'cd ' .. a:name
     endif
-    call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --base-directory ' .. a:folder, 'center': 10, 'sink': function('quickui#miniFiles')}))
-endfunc
+endfunction
 
 call quickui#menu#reset()
 call quickui#menu#install('&Projects', [
-            \ [ "&Open",
-            \ "call quickui#listbox#open(["..
-            \ "['[&0] program',                     'call quickui#miniProject(\"D:/minieyes_chen/program\", 0)'],"..
-            \ "['[&1] .bashrc.d',                   'cd ~/.bashrc.d | Files'],"..
-            \ "['[&2] .vimrc.d',                    'cd ~/.vimrc.d | Files'],"..
-            \ "['[&3] .vifm',                       'cd ~/.vifm | Files'],"..
-            \ "['[&4] .vim',                        'cd ~/.vim | Files'],"..
-            \ "['[&5] FPGA NewABTable For P.E.',    'cd D:/minieyes_chen/fpga/nora/NewABTable_ForPatternEditor/rtl | Files'],"..
-            \ "['[&6] IVE4S_FPGA',                  'cd D:/minieyes_chen/fpga/IVE4S_FPGA/rtl | Files'],"..
-            \ "['[&7] IVE4S_FW',                    'cd D:/minieyes_chen/firmware/IVE4S_FW | Files'],"..
-            \ "['[&8] WebDocs',                     'cd G:/MD/Projects/IVE/WebDocs | Files'],"..
-            \ "['[&9] Charles_RGBLUTv2',            'cd C:/Users/nvt02863/Desktop/Charles_RGBLUTv2 | Files'],"..
-            \ "], {'title': 'Projects'})"
-            \ ],
-            \ [ "&Peek",
-            \ "call quickui#listbox#open(["..
-            \ "['[&0] program',                     'call quickui#miniProject(\"D:/minieyes_chen/program\", 1)'],"..
-            \ "['[&1] .bashrc.d',                   'Files ~/.bashrc.d'],"..
-            \ "['[&2] .vimrc.d',                    'Files ~/.vimrc.d'],"..
-            \ "['[&3] .vifm',                       'Files ~/.vifm'],"..
-            \ "['[&4] .vim',                        'Files ~/.vim'],"..
-            \ "['[&5] FPGA NewABTable For P.E.',    'Files D:/minieyes_chen/fpga/nora/NewABTable_ForPatternEditor/rtl'],"..
-            \ "['[&6] IVE4S_FPGA',                  'Files D:/minieyes_chen/fpga/IVE4S_FPGA/rtl'],"..
-            \ "['[&7] IVE4S_FW',                    'Files D:/minieyes_chen/firmware/IVE4S_FW'],"..
-            \ "['[&8] WebDocs',                     'Files G:/MD/Projects/IVE/WebDocs'],"..
-            \ "['[&9] Charles_RGBLUTv2',            'Files C:/Users/nvt02863/Desktop/Charles_RGBLUTv2'],"..
-            \ "['[&a] Ultisnips snippets',          'Files ~/.vim/bundle/vim-snippets/UltiSnips'],"..
-            \ "], {'title': 'Browser Projects'})"
-            \ ],
+            \ ["&Open", "call quickui#SelectProject('quickui#OpenProject')"],
+            \ ["&Peek", "call quickui#SelectProject('quickui#PeekProject')"],
+            \ ["&Goto", "call quickui#SelectProject('quickui#GotoProject')"],
             \ ])
 
 call quickui#menu#install('&Git', [

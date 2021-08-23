@@ -71,14 +71,10 @@ set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set confirm
+set cursorline
 set encoding=utf8
 set expandtab
 set exrc
-if has('nvim')
-    source ~/.vimrc.d/fonts.vim
-else
-    set guifont=Fira_Mono_for_Powerline:h14:cANSI:qDRAFT
-endif
 set history=50
 set hlsearch
 set incsearch
@@ -87,7 +83,6 @@ set nobackup
 set number
 set relativenumber
 set ruler
-" set shellslash
 set shiftwidth=4
 set showcmd
 set splitright
@@ -116,12 +111,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
+nnoremap <leader>m :60vsplit term://bash -c vifm<CR>:only<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
-tnoremap <leader>d yp<C-\><C-N>:sleep 800m<CR>:cd <C-R>+<CR>i
-tnoremap <leader>e yf<C-\><C-N>:sleep 800m<CR>:edit <C-R>+<CR>
+tnoremap <C-H> <C-\><C-N><C-W>h
+tnoremap <leader>d yp<C-\><C-N>:cd <C-R>+<CR>i
+tnoremap <leader>e yf<C-\><C-N><C-W>h:edit <C-R>+<CR>
 " }}}
 
 " {{{ Auto Commands
@@ -141,6 +137,7 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/quickmenu.vim
+source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim

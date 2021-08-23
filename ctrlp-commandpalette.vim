@@ -2,9 +2,9 @@ nmap <space><space> :CtrlPCommandPalette<CR>
 
 let g:ctrlp_commandpalette_autoload_commands = 0
 let g:commandPalette = {
-            \ 'cmd terminal'            : 'edit term://cmd',
-            \ 'bash terminal'           : 'edit term://bash',
-            \ 'python terminal'         : 'edit term://py',
+            \ 'cmd terminal'            : '60vsplit term://cmd',
+            \ 'bash terminal'           : '60vsplit term://bash',
+            \ 'python terminal'         : '60vsplit term://py',
             \ 'git log'                 : '!START TortoiseGitProc.exe -command log',
             \ 'git diff'                : '!START TortoiseGitProc.exe -command diff',
             \ 'git pull'                : '!START TortoiseGitProc.exe -command pull',
@@ -17,4 +17,5 @@ let g:commandPalette = {
             \ 'Show Invisible Chars'    : 'set list',
             \ 'Hide Invisible Chars'    : 'set nolist',
             \ 'Toggle Indent Lines'     : 'IndentLinesToggle',
+            \ 'run programs'            : "call fzf#run(fzf#wrap({'source': 'type C:\\Users\\NVT02863\\.bashrc.d\\user\\programs.txt', 'center': 10, 'sink': {cmd -> execute('!' .. cmd)}}))"
 \}
