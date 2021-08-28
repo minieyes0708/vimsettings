@@ -97,8 +97,11 @@ endif
 " {{{ Mappings
 inoremap <C-CR> <ESC>o
 inoremap <C-F> <ESC>la
-inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
-inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+inoremap <expr> <CR> pumvisible() ? '<C-E><CR>' :
+            \ getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+inoremap <expr> <S-CR> pumvisible() ? '<C-E><CR>' :
+            \ getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
+inoremap <expr> <TAB> pumvisible() ? '<C-Y>' : '<TAB>'
 inoremap jk <ESC>
 inoremap kj <ESC>
 nnoremap <C-S-Down> :resize -5<cr>
@@ -147,6 +150,7 @@ source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
+source ~/.vimrc.d/auto-pairs.vim
 source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
