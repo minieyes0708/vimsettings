@@ -101,7 +101,6 @@ inoremap <expr> <CR> pumvisible() ? '<C-E><CR>' :
             \ getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap <expr> <S-CR> pumvisible() ? '<C-E><CR>' :
             \ getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
-inoremap <expr> <TAB> pumvisible() ? '<C-Y>' : '<TAB>'
 inoremap jk <ESC>
 inoremap kj <ESC>
 nnoremap <C-S-Down> :resize -5<cr>
