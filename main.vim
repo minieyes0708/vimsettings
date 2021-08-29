@@ -95,6 +95,7 @@ endif
 " }}}
 
 " {{{ Mappings
+inoremap <C-B> <ESC>i
 inoremap <C-CR> <ESC>o
 inoremap <C-F> <ESC>la
 inoremap <expr> <CR> pumvisible() ? '<C-E><CR>' :
