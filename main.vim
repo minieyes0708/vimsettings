@@ -41,6 +41,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'kdheepak/lazygit.nvim'
 Plugin 'kiteco/vim-plugin'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mattn/emmet-vim'
@@ -118,6 +119,7 @@ nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
+nnoremap <silent> <leader>gg :LazyGit<CR>
 tnoremap <leader>d <C-\><C-N>:cd <C-R>+<CR>i
 tnoremap <leader>e <C-\><C-N>:edit <C-R>+<CR>
 " }}}
