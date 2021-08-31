@@ -50,6 +50,9 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'nvim-telescope/telescope.nvim'
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'rafi/awesome-vim-colorschemes'
@@ -173,5 +176,6 @@ source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
+source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
 " }}}
