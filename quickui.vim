@@ -6,10 +6,10 @@ function quickui#SelectProject(callback)
 endfunction
 function quickui#OpenProject(name)
     execute 'cd ' .. a:name
-    execute 'Files'
+    execute 'Telescope find_files'
 endfunction
 function quickui#PeekProject(name)
-    execute 'Files ' .. a:name
+    execute 'Telescope find_files ' .. a:name
 endfunction
 function quickui#GotoProject(name)
     execute 'cd ' .. a:name
