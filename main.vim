@@ -9,6 +9,9 @@ if has("gui_running")
 elseif !has('nvim')
     let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
 endif
+if has('nvim') && executable('nvr')
+  let $GIT_EDITOR = "py -m miniLibrary.mynvr -cc split --remote-wait +'set bufhidden=wipe'"
+endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
 let $GIT_SSL_NO_VERIFY = 'true'
 " }}}
