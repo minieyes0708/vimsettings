@@ -21,6 +21,7 @@ filetype off                        " required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
 " (
+" Plugin 'codota/tabnine-vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'kiteco/vim-plugin'
 " Plugin 'mnishz/colorscheme-preview.vim'
@@ -30,7 +31,6 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
-Plugin 'codota/tabnine-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
@@ -48,6 +48,9 @@ Plugin 'kdheepak/lazygit.nvim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'nvim-telescope/telescope.nvim'
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'pseewald/vim-anyfold'
@@ -118,14 +121,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
-nnoremap <leader>m :60vsplit term://bash -c vifm<CR>:only<CR>
+nnoremap <leader>m :Telescope<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
 nnoremap <silent> <leader>gg :LazyGit<CR>
 tnoremap <C-H> <C-\><C-N><C-W>h
-tnoremap <leader>d yp<C-\><C-N>:cd <C-R>+<CR>i
-tnoremap <leader>e yf<C-\><C-N><C-W>h:edit <C-R>+<CR>
 " }}}
 
 " {{{ Auto Commands
@@ -145,7 +146,6 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/quickmenu.vim
-source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim
@@ -154,6 +154,7 @@ source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/emmet.vim
+source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
@@ -163,6 +164,7 @@ source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
+source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
 " }}}
 
