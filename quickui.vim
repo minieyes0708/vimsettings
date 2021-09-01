@@ -10,7 +10,7 @@ function! quickui#OpenProject(name)
         call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#OpenProject')}))
     else
         execute 'cd ' .. a:name
-        execute 'Treesitter find_files'
+        execute 'Telescope find_files'
     endif
 endfunction
 
@@ -18,7 +18,7 @@ function! quickui#PeekProject(name)
     if a:name == 'D:/minieyes_chen/program'
         call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#PeekProject')}))
     else
-        execute 'Treesitter find_files ' .. a:name
+        execute 'Telescope find_files ' .. a:name
     end
 endfunction
 
