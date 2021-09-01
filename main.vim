@@ -45,6 +45,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'justinmk/vim-sneak'
 Plugin 'kdheepak/lazygit.nvim'
 Plugin 'kiteco/vim-plugin'
 Plugin 'leafgarland/typescript-vim'
@@ -69,6 +70,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wadackel/vim-dogrun'
+Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 " )
@@ -182,4 +184,5 @@ source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
+source ~/.vimrc.d/lsp.vim
 " }}}
