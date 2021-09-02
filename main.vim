@@ -36,6 +36,7 @@ Plugin 'alvan/vim-closetag'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
+Plugin 'dstein64/vim-startuptime'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
 Plugin 'frazrepo/vim-rainbow'
@@ -83,6 +84,7 @@ filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
+set completeopt=menuone,noinsert,noselect shm+=c
 set confirm
 set cursorline
 set encoding=utf8
@@ -90,6 +92,7 @@ set expandtab
 set exrc
 set history=50
 set hlsearch
+set ignorecase
 set incsearch
 set mouse=a
 set nobackup
@@ -98,6 +101,7 @@ set relativenumber
 set ruler
 set shiftwidth=4
 set showcmd
+set smartcase
 set splitright
 set tabstop=4
 set viewdir=~/.vim/viewdir
@@ -160,7 +164,6 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " {{{ Sources
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
-source ~/.vimrc.d/completion-nvim.vim
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
@@ -168,6 +171,7 @@ source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/auto-pairs.vim
 source ~/.vimrc.d/closetag.vim
+source ~/.vimrc.d/completion-nvim.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/emmit.vim
@@ -177,12 +181,13 @@ source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/kite.vim
 source ~/.vimrc.d/localvimrc.vim
+source ~/.vimrc.d/lsp.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
+source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
-source ~/.vimrc.d/lsp.vim
 " }}}
