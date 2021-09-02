@@ -86,15 +86,16 @@ set expandtab
 set exrc
 set history=50
 set hlsearch
+set ignorecase
 set incsearch
 set mouse=a
 set nobackup
 set number
-set path=.\\**
 set relativenumber
 set ruler
 set shiftwidth=4
 set showcmd
+set smartcase
 set splitright
 set tabstop=4
 if has("gui_running")
