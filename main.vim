@@ -126,7 +126,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
 nnoremap <leader>m :Telescope<CR>
-nnoremap <leader>td :40vs P:\todo.md<CR>
+nnoremap <leader>td :50vs P:\todo.md<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
@@ -169,6 +169,7 @@ source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
+source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
 " }}}
