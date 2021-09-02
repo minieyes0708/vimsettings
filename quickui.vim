@@ -48,6 +48,11 @@ call quickui#menu#install('&Git', [
             \ ['git log current &file',             '!START TortoiseGitProc.exe -command log -path %' ],
             \ ])
 
+call quickui#menu#install('&List', [
+            \ ['&function',                          'call quickui#tools#list_function()' ],
+            \ ['&register',                          'call quickui#tools#list_register()' ],
+            \ ])
+
 call quickui#menu#install('&Terminal', [
             \ ['&bash',                              'call quickui#terminal#open("bash",    {"title": "bash"})' ],
             \ ['&cmd',                               'call quickui#terminal#open("cmd.exe", {"title": "cmd"})' ],
