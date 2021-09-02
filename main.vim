@@ -90,6 +90,7 @@ set incsearch
 set mouse=a
 set nobackup
 set number
+set path=.\\**
 set relativenumber
 set ruler
 set shiftwidth=4
