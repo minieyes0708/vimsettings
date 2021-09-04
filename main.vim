@@ -128,6 +128,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
 nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
+nnoremap <leader>td :e ~/OneDrive/文件/todo.md<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
