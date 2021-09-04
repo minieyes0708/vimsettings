@@ -127,12 +127,13 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
 nnoremap <leader>td :60vs ~/OneDrive/文件/todo.md<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
-nnoremap <silent> <leader>gg :LazyGit<CR>
 tnoremap <leader>d <C-\><C-N>:cd <C-R>+<CR>i
 tnoremap <leader>e <C-\><C-N>:edit <C-R>+<CR>
 " }}}
