@@ -14,6 +14,7 @@ let g:commandPalette = {
             \ 'git commit'              : '!START TortoiseGitProc.exe -command commit',
             \ 'git revert'              : '!START TortoiseGitProc.exe -command revert',
             \ 'git log current file'    : '!START TortoiseGitProc.exe -command log -path %',
+            \ 'set path to pwd'         : 'execute "set path=" .. expand("%:p:h") .. "\\\\**"',
             \ 'Show Invisible Chars'    : 'set list',
             \ 'Hide Invisible Chars'    : 'set nolist',
             \ 'Toggle Indent Lines'     : 'IndentLinesToggle',
