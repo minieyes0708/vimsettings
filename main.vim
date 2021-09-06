@@ -79,6 +79,7 @@ filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
+set completeopt=menuone,noinsert,noselect shm+=c
 set confirm
 set cursorline
 set encoding=utf8
@@ -98,11 +99,6 @@ set showcmd
 set smartcase
 set splitright
 set tabstop=4
-if has("gui_running")
-    colorscheme angr
-else
-    colorscheme desert
-endif
 if has("cscope")
     set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
@@ -112,8 +108,6 @@ endif
 inoremap <C-B> <ESC>i
 inoremap <C-CR> <ESC>o
 inoremap <C-F> <ESC>la
-inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
-inoremap <expr> <S-CR> getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O" : "<cr>"
 inoremap jk <ESC>
 inoremap kj <ESC>
 nnoremap <C-S-Down> :resize -5<cr>
