@@ -29,6 +29,7 @@ call vundle#begin()
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'vim-scripts/AutoComplPop'
 " Plugin 'vim-scripts/indentpython.vim'
+" Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
@@ -48,6 +49,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'justinmk/vim-sneak'
+Plugin 'kabouzeid/nvim-lspinstall'
 Plugin 'kdheepak/lazygit.nvim'
 Plugin 'kiteco/vim-plugin'
 Plugin 'leafgarland/typescript-vim'
@@ -72,7 +74,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wadackel/vim-dogrun'
-Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 " )
@@ -164,6 +165,7 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " {{{ Sources
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
+lua dofile('~/.vimrc.d/lsp.lua')
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
@@ -181,7 +183,6 @@ source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/kite.vim
 source ~/.vimrc.d/localvimrc.vim
-source ~/.vimrc.d/lsp.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
 source ~/.vimrc.d/quickmenu.vim
