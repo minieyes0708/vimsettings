@@ -120,6 +120,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
 nnoremap <leader>m :Telescope<CR>
 nnoremap <leader>td :50vs P:\todo.md<CR>
