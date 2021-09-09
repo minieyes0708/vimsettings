@@ -26,6 +26,7 @@ call vundle#begin()
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'kiteco/vim-plugin'
 " Plugin 'mnishz/colorscheme-preview.vim'
+" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 " Plugin 'skywind3000/quickmenu.vim'
 " Plugin 'vim-scripts/indentpython.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -51,7 +52,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'neovim/nvim-lspconfig'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -147,13 +148,14 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/OmniCpp.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
+" source ~/.vimrc.d/coc.vim
 " source ~/.vimrc.d/quickmenu.vim
+lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
-source ~/.vimrc.d/coc-lua.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/emmet.vim
