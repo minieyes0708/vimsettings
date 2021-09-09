@@ -1,6 +1,6 @@
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -63,6 +63,7 @@ require'lspconfig'.sumneko_lua.setup {
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
                 globals = {'vim'},
+                disable = {'lowercase-global'},
             },
             workspace = {
                 -- Make the server aware of Neovim runtime files
