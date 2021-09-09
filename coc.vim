@@ -7,6 +7,11 @@ if len(lua_lsp)
         \     'command': lua_lsp . '\bin\Windows\lua-language-server.exe',
         \     'args': ['-E', '-e', 'LANG="zh-cn"', lua_lsp . '\main.lua'],
         \     'filetypes': ['lua'],
+        \ },
+        \ 'clangd': {
+        \     'command': 'clangd',
+        \     'rootPatterns': ['compile_flags.txt', 'compile_commands.json'],
+        \     'filetypes': ['c', 'cc', 'cpp', 'c++', 'objc', 'objcpp']
         \ }
     \ })
 endif
