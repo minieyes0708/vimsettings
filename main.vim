@@ -165,7 +165,8 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " {{{ Sources
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
-lua dofile('~/.vimrc.d/lsp.lua')
+lua dofile('C:/Users/chenv/.vimrc.d/lsp.lua')
+lua dofile('C:/Users/chenv/.vimrc.d/lsp-lua.lua')
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
