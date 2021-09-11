@@ -117,6 +117,7 @@ endif
 " {{{ Mappings
 inoremap <C-B> <ESC>i
 inoremap <C-CR> <ESC>o
+inoremap <C-D> <DEL>
 inoremap <C-F> <ESC>la
 inoremap jk <ESC>
 inoremap kj <ESC>
