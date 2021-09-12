@@ -6,10 +6,19 @@ function quickui#SelectProject(callback)
 endfunction
 function quickui#OpenProject(name)
     execute 'cd ' .. a:name
-    execute 'Files'
+    lua << END
+        require('telescope.builtin').find_files {
+            search_dirs = {folder},
+        }
+END
 endfunction
 function quickui#PeekProject(name)
-    execute 'Files ' .. a:name
+    lua << END
+        require('telescope.builtin').find_files {
+            cwd = vim.api.nvim_eval('a:name'),
+            search_dirs = {vim.api.nvim_eval('a:name')},
+        }
+END
 endfunction
 function quickui#GotoProject(name)
     execute 'cd ' .. a:name
