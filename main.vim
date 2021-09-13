@@ -159,6 +159,7 @@ source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/closetag.vim
+source ~/.vimrc.d/completion.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
 source ~/.vimrc.d/emmet.vim
