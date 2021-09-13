@@ -2,6 +2,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 let g:colors_name = 'challenger_deep'
+lua package.path = package.path .. vim.env.USERPROFILE .. '/.vimrc.d/?.lua;'
 
 " {{{ Environment
 let mapleader=','
@@ -53,6 +54,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
 Plugin 'neovim/nvim-lspconfig'
+Plugin 'nvim-lua/completion-nvim'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -151,6 +153,7 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/coc.vim
 " source ~/.vimrc.d/quickmenu.vim
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
+lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-on_attach.lua')
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim
