@@ -116,9 +116,9 @@ endif
 " }}}
 
 " {{{ Mappings
-inoremap <C-B> <ESC>i
-inoremap <C-CR> <ESC>o
-inoremap <C-F> <ESC>la
+inoremap <C-B> <C-O>h
+inoremap <C-CR> <C-O>o
+inoremap <C-F> <C-O>a
 inoremap jk <ESC>
 inoremap kj <ESC>
 nnoremap <C-S-Down> :resize -5<cr>
