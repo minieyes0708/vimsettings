@@ -36,6 +36,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'alvan/vim-closetag'
+Plugin 'caenrique/nvim-toggle-terminal'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
@@ -137,8 +138,6 @@ nnoremap <leader>td :60vs ~/OneDrive/文件/todo.md<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
-tnoremap <leader>d <C-\><C-N>:cd <C-R>+<CR>i
-tnoremap <leader>e <C-\><C-N>:edit <C-R>+<CR>
 " }}}
 
 " {{{ NVIM Specific
@@ -193,5 +192,6 @@ source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
+source ~/.vimrc.d/toggle-terminal.vim
 source ~/.vimrc.d/ultisnips.vim
 " }}}
