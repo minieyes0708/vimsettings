@@ -24,7 +24,6 @@ filetype off                        " required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
 " (
-" Plugin 'caenrique/nvim-toggle-terminal'
 " Plugin 'codota/tabnine-vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'kiteco/vim-plugin'
@@ -39,6 +38,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'akinsho/toggleterm.nvim'
 Plugin 'alvan/vim-closetag'
 Plugin 'beauwilliams/focus.nvim'
+Plugin 'caenrique/nvim-toggle-terminal'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
@@ -168,7 +168,6 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " {{{ Sources
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
-" source ~/.vimrc.d/toggle-terminal.vim
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-lua.lua')
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/toggleterm.lua')
@@ -197,5 +196,6 @@ source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
+source ~/.vimrc.d/toggle-terminal.vim
 source ~/.vimrc.d/ultisnips.vim
 " }}}
