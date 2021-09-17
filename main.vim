@@ -23,6 +23,7 @@ filetype off                        " required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
 " (
+" Plugin 'caenrique/nvim-toggle-terminal'
 " Plugin 'codota/tabnine-vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'kiteco/vim-plugin'
@@ -33,8 +34,9 @@ call vundle#begin()
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
+Plugin 'akinsho/toggleterm.nvim'
 Plugin 'alvan/vim-closetag'
-Plugin 'caenrique/nvim-toggle-terminal'
+Plugin 'beauwilliams/focus.nvim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
@@ -91,6 +93,7 @@ set cursorline
 set encoding=utf8
 set expandtab
 set exrc
+set hidden
 set history=50
 set hlsearch
 set ignorecase
@@ -153,8 +156,11 @@ au Filetype cpp set foldmethod=syntax
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/coc.vim
 " source ~/.vimrc.d/quickmenu.vim
-lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
+" source ~/.vimrc.d/toggle-terminal.vim
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-on_attach.lua')
+lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
+lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/toggleterm.lua')
+lua require("focus").setup()
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim
@@ -176,7 +182,6 @@ source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
-source ~/.vimrc.d/toggle-terminal.vim
 source ~/.vimrc.d/ultisnips.vim
 " }}}
 
