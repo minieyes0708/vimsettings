@@ -116,23 +116,23 @@ inoremap <C-CR> <ESC>o
 inoremap <C-F> <ESC>la
 inoremap jk <ESC>
 inoremap kj <ESC>
-nnoremap <C-S-Down> :resize -5<cr>
-nnoremap <C-S-Left> :vertical resize -5<cr>
-nnoremap <C-S-Right> :vertical resize +5<cr>
-nnoremap <C-S-Up> :resize +5<cr>
+nnoremap <C-S-Down> :resize -5<CR>
+nnoremap <C-S-Left> :vertical resize -5<CR>
+nnoremap <C-S-Right> :vertical resize +5<CR>
+nnoremap <C-S-Up> :resize +5<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
-nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
+nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>m :Telescope<CR>
+nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
 nnoremap <leader>td :50vs P:\todo.md<CR>
 nnoremap <leader>w <C-w>
-nnoremap <leader>yf :let @* = expand('%:p')<cr>
-nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
+nnoremap <leader>yf :let @* = expand('%:p')<CR>
+nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
 nnoremap <silent> <leader>gg :LazyGit<CR>
-tnoremap <C-H> <C-\><C-N><C-W>h
 " }}}
 
 " {{{ Auto Commands
