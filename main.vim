@@ -92,10 +92,10 @@ set backspace=indent,eol,start " allow backspacing over everything in insert mod
 set clipboard=unnamed
 set completeopt=menuone,noinsert,noselect shm+=c
 set confirm
-set cursorline
 set encoding=utf8
 set expandtab
 set exrc
+set hidden
 set history=50
 set hlsearch
 set ignorecase
@@ -168,10 +168,11 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " {{{ Sources
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
+" source ~/.vimrc.d/toggle-terminal.vim
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-lua.lua')
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/toggleterm.lua')
-lua require("focus").setup()
+lua require("focus").setup({cursorline = false})
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/OmniCpp.vim
@@ -196,6 +197,5 @@ source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
-source ~/.vimrc.d/toggle-terminal.vim
 source ~/.vimrc.d/ultisnips.vim
 " }}}
