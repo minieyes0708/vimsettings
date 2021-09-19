@@ -106,7 +106,6 @@ set nobackup
 set number
 set relativenumber
 set ruler
-set shell=powershell
 set shiftwidth=4
 set showcmd
 set smartcase
@@ -136,9 +135,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
-nnoremap <leader>m :edit term://bash -c vifm<CR>:only<CR>
 nnoremap <leader>td :60vs ~/OneDrive/文件/todo.md<CR>
-nnoremap <leader>w <C-w>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
 " }}}
