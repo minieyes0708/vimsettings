@@ -106,6 +106,7 @@ set nobackup
 set number
 set relativenumber
 set ruler
+set shell=powershell
 set shiftwidth=4
 set showcmd
 set smartcase
