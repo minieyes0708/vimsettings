@@ -1,5 +1,5 @@
 require("toggleterm").setup{
-    open_mapping = [[<c-q>]],
+    open_mapping = [[<leader>m]],
     -- hide_numbers = true, -- hide the number column in toggleterm buffers
     -- shade_filetypes = {},
     -- shade_terminals = true,
@@ -9,7 +9,7 @@ require("toggleterm").setup{
     -- persist_size = true,
     -- direction = 'float',
     -- close_on_exit = true, -- close the terminal window when the process exits
-    shell = 'bash',
+    shell = 'powershell',
     -- -- This field is only relevant if direction is set to 'float'
     -- float_opts = {
         -- -- The border key is *almost* the same as 'nvim_open_win'
