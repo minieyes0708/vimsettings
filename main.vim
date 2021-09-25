@@ -34,6 +34,7 @@ call vundle#begin()
 " Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
+Plugin 'Vimwiki/Vimwiki'
 Plugin 'Yggdroot/indentLine'
 Plugin 'akinsho/toggleterm.nvim'
 Plugin 'alvan/vim-closetag'
@@ -136,7 +137,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
-nnoremap <leader>td :60vs ~/OneDrive/文件/todo.md<CR>
+nnoremap <leader>td :60vs ~/OneDrive/文件/vimwiki/TODO.md<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<cr>
 nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
 " }}}
@@ -197,4 +198,5 @@ source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
+source ~/.vimrc.d/vimwiki.vim
 " }}}
