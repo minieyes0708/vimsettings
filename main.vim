@@ -126,20 +126,21 @@ inoremap <C-CR> <C-O>o
 inoremap <C-F> <C-O>a
 inoremap jk <ESC>
 inoremap kj <ESC>
-nnoremap <C-S-Down> :resize -5<cr>
-nnoremap <C-S-Left> :vertical resize -5<cr>
-nnoremap <C-S-Right> :vertical resize +5<cr>
-nnoremap <C-S-Up> :resize +5<cr>
+nnoremap <C-S-Down> :resize -5<CR>
+nnoremap <C-S-Left> :vertical resize -5<CR>
+nnoremap <C-S-Right> :vertical resize +5<CR>
+nnoremap <C-S-Up> :resize +5<CR>
+nnoremap <C-Z> :2ToggleTerm<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<cr>
+nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>td :60vs ~/OneDrive/文件/vimwiki/TODO.md<CR>
-nnoremap <leader>yf :let @* = expand('%:p')<cr>
-nnoremap <leader>yp :let @* = expand('%:p:h')<cr>
+nnoremap <leader>yf :let @* = expand('%:p')<CR>
+nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
 " }}}
 
 " {{{ NVIM Specific
