@@ -141,6 +141,7 @@ nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>td :60vs ~/OneDrive/文件/vimwiki/TODO.md<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
+tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>
 " }}}
 
 " {{{ NVIM Specific
