@@ -90,6 +90,7 @@ set clipboard=unnamed
 set completeopt=menuone,noinsert,noselect shm+=c
 set confirm
 set cursorline
+set diffopt+=iwhite
 set encoding=utf8
 set expandtab
 set exrc
@@ -124,6 +125,7 @@ nnoremap <C-S-Down> :resize -5<CR>
 nnoremap <C-S-Left> :vertical resize -5<CR>
 nnoremap <C-S-Right> :vertical resize +5<CR>
 nnoremap <C-S-Up> :resize +5<CR>
+nnoremap <C-Z> :2ToggleTerm<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -135,6 +137,7 @@ nnoremap <leader>td :50vs P:\todo.md<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
 nnoremap <silent> <leader>gg :LazyGit<CR>
+tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>
 " }}}
 
 " {{{ Auto Commands
