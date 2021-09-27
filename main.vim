@@ -134,7 +134,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
-nnoremap <leader>td :50vs P:\todo.md<CR>
+nnoremap <leader>td :50vs P:/vimwiki/TODO.md<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
 nnoremap <silent> <leader>gg :LazyGit<CR>
