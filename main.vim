@@ -73,6 +73,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vimwiki/vimwiki'
 Plugin 'wadackel/vim-dogrun'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
@@ -187,6 +188,7 @@ source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
+source ~/.vimrc.d/vimwiki.vim
 " }}}
 
 " vim: foldmethod=marker
