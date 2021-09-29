@@ -15,8 +15,8 @@ let g:commandPalette = {
             \ 'git revert'              : '!START TortoiseGitProc.exe -command revert',
             \ 'git log current file'    : '!START TortoiseGitProc.exe -command log -path %',
             \ 'set path to pwd'         : 'execute "set path=" .. getcwd() .. "\\\\**"',
+            \ 'clear all buffers'       : '%bd | source ~/.vimrc.d/quickui.vim',
             \ 'Show Invisible Chars'    : 'set list',
             \ 'Hide Invisible Chars'    : 'set nolist',
             \ 'Toggle Indent Lines'     : 'IndentLinesToggle',
-            \ 'run programs'            : "call fzf#run(fzf#wrap({'source': 'type C:\\Users\\NVT02863\\.bashrc.d\\user\\programs.txt', 'center': 10, 'sink': {cmd -> execute('!' .. cmd)}}))"
 \}
