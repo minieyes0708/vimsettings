@@ -4,7 +4,6 @@ let g:quickui_show_tip = 1
 function! quickui#SelectProject(callback)
     call fzf#run(fzf#wrap({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'center': 10, 'sink': function(a:callback)}))
 endfunction
-
 function! quickui#OpenProject(name)
     if a:name == 'D:/minieyes_chen/program'
         call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#OpenProject')}))
@@ -13,7 +12,6 @@ function! quickui#OpenProject(name)
         execute 'Files'
     endif
 endfunction
-
 function! quickui#PeekProject(name)
     if a:name == 'D:/minieyes_chen/program'
         call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#PeekProject')}))
@@ -21,7 +19,6 @@ function! quickui#PeekProject(name)
         execute 'Files ' .. a:name
     end
 endfunction
-
 function! quickui#GotoProject(name)
     if a:name == 'D:/minieyes_chen/program'
         call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#GotoProject')}))
@@ -42,10 +39,11 @@ call quickui#menu#install('&Git', [
             \ ['git &diff',                         '!START TortoiseGitProc.exe -command diff' ],
             \ ['git p&ull',                         '!START TortoiseGitProc.exe -command pull' ],
             \ ['git pus&h',                         '!START TortoiseGitProc.exe -command push' ],
+            \ ['git &fetch',                    '!START TortoiseGitProc.exe -command fetch' ],
             \ ['git &blame',                        '!START TortoiseGitProc.exe -command blame -path %' ],
             \ ['git &commit',                       '!START TortoiseGitProc.exe -command commit' ],
             \ ['git &revert',                       '!START TortoiseGitProc.exe -command revert' ],
-            \ ['git log current &file',             '!START TortoiseGitProc.exe -command log -path %' ],
+            \ ['git log current f&ile',             '!START TortoiseGitProc.exe -command log -path %' ],
             \ ])
 
 call quickui#menu#install('&List', [
@@ -54,9 +52,9 @@ call quickui#menu#install('&List', [
             \ ])
 
 call quickui#menu#install('&Terminal', [
-            \ ['&bash',                              'call quickui#terminal#open("bash",    {"title": "bash"})' ],
-            \ ['&cmd',                               'call quickui#terminal#open("cmd.exe", {"title": "cmd"})' ],
-            \ ['&py',                                'call quickui#terminal#open("py.exe",  {"title": "py"})' ],
+            \ ['&bash',                         'call quickui#terminal#open("bash.exe", {"title": "bash.exe"})' ],
+            \ ['&cmd',                          'call quickui#terminal#open("cmd.exe",  {"title": "cmd.exe"})' ],
+            \ ['&py',                           'call quickui#terminal#open("py.exe",   {"title": "py.exe"})' ],
             \ ])
 
 call quickui#menu#install('&Compiler', [
