@@ -7,6 +7,7 @@ require("toggleterm").setup{
     -- start_in_insert = true,
     -- insert_mappings = true, -- whether or not the open mapping applies in insert mode
     -- persist_size = true,
+    -- direction = 'vertical' | 'horizontal' | 'window' | 'float',
     -- direction = 'float',
     -- close_on_exit = true, -- close the terminal window when the process exits
     shell = 'powershell',
@@ -35,4 +36,3 @@ end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-
