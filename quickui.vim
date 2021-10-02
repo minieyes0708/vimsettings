@@ -1,8 +1,8 @@
 " enable to display tips in the cmdline
 let g:quickui_show_tip = 1
 
-function quickui#SelectProject(callback)
-    call fzf#run({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'sink': function(a:callback)})
+function! quickui#SelectProject(callback)
+    call fzf#run(fzf#wrap({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'center': 10, 'sink': function(a:callback)}))
 endfunction
 function quickui#OpenProject(name)
     execute 'cd ' .. a:name
@@ -32,15 +32,20 @@ call quickui#menu#install('&Projects', [
             \ ])
 
 call quickui#menu#install('&Git', [
-            \ ['git l&og',                      '!START TortoiseGitProc.exe -command log' ],
-            \ ['git &diff',                     '!START TortoiseGitProc.exe -command diff' ],
-            \ ['git p&ull',                     '!START TortoiseGitProc.exe -command pull' ],
-            \ ['git pus&h',                     '!START TortoiseGitProc.exe -command push' ],
-            \ ['git &fetch',                    '!START TortoiseGitProc.exe -command fetch' ],
-            \ ['git &blame',                    '!START TortoiseGitProc.exe -command blame -path %' ],
-            \ ['git &commit',                   '!START TortoiseGitProc.exe -command commit' ],
-            \ ['git &revert',                   '!START TortoiseGitProc.exe -command revert' ],
-            \ ['git log current f&ile',         '!START TortoiseGitProc.exe -command log -path %' ],
+            \ ['git l&og',                          '!START TortoiseGitProc.exe -command log' ],
+            \ ['git &diff',                         '!START TortoiseGitProc.exe -command diff' ],
+            \ ['git p&ull',                         '!START TortoiseGitProc.exe -command pull' ],
+            \ ['git pus&h',                         '!START TortoiseGitProc.exe -command push' ],
+            \ ['git &fetch',                        '!START TortoiseGitProc.exe -command fetch' ],
+            \ ['git &blame',                        '!START TortoiseGitProc.exe -command blame -path %' ],
+            \ ['git &commit',                       '!START TortoiseGitProc.exe -command commit' ],
+            \ ['git &revert',                       '!START TortoiseGitProc.exe -command revert' ],
+            \ ['git log current f&ile',             '!START TortoiseGitProc.exe -command log -path %' ],
+            \ ])
+
+call quickui#menu#install('&List', [
+            \ ['&function',                          'call quickui#tools#list_function()' ],
+            \ ['&register',                          'call quickui#tools#list_register()' ],
             \ ])
 
 call quickui#menu#install('&Terminal', [
@@ -49,13 +54,17 @@ call quickui#menu#install('&Terminal', [
             \ ['&py',                           'call quickui#terminal#open("py.exe",   {"title": "py.exe"})' ],
             \ ])
 
+call quickui#menu#install('&Compiler', [
+            \ ['setup &msbuild',                   'set errorformat=\ %#%f(%l):\ %m | set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true' ],
+            \ ])
+
 call quickui#menu#install('P&ython', [
-            \ ['&run',                          'call quickui#terminal#open("py.exe "..expand("%"), {"title": expand("%")})' ],
-            \ ['run and -&i',                   'call quickui#terminal#open("py.exe -i "..expand("%"), {"title": expand("%")})' ],
+            \ ['&run',                              'call quickui#terminal#open("py.exe "..expand("%"), {"title": expand("%")})' ],
+            \ ['run and -&i',                       'call quickui#terminal#open("py.exe -i "..expand("%"), {"title": expand("%")})' ],
             \ ], '<auto>', 'python')
 
 call quickui#menu#install('&Vim', [
-            \ ['&source',                       'source %' ],
+            \ ['&source',                           'source %' ],
             \ ], '<auto>', 'vim')
 
 noremap <space> :call quickui#menu#open()<cr>
