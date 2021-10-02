@@ -12,7 +12,7 @@ elseif !has('nvim')
     let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
 endif
 if has('nvim') && executable('nvr')
-  let $GIT_EDITOR = "py -m tools.mynvr -cc split --remote-wait +'set bufhidden=wipe'"
+  let $GIT_EDITOR = "nvr -l -cc split --remote-wait +'set bufhidden=wipe'"
 endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
 set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
