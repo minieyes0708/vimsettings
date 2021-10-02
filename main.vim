@@ -50,6 +50,7 @@ Plugin 'frazrepo/vim-rainbow'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
+Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
@@ -185,7 +186,7 @@ source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/completion-nvim.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
-source ~/.vimrc.d/emmit.vim
+source ~/.vimrc.d/emmet.vim
 source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
