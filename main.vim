@@ -191,6 +191,7 @@ source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
+source ~/.vimrc.d/indentLine.vim
 source ~/.vimrc.d/kite.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
