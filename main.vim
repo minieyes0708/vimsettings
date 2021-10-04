@@ -1,7 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-let g:colors_name = 'challenger_deep'
+let g:colors_name = 'one-dark'
 lua package.path = package.path .. vim.env.USERPROFILE .. '/.vimrc.d/?.lua;'
 
 " {{{ Environment
@@ -12,9 +12,10 @@ elseif !has('nvim')
     let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
 endif
 if has('nvim') && executable('nvr')
-  let $GIT_EDITOR = "py -m miniLibrary.mynvr -cc split --remote-wait +'set bufhidden=wipe'"
+  let $GIT_EDITOR = "nvr -l -cc split --remote-wait +'set bufhidden=wipe'"
 endif
 let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
+set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
 let $GIT_SSL_NO_VERIFY = 'true'
 " }}}
 
@@ -23,13 +24,12 @@ filetype off                        " required before Vundle
 set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
 call vundle#begin()
 " (
-" Plugin 'caenrique/nvim-toggle-terminal'
 " Plugin 'codota/tabnine-vim'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'kiteco/vim-plugin'
 " Plugin 'mnishz/colorscheme-preview.vim'
-" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-" Plugin 'skywind3000/quickmenu.vim'
+" Plugin 'pseewald/vim-anyfold'
+" Plugin 'vim-scripts/AutoComplPop'
 " Plugin 'vim-scripts/indentpython.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
@@ -63,7 +63,6 @@ Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
-Plugin 'pseewald/vim-anyfold'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/vim-quickui'
@@ -72,7 +71,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vimwiki/vimwiki'
 Plugin 'wadackel/vim-dogrun'
 Plugin 'xolox/vim-colorscheme-switcher'
@@ -106,6 +104,7 @@ set number
 set path=./**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**,P:/vimwiki/**
 set relativenumber
 set ruler
+set shell=powershell
 set shiftwidth=4
 set showcmd
 set smartcase
@@ -117,15 +116,15 @@ endif
 " }}}
 
 " {{{ Mappings
-inoremap <C-B> <ESC>i
-inoremap <C-CR> <ESC>o
-inoremap <C-F> <ESC>la
+inoremap <C-B> <C-O>h
+inoremap <C-CR> <C-O>o
+inoremap <C-F> <C-O>a
 inoremap jk <ESC>
 inoremap kj <ESC>
-nnoremap <C-S-Down> :resize -5<CR>
-nnoremap <C-S-Left> :vertical resize -5<CR>
-nnoremap <C-S-Right> :vertical resize +5<CR>
-nnoremap <C-S-Up> :resize +5<CR>
+nnoremap <C-S-Down> :resize -5<cr>
+nnoremap <C-S-Left> :vertical resize -5<cr>
+nnoremap <C-S-Right> :vertical resize +5<cr>
+nnoremap <C-S-Up> :resize +5<cr>
 nnoremap <C-Z> :2ToggleTerm<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -133,11 +132,11 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
+nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
 nnoremap <leader>td :50vs P:/vimwiki/TODO/index.md<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
-nnoremap <silent> <leader>gg :LazyGit<CR>
 tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>
 " }}}
 
@@ -152,19 +151,20 @@ au BufWinEnter,WinEnter term://* startinsert
 au Filetype c set foldmethod=syntax
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
+au Filetype vim set foldmethod=marker
+au Filetype python set foldmethod=indent
+au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" ? "<cr><esc>O" : "<cr>"
 " }}}
 
 " {{{ Sources
-" source ~/.vimrc.d/OmniCpp.vim
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
-" source ~/.vimrc.d/coc.vim
-" source ~/.vimrc.d/quickmenu.vim
 " source ~/.vimrc.d/toggle-terminal.vim
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-on_attach.lua')
+lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-lua.lua')
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
 lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/toggleterm.lua')
-lua require("focus").setup()
+lua require("focus").setup({cursorline = false})
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim
@@ -174,7 +174,7 @@ source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/completion-nvim.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
-source ~/.vimrc.d/emmet.vim
+source ~/.vimrc.d/emmit.vim
 source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
