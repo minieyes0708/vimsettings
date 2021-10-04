@@ -127,6 +127,8 @@ inoremap <C-CR> <C-O>o
 inoremap <C-F> <C-O>a
 inoremap jk <ESC>
 inoremap kj <ESC>
+nnoremap <C-PageDown> :execute 'GuiFont!' .. substitute(&guifont, ':h\zs\d\+', '\=eval(submatch(0)-1)', '')<CR>
+nnoremap <C-PageUp> :execute 'GuiFont!' .. substitute(&guifont, ':h\zs\d\+', '\=eval(submatch(0)+1)', '')<CR>
 nnoremap <C-S-Down> :resize -5<CR>
 nnoremap <C-S-Left> :vertical resize -5<CR>
 nnoremap <C-S-Right> :vertical resize +5<CR>
