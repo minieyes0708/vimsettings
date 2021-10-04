@@ -107,7 +107,6 @@ set number
 set path=./**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**,P:/vimwiki/**
 set relativenumber
 set ruler
-set shell=powershell
 set shiftwidth=4
 set showcmd
 set smartcase
