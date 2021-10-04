@@ -31,6 +31,7 @@ call vundle#begin()
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'vim-scripts/AutoComplPop'
 " Plugin 'vim-scripts/indentpython.vim'
+" Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
@@ -42,16 +43,18 @@ Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
-Plugin 'ervandew/supertab'
 Plugin 'frazrepo/vim-rainbow'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
+Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'justinmk/vim-sneak'
+Plugin 'kabouzeid/nvim-lspinstall'
 Plugin 'kdheepak/lazygit.nvim'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
@@ -121,10 +124,10 @@ inoremap <C-CR> <C-O>o
 inoremap <C-F> <C-O>a
 inoremap jk <ESC>
 inoremap kj <ESC>
-nnoremap <C-S-Down> :resize -5<cr>
-nnoremap <C-S-Left> :vertical resize -5<cr>
-nnoremap <C-S-Right> :vertical resize +5<cr>
-nnoremap <C-S-Up> :resize +5<cr>
+nnoremap <C-S-Down> :resize -5<CR>
+nnoremap <C-S-Left> :vertical resize -5<CR>
+nnoremap <C-S-Right> :vertical resize +5<CR>
+nnoremap <C-S-Up> :resize +5<CR>
 nnoremap <C-Z> :2ToggleTerm<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -132,12 +135,21 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
+nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
 nnoremap <leader>td :50vs P:/vimwiki/TODO/index.md<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
 tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>
+" }}}
+
+" {{{ NVIM Specific
+if has('nvim')
+    function Config()
+        exe 'edit ' . stdpath('config') . '\\init.vim'
+    endfunction
+endif
 " }}}
 
 " {{{ Auto Commands
@@ -174,12 +186,13 @@ source ~/.vimrc.d/closetag.vim
 source ~/.vimrc.d/completion-nvim.vim
 source ~/.vimrc.d/ctrlp-commandpalette.vim
 source ~/.vimrc.d/ctrlp.vim
-source ~/.vimrc.d/emmit.vim
+source ~/.vimrc.d/emmet.vim
 source ~/.vimrc.d/fonts.vim
 source ~/.vimrc.d/fzf.vim
 source ~/.vimrc.d/grepper.vim
 source ~/.vimrc.d/incsearch-easymotion.vim
 source ~/.vimrc.d/indentLine.vim
+source ~/.vimrc.d/kite.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
