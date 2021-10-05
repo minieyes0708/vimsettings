@@ -3,7 +3,7 @@
 local servers = { 'pyright', 'vimls', 'bashls' }
 for _, lsp in ipairs(servers) do
     require'lspconfig'[lsp].setup {
-        on_attach = require'lsp-on_attach'.on_attach,
+        on_attach = require'minilua.lsp-on_attach'.on_attach,
         flags = {
             debounce_text_changes = 150,
         }
