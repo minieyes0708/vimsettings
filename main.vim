@@ -87,6 +87,7 @@ call vundle#end()
 " {{{ Settings
 syntax on
 filetype plugin indent on
+let &path='./**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**,' .. luaeval('require"minilua.user".vimwiki_path') .. '**'
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
@@ -105,7 +106,6 @@ set incsearch
 set mouse=a
 set nobackup
 set number
-set path = './**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**,' .. luaeval('require"minilua.user".vimwiki_path') .. '**'
 set relativenumber
 set ruler
 set shiftwidth=4
