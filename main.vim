@@ -34,16 +34,13 @@ call vundle#begin()
 " Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
-Plugin 'Vimwiki/Vimwiki'
 Plugin 'Yggdroot/indentLine'
 Plugin 'akinsho/toggleterm.nvim'
 Plugin 'alvan/vim-closetag'
 Plugin 'beauwilliams/focus.nvim'
-Plugin 'caenrique/nvim-toggle-terminal'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
-Plugin 'dstein64/vim-startuptime'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
 Plugin 'frazrepo/vim-rainbow'
@@ -72,16 +69,17 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
-Plugin 'skywind3000/quickmenu.vim'
 Plugin 'skywind3000/vim-quickui'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vimwiki/vimwiki'
 Plugin 'wadackel/vim-dogrun'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
+Plugin 'zacanger/angr.vim'
 " )
 call vundle#end()
 " }}}
@@ -94,6 +92,8 @@ set backspace=indent,eol,start " allow backspacing over everything in insert mod
 set clipboard=unnamed
 set completeopt=menuone,noinsert,noselect shm+=c
 set confirm
+set cursorline
+set diffopt+=iwhite
 set encoding=utf8
 set expandtab
 set exrc
@@ -101,17 +101,15 @@ set hidden
 set history=50
 set hlsearch
 set ignorecase
-set ignorecase
 set incsearch
 set mouse=a
 set nobackup
 set number
-set path=.,,~/.vimrc.d,
+set path = './**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**,' .. luaeval('require"minilua.user".vimwiki_path') .. '**'
 set relativenumber
 set ruler
 set shiftwidth=4
 set showcmd
-set smartcase
 set smartcase
 set splitright
 set tabstop=4
@@ -138,10 +136,12 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
-nnoremap <leader>td :60vs ~/OneDrive/文件/vimwiki/TODO.md<CR>
+nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
+nnoremap <leader>td :50vs luaeval('require"minilua.user".vimwiki_path .. "TODO.md"')<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
 tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>
@@ -156,13 +156,14 @@ endif
 " }}}
 
 " {{{ Auto Commands
-au GUIEnter * source $VIMRUNTIME\delmenu.vim
-au GUIEnter * source $VIMRUNTIME\menu.vim
+" au GUIEnter * source $VIMRUNTIME\delmenu.vim
+" au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
 au GUIEnter * RandomColorScheme
 
 au BufWinEnter,WinEnter term://* startinsert
 
+au Filetype c set foldmethod=syntax
 au Filetype lua set foldmethod=indent
 au Filetype cpp set foldmethod=syntax
 au Filetype vim set foldmethod=marker
@@ -174,13 +175,13 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/toggle-terminal.vim
-lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-lua.lua')
-lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
-lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/toggleterm.lua')
-lua require("focus").setup({cursorline = false})
+lua require('focus').setup({cursorline = false})
+lua require('minilua.lsp')
+lua require('minilua.lsp-lua')
+lua require('minilua.toggleterm')
+lua require('minilua.vimwiki')
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
-source ~/.vimrc.d/OmniCpp.vim
 source ~/.vimrc.d/YouCompleteMe.vim
 source ~/.vimrc.d/airline.vim
 source ~/.vimrc.d/auto-pairs.vim
@@ -198,11 +199,11 @@ source ~/.vimrc.d/kite.vim
 source ~/.vimrc.d/localvimrc.vim
 source ~/.vimrc.d/multiple-cursors.vim
 source ~/.vimrc.d/nerdcommenter.vim
-source ~/.vimrc.d/quickmenu.vim
 source ~/.vimrc.d/quickui.vim
 source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
-source ~/.vimrc.d/vimwiki.vim
 " }}}
+
+" vim: foldmethod=marker
