@@ -2,33 +2,14 @@
 let g:quickui_show_tip = 1
 
 function! quickui#SelectProject(callback)
-    call fzf#run(fzf#wrap({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'center': 10, 'sink': function(a:callback)}))
-endfunction
-function quickui#OpenProject(name)
-    execute 'cd ' .. a:name
-    lua << END
-        require('telescope.builtin').find_files {
-            search_dirs = {folder},
-        }
-END
-endfunction
-function quickui#PeekProject(name)
-    lua << END
-        require('telescope.builtin').find_files {
-            cwd = vim.api.nvim_eval('a:name'),
-            search_dirs = {vim.api.nvim_eval('a:name')},
-        }
-END
-endfunction
-function quickui#GotoProject(name)
-    execute 'cd ' .. a:name
+    call fzf#run(fzf#wrap({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'center': 10, 'sink': a:callback}))
 endfunction
 
 call quickui#menu#reset()
 call quickui#menu#install('&Projects', [
-            \ ["&Open", "call quickui#SelectProject('quickui#OpenProject')"],
-            \ ["&Peek", "call quickui#SelectProject('quickui#PeekProject')"],
-            \ ["&Goto", "call quickui#SelectProject('quickui#GotoProject')"],
+            \ ["&Open", "call quickui#SelectProject(luaeval('require\"minilua.user\".open_project'))"],
+            \ ["&Peek", "call quickui#SelectProject(luaeval('require\"minilua.user\".peek_project'))"],
+            \ ["&Goto", "call quickui#SelectProject(luaeval('require\"minilua.user\".goto_project'))"],
             \ ])
 
 call quickui#menu#install('&Git', [
