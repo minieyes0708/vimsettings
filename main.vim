@@ -171,11 +171,12 @@ au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" 
 " source ~/.vimrc.d/anyfold.vim
 " source ~/.vimrc.d/asyncomplete.vim
 " source ~/.vimrc.d/toggle-terminal.vim
-lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-on_attach.lua')
-lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp-lua.lua')
-lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/lsp.lua')
-lua dofile(vim.env.USERPROFILE .. '/.vimrc.d/toggleterm.lua')
-lua require("focus").setup({cursorline = false})
+lua require('focus').setup({cursorline = false})
+lua require('lsp')
+lua require('lsp-lua')
+lua require('lsp-on_attach')
+lua require('toggleterm')
+lua require('vimwiki')
 source ~/.vimrc.d/AutoComplPop.vim
 source ~/.vimrc.d/NERDTree.vim
 source ~/.vimrc.d/YouCompleteMe.vim
@@ -200,7 +201,6 @@ source ~/.vimrc.d/rainbow.vim
 source ~/.vimrc.d/sneak.vim
 source ~/.vimrc.d/telescope.vim
 source ~/.vimrc.d/ultisnips.vim
-source ~/.vimrc.d/vimwiki.vim
 " }}}
 
 " vim: foldmethod=marker
