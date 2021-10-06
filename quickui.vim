@@ -17,7 +17,7 @@ call quickui#menu#install('&Git', [
             \ ['git &diff',                         '!START TortoiseGitProc.exe -command diff' ],
             \ ['git p&ull',                         '!START TortoiseGitProc.exe -command pull' ],
             \ ['git pus&h',                         '!START TortoiseGitProc.exe -command push' ],
-            \ ['git &fetch',                    '!START TortoiseGitProc.exe -command fetch' ],
+            \ ['git &fetch',                        '!START TortoiseGitProc.exe -command fetch' ],
             \ ['git &blame',                        '!START TortoiseGitProc.exe -command blame -path %' ],
             \ ['git &commit',                       '!START TortoiseGitProc.exe -command commit' ],
             \ ['git &revert',                       '!START TortoiseGitProc.exe -command revert' ],
