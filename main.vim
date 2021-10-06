@@ -48,6 +48,7 @@ Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
@@ -86,6 +87,7 @@ call vundle#end()
 " {{{ Settings
 syntax on
 filetype plugin indent on
+let &path='./**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**,' .. luaeval('require"minilua.user".vimwiki_path') .. '**'
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
@@ -111,6 +113,7 @@ set showcmd
 set smartcase
 set splitright
 set tabstop=4
+set viewdir=~/.vim/viewdir
 if has("cscope")
     set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
@@ -122,6 +125,8 @@ inoremap <C-CR> <C-O>o
 inoremap <C-F> <C-O>a
 inoremap jk <ESC>
 inoremap kj <ESC>
+nnoremap <C-PageDown> :execute 'GuiFont!' .. substitute(&guifont, ':h\zs\d\+', '\=eval(submatch(0)-1)', '')<CR>
+nnoremap <C-PageUp> :execute 'GuiFont!' .. substitute(&guifont, ':h\zs\d\+', '\=eval(submatch(0)+1)', '')<CR>
 nnoremap <C-S-Down> :resize -5<CR>
 nnoremap <C-S-Left> :vertical resize -5<CR>
 nnoremap <C-S-Right> :vertical resize +5<CR>
@@ -136,7 +141,7 @@ nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
-nnoremap <leader>td :50vs P:/vimwiki/TODO/index.md<CR>
+nnoremap <leader>td :50vs luaeval('require"minilua.user".vimwiki_path .. "TODO.md"')<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
 tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>

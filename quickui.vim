@@ -2,36 +2,14 @@
 let g:quickui_show_tip = 1
 
 function! quickui#SelectProject(callback)
-    call fzf#run(fzf#wrap({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'center': 10, 'sink': function(a:callback)}))
-endfunction
-function! quickui#OpenProject(name)
-    if a:name == 'D:/minieyes_chen/program'
-        call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#OpenProject')}))
-    else
-        execute 'cd ' .. a:name
-        execute 'Files'
-    endif
-endfunction
-function! quickui#PeekProject(name)
-    if a:name == 'D:/minieyes_chen/program'
-        call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#PeekProject')}))
-    else
-        execute 'Files ' .. a:name
-    end
-endfunction
-function! quickui#GotoProject(name)
-    if a:name == 'D:/minieyes_chen/program'
-        call fzf#run(fzf#wrap({'source': 'fd --type d --max-depth 1 --absolute-path --base-directory ' .. a:name, 'center': 10, 'sink': function('quickui#GotoProject')}))
-    else
-        execute 'cd ' .. a:name
-    endif
+    call fzf#run(fzf#wrap({'source': readfile($HOME .. '/.vimrc.d/quickui.projects'), 'center': 10, 'sink': a:callback}))
 endfunction
 
 call quickui#menu#reset()
 call quickui#menu#install('&Projects', [
-            \ ["&Open", "call quickui#SelectProject('quickui#OpenProject')"],
-            \ ["&Peek", "call quickui#SelectProject('quickui#PeekProject')"],
-            \ ["&Goto", "call quickui#SelectProject('quickui#GotoProject')"],
+            \ ["&Open", "call quickui#SelectProject(luaeval('require\"minilua.user\".open_project'))"],
+            \ ["&Peek", "call quickui#SelectProject(luaeval('require\"minilua.user\".peek_project'))"],
+            \ ["&Goto", "call quickui#SelectProject(luaeval('require\"minilua.user\".goto_project'))"],
             \ ])
 
 call quickui#menu#install('&Git', [
