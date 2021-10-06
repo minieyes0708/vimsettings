@@ -141,7 +141,7 @@ nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
-nnoremap <leader>td :50vs luaeval('require"minilua.user".vimwiki_path .. "TODO.md"')<CR>
+nnoremap <leader>td :execute '50vs ' .. luaeval('require"minilua.user".vimwiki_path .. "TODO/index.md"')<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
 tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>
@@ -149,7 +149,7 @@ tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>
 
 " {{{ NVIM Specific
 if has('nvim')
-    function Config()
+    function! Config()
         exe 'edit ' . stdpath('config') . '\\init.vim'
     endfunction
 endif
@@ -169,6 +169,11 @@ au Filetype cpp set foldmethod=syntax
 au Filetype vim set foldmethod=marker
 au Filetype python set foldmethod=indent
 au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" ? "<cr><esc>O" : "<cr>"
+
+function! LuaFunc(funcname, ...)
+    call call(luaeval(a:funcname), a:000)
+endfunction
+command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 " }}}
 
 " {{{ Sources
