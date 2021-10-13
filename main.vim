@@ -33,6 +33,7 @@ call vundle#begin()
 " Plugin 'vim-scripts/indentpython.vim'
 " Plugin 'williamboman/nvim-lsp-installer'
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Shatur/neovim-ayu'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
 Plugin 'akinsho/toggleterm.nvim'
