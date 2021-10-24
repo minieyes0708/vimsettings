@@ -132,7 +132,6 @@ nnoremap <C-S-Down> :resize -5<CR>
 nnoremap <C-S-Left> :vertical resize -5<CR>
 nnoremap <C-S-Right> :vertical resize +5<CR>
 nnoremap <C-S-Up> :resize +5<CR>
-nnoremap <C-Z> :2ToggleTerm<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -145,7 +144,6 @@ nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
 nnoremap <leader>td :execute '50vs ' .. luaeval('require"minilua.user".vimwiki_path .. "TODO/index.md"')<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
-tnoremap <C-Z> <C-\><C-N>:ToggleTerm<CR>
 " }}}
 
 " {{{ NVIM Specific
