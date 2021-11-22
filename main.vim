@@ -2,7 +2,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 let g:colors_name = 'one-dark'
-lua package.path = package.path .. vim.env.USERPROFILE .. '/.vimrc.d/?.lua;'
+lua package.path = package.path .. vim.env.VIM .. '/.vimrc.d/?.lua;'
 
 " {{{ Environment
 let mapleader=','
@@ -14,15 +14,16 @@ endif
 if has('nvim') && executable('nvr')
   let $GIT_EDITOR = "nvr -l -cc split --remote-wait +'set bufhidden=wipe'"
 endif
-let $TMP='C:/Users/'..$USERNAME..'/AppData/Local/Temp'
+let $TMP=$VIM .. '\\temp'
+let $TEMP=$VIM .. '\\temp'
 set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
 let $GIT_SSL_NO_VERIFY = 'true'
 " }}}
 
 " {{{ Plugins
 filetype off                        " required before Vundle
-set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
-call vundle#begin()
+set rtp+=$VIMRUNTIME/bundle/Vundle.vim    " set runtime path
+call vundle#begin($VIMRUNTIME .. "/bundle")
 " (
 " Plugin 'codota/tabnine-vim'
 " Plugin 'garbas/vim-snipmate'
@@ -90,7 +91,6 @@ call vundle#end()
 " {{{ Settings
 syntax on
 filetype plugin indent on
-let &path='./**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**,' .. luaeval('require"minilua.user".vimwiki_path') .. '**'
 set autoindent
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
@@ -109,6 +109,7 @@ set incsearch
 set mouse=a
 set nobackup
 set number
+set path=./**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**
 set relativenumber
 set ruler
 set shiftwidth=4
@@ -116,7 +117,7 @@ set showcmd
 set smartcase
 set splitright
 set tabstop=4
-set viewdir=~/.vim/viewdir
+set viewdir=$VIMRUNTIME/viewdir
 if has("cscope")
     set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
@@ -178,38 +179,38 @@ command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 " }}}
 
 " {{{ Sources
-" source ~/.vimrc.d/anyfold.vim
-" source ~/.vimrc.d/asyncomplete.vim
-" source ~/.vimrc.d/toggle-terminal.vim
+" source $VIM/.vimrc.d/anyfold.vim
+" source $VIM/.vimrc.d/asyncomplete.vim
+" source $VIM/.vimrc.d/toggle-terminal.vim
 lua require('focus').setup({cursorline = false})
 lua require('minilua.lsp')
 lua require('minilua.lsp-lua')
 lua require('minilua.toggleterm')
 lua require('minilua.vimwiki')
-source ~/.vimrc.d/AutoComplPop.vim
-source ~/.vimrc.d/NERDTree.vim
-source ~/.vimrc.d/YouCompleteMe.vim
-source ~/.vimrc.d/airline.vim
-source ~/.vimrc.d/auto-pairs.vim
-source ~/.vimrc.d/closetag.vim
-source ~/.vimrc.d/completion-nvim.vim
-source ~/.vimrc.d/ctrlp-commandpalette.vim
-source ~/.vimrc.d/ctrlp.vim
-source ~/.vimrc.d/emmet.vim
-source ~/.vimrc.d/fonts.vim
-source ~/.vimrc.d/fzf.vim
-source ~/.vimrc.d/grepper.vim
-source ~/.vimrc.d/incsearch-easymotion.vim
-source ~/.vimrc.d/indentLine.vim
-source ~/.vimrc.d/kite.vim
-source ~/.vimrc.d/localvimrc.vim
-source ~/.vimrc.d/multiple-cursors.vim
-source ~/.vimrc.d/nerdcommenter.vim
-source ~/.vimrc.d/quickui.vim
-source ~/.vimrc.d/rainbow.vim
-source ~/.vimrc.d/sneak.vim
-source ~/.vimrc.d/telescope.vim
-source ~/.vimrc.d/ultisnips.vim
+source $VIM/.vimrc.d/AutoComplPop.vim
+source $VIM/.vimrc.d/NERDTree.vim
+source $VIM/.vimrc.d/YouCompleteMe.vim
+source $VIM/.vimrc.d/airline.vim
+source $VIM/.vimrc.d/auto-pairs.vim
+source $VIM/.vimrc.d/closetag.vim
+source $VIM/.vimrc.d/completion-nvim.vim
+source $VIM/.vimrc.d/ctrlp-commandpalette.vim
+source $VIM/.vimrc.d/ctrlp.vim
+source $VIM/.vimrc.d/emmet.vim
+source $VIM/.vimrc.d/fonts.vim
+source $VIM/.vimrc.d/fzf.vim
+source $VIM/.vimrc.d/grepper.vim
+source $VIM/.vimrc.d/incsearch-easymotion.vim
+source $VIM/.vimrc.d/indentLine.vim
+source $VIM/.vimrc.d/kite.vim
+source $VIM/.vimrc.d/localvimrc.vim
+source $VIM/.vimrc.d/multiple-cursors.vim
+source $VIM/.vimrc.d/nerdcommenter.vim
+source $VIM/.vimrc.d/quickui.vim
+source $VIM/.vimrc.d/rainbow.vim
+source $VIM/.vimrc.d/sneak.vim
+source $VIM/.vimrc.d/telescope.vim
+source $VIM/.vimrc.d/ultisnips.vim
 " }}}
 
 " vim: foldmethod=marker
