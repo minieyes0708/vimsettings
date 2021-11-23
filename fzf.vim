@@ -1,4 +1,4 @@
-let $FZF_DEFAULT_OPTS='--bind ctrl-a:select-all --bind ctrl-d:deselect-all'
+let $FZF_DEFAULT_OPTS='-i --bind ctrl-a:select-all --bind ctrl-d:deselect-all'
 let $FZF_DEFAULT_COMMAND=
             \ 'fd --hidden --follow ' ..
             \ '--exclude ".git" ' ..
