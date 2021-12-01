@@ -109,7 +109,7 @@ set incsearch
 set mouse=a
 set nobackup
 set number
-set path=./**,,~/.bashrc.d/**,~/.vifm/**,~/.vimrc.d/**
+set path=./**,,~/.bashrc.d/**,~/.vifm/**,$VIM/.vimrc.d/**
 set relativenumber
 set ruler
 set shiftwidth=4
