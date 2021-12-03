@@ -12,6 +12,8 @@ if has('nvim')
     " set guifont=Noto\ Mono\ for\ Powerline:h14:cANSI:qDRAFT
     if $COMPUTERNAME == 'MINIEYESNB1' && $USERNAME == '怡哲'
         set guifont=Noto\ Mono\ for\ Powerline:h14:cANSI:qDRAFT
+    elseif $COMPUTERNAME == 'NVT02863_NB' && $USERNAME == 'NVT02863'
+        set guifont=Noto\ Mono\ for\ Powerline:h14:cANSI:qDRAFT
     else
         set guifont=Noto\ Mono\ for\ Powerline:h16:cANSI:qDRAFT
     endif
