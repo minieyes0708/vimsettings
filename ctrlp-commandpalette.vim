@@ -21,7 +21,7 @@ let g:commandPalette = {
             \ 'git compare'             : '!START TortoiseGitProc.exe -command showcompare -revision1:HEAD -revision2:HEAD',
             \ 'git log current file'    : '!START TortoiseGitProc.exe -command log -path %',
             \ 'set path to pwd'         : 'execute "set path=" .. getcwd() .. "\\\\**"',
-            \ 'clear all buffers'       : '%bd | source ~/.vimrc.d/quickui.vim',
+            \ 'clear all buffers'       : '%bd | source $VIM/.vimrc.d/quickui.vim',
             \ 'Show Invisible Chars'    : 'set list',
             \ 'Hide Invisible Chars'    : 'set nolist',
             \ 'Toggle Indent Lines'     : 'IndentLinesToggle',
