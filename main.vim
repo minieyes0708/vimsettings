@@ -60,6 +60,7 @@ Plugin 'kabouzeid/nvim-lspinstall'
 Plugin 'kdheepak/lazygit.nvim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'lewis6991/gitsigns.nvim'
+Plugin 'liuchengxu/vim-which-key'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
@@ -140,6 +141,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <leader> :<c-u>WhichKey ','<CR>
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
@@ -213,6 +215,7 @@ source $VIM/.vimrc.d/rainbow.vim
 source $VIM/.vimrc.d/sneak.vim
 source $VIM/.vimrc.d/telescope.vim
 source $VIM/.vimrc.d/ultisnips.vim
+source $VIM/.vimrc.d/which-key.vim
 " }}}
 
 " vim: foldmethod=marker
