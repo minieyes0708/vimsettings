@@ -216,7 +216,6 @@ source $VIM/.vimrc.d/rainbow.vim
 source $VIM/.vimrc.d/sneak.vim
 source $VIM/.vimrc.d/telescope.vim
 source $VIM/.vimrc.d/ultisnips.vim
-source $VIM/.vimrc.d/which-key.vim
 " }}}
 
 " vim: foldmethod=marker
