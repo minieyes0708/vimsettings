@@ -186,11 +186,12 @@ command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 " source $VIM/.vimrc.d/anyfold.vim
 " source $VIM/.vimrc.d/asyncomplete.vim
 " source $VIM/.vimrc.d/toggle-terminal.vim
-lua require('focus').setup({cursorline = false})
-lua require('minilua.lsp')
-lua require('minilua.lsp-lua')
-lua require('minilua.toggleterm')
-lua require('minilua.vimwiki')
+lua require'focus'.setup({cursorline = false})
+lua require'gitsigns'.setup()
+lua require'minilua.lsp'
+lua require'minilua.lsp-lua'
+lua require'minilua.toggleterm'
+lua require'minilua.vimwiki'
 source $VIM/.vimrc.d/AutoComplPop.vim
 source $VIM/.vimrc.d/NERDTree.vim
 source $VIM/.vimrc.d/YouCompleteMe.vim
