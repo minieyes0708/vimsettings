@@ -152,7 +152,7 @@ nnoremap <leader>tb :TagbarOpenAutoClose<CR>
 nnoremap <leader>td :execute '50vs ' .. luaeval('require"minilua.user".vimwiki_path .. "TODO/index.md"')<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
-tnoremap <leader>tc :ToggleTermCloseAll<CR>
+tnoremap <leader>tt <C-\><C-N>:ToggleTermCloseAll<CR>
 " }}}
 
 " {{{ NVIM Specific
