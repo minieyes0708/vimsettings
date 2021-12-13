@@ -59,6 +59,8 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'kabouzeid/nvim-lspinstall'
 Plugin 'kdheepak/lazygit.nvim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'lewis6991/gitsigns.nvim'
+Plugin 'liuchengxu/vim-which-key'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
@@ -74,7 +76,6 @@ Plugin 'preservim/tagbar'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/vim-quickui'
-Plugin 'tanvirtin/monokai.nvim'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -139,6 +140,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <leader> :<c-u>WhichKey ','<CR>
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
@@ -183,11 +185,12 @@ command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 " source $VIM/.vimrc.d/anyfold.vim
 " source $VIM/.vimrc.d/asyncomplete.vim
 " source $VIM/.vimrc.d/toggle-terminal.vim
-lua require('focus').setup({cursorline = false})
-lua require('minilua.lsp')
-lua require('minilua.lsp-lua')
-lua require('minilua.toggleterm')
-lua require('minilua.vimwiki')
+lua require'focus'.setup({cursorline = false})
+lua require'gitsigns'.setup()
+lua require'minilua.lsp'
+lua require'minilua.lsp-lua'
+lua require'minilua.toggleterm'
+lua require'minilua.vimwiki'
 source $VIM/.vimrc.d/AutoComplPop.vim
 source $VIM/.vimrc.d/NERDTree.vim
 source $VIM/.vimrc.d/YouCompleteMe.vim
