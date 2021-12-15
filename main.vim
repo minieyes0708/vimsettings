@@ -68,6 +68,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'lewis6991/gitsigns.nvim'
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'matbme/JABS.nvim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
@@ -148,11 +149,12 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <leader> :<c-u>WhichKey ','<CR>
+nnoremap <leader>   :<c-u>WhichKey ','<CR>
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
+nnoremap <leader>j  :JABSOpen<CR>
 nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
 nnoremap <leader>tb :TagbarOpenAutoClose<CR>
 nnoremap <leader>td :execute '50vs ' .. luaeval('require"minilua.user".vimwiki_path .. "TODO/index.md"')<CR>
@@ -197,6 +199,7 @@ command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 lua require'Comment'.setup()
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
+lua require'jabs'.setup()
 lua require'minilua.lsp'
 lua require'minilua.lsp-lua'
 lua require'minilua.toggleterm'
