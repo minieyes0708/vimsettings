@@ -70,6 +70,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
 Plugin 'neovim/nvim-lspconfig'
+Plugin 'numToStr/Comment.nvim'
 Plugin 'nvim-lua/completion-nvim'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
@@ -191,6 +192,7 @@ command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 " source $VIM/.vimrc.d/anyfold.vim
 " source $VIM/.vimrc.d/asyncomplete.vim
 " source $VIM/.vimrc.d/toggle-terminal.vim
+lua require'Comment'.setup()
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
 lua require'nvim-tree'.setup()
