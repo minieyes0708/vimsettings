@@ -78,6 +78,7 @@ Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/tagbar'
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'rcarriga/nvim-notify'
 Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/vim-quickui'
 Plugin 'tomtom/tlib_vim'
@@ -195,12 +196,13 @@ command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 lua require'Comment'.setup()
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
-lua require'nvim-tree'.setup()
-lua require'nvim-web-devicons'.setup()
 lua require'minilua.lsp'
 lua require'minilua.lsp-lua'
 lua require'minilua.toggleterm'
 lua require'minilua.vimwiki'
+lua require'nvim-tree'.setup()
+lua require'nvim-web-devicons'.setup()
+lua vim.notify = require'notify'
 source $VIM/.vimrc.d/AutoComplPop.vim
 source $VIM/.vimrc.d/YouCompleteMe.vim
 source $VIM/.vimrc.d/airline.vim
