@@ -29,6 +29,7 @@ call vundle#begin($VIMRUNTIME .. "/bundle")
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'kiteco/vim-plugin'
 " Plugin 'mnishz/colorscheme-preview.vim'
+" Plugin 'preservim/nerdtree'
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'vim-scripts/AutoComplPop'
 " Plugin 'vim-scripts/indentpython.vim'
@@ -59,6 +60,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'kabouzeid/nvim-lspinstall'
 Plugin 'kdheepak/lazygit.nvim'
+Plugin 'kyazdani42/nvim-tree.lua'
 Plugin 'kyazdani42/nvim-web-devicons'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'lewis6991/gitsigns.nvim'
@@ -73,7 +75,6 @@ Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'preservim/nerdcommenter'
-Plugin 'preservim/nerdtree'
 Plugin 'preservim/tagbar'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'reedes/vim-thematic'
@@ -186,17 +187,19 @@ command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 " }}}
 
 " {{{ Sources
+" source $VIM/.vimrc.d/NERDTree.vim
 " source $VIM/.vimrc.d/anyfold.vim
 " source $VIM/.vimrc.d/asyncomplete.vim
 " source $VIM/.vimrc.d/toggle-terminal.vim
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
+lua require'nvim-tree'.setup()
+lua require'nvim-web-devicons'.setup()
 lua require'minilua.lsp'
 lua require'minilua.lsp-lua'
 lua require'minilua.toggleterm'
 lua require'minilua.vimwiki'
 source $VIM/.vimrc.d/AutoComplPop.vim
-source $VIM/.vimrc.d/NERDTree.vim
 source $VIM/.vimrc.d/YouCompleteMe.vim
 source $VIM/.vimrc.d/airline.vim
 source $VIM/.vimrc.d/auto-pairs.vim
@@ -214,6 +217,7 @@ source $VIM/.vimrc.d/kite.vim
 source $VIM/.vimrc.d/localvimrc.vim
 source $VIM/.vimrc.d/multiple-cursors.vim
 source $VIM/.vimrc.d/nerdcommenter.vim
+source $VIM/.vimrc.d/nvim-tree.vim
 source $VIM/.vimrc.d/quickui.vim
 source $VIM/.vimrc.d/rainbow.vim
 source $VIM/.vimrc.d/sneak.vim
