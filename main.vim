@@ -47,6 +47,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
 Plugin 'ervandew/supertab'
 Plugin 'frazrepo/vim-rainbow'
+Plugin 'haringsrob/nvim_context_vt'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
@@ -98,6 +99,7 @@ set backspace=indent,eol,start " allow backspacing over everything in insert mod
 set clipboard=unnamed
 set completeopt=menuone,noinsert,noselect shm+=c
 set confirm
+set cursorline
 set diffopt+=iwhite
 set encoding=utf8
 set expandtab
