@@ -53,6 +53,11 @@ Plugin 'haringsrob/nvim_context_vt'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
+Plugin 'hrsh7th/cmp-buffer'
+Plugin 'hrsh7th/cmp-cmdline'
+Plugin 'hrsh7th/cmp-nvim-lsp'
+Plugin 'hrsh7th/cmp-path'
+Plugin 'hrsh7th/nvim-cmp'
 Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'jiangmiao/auto-pairs'
@@ -79,6 +84,7 @@ Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'preservim/tagbar'
+Plugin 'quangnguyen30192/cmp-nvim-ultisnips'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'rcarriga/nvim-notify'
 Plugin 'reedes/vim-thematic'
@@ -205,6 +211,7 @@ lua require'Comment'.setup()
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
 lua require'jabs'.setup()
+lua require'minilua.cmp'
 lua require'minilua.lsp'
 lua require'minilua.lsp-lua'
 lua require'minilua.toggleterm'
