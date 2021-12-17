@@ -72,6 +72,9 @@ Plugin 'matbme/JABS.nvim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
+Plugin 'ms-jpq/coq.artifacts', {'branch': 'artifacts'} " 9000+ Snippets
+Plugin 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+Plugin 'ms-jpq/coq_nvim', {'branch': 'coq'} " main one
 Plugin 'neovim/nvim-lspconfig'
 Plugin 'numToStr/Comment.nvim'
 Plugin 'nvim-lua/completion-nvim'
