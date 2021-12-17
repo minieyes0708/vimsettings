@@ -1,7 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-let g:colors_name = 'one-dark'
+let g:colors_name = 'PaperColor'
 lua package.path = package.path .. vim.env.VIM .. '/.vimrc.d/?.lua;'
 
 " {{{ Environment
