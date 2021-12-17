@@ -156,10 +156,13 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>j  :JABSOpen<CR>
 nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
+nnoremap <leader>t1 :1ToggleTerm<CR>
+nnoremap <leader>t2 :2ToggleTerm direction=float<CR>
 nnoremap <leader>tb :TagbarOpenAutoClose<CR>
 nnoremap <leader>td :execute '50vs ' .. luaeval('require"minilua.user".vimwiki_path .. "TODO/index.md"')<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
+tnoremap <leader>tt <C-\><C-N>:ToggleTermCloseAll<CR>
 " }}}
 
 " {{{ NVIM Specific
