@@ -1,7 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-let g:colors_name = 'one-dark'
+let g:colors_name = 'PaperColor'
 lua package.path = package.path .. vim.env.VIM .. '/.vimrc.d/?.lua;'
 
 " {{{ Environment
@@ -29,6 +29,8 @@ call vundle#begin($VIMRUNTIME .. "/bundle")
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'kiteco/vim-plugin'
 " Plugin 'mnishz/colorscheme-preview.vim'
+" Plugin 'preservim/nerdcommenter'
+" Plugin 'preservim/nerdtree'
 " Plugin 'pseewald/vim-anyfold'
 " Plugin 'vim-scripts/AutoComplPop'
 " Plugin 'vim-scripts/indentpython.vim'
@@ -47,9 +49,15 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
 Plugin 'ervandew/supertab'
 Plugin 'frazrepo/vim-rainbow'
+Plugin 'haringsrob/nvim_context_vt'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
+Plugin 'hrsh7th/cmp-buffer'
+Plugin 'hrsh7th/cmp-cmdline'
+Plugin 'hrsh7th/cmp-nvim-lsp'
+Plugin 'hrsh7th/cmp-path'
+Plugin 'hrsh7th/nvim-cmp'
 Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'jiangmiao/auto-pairs'
@@ -57,21 +65,28 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'kabouzeid/nvim-lspinstall'
+Plugin 'kazhala/close-buffers.nvim'
 Plugin 'kdheepak/lazygit.nvim'
+Plugin 'kyazdani42/nvim-tree.lua'
+Plugin 'kyazdani42/nvim-web-devicons'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'lewis6991/gitsigns.nvim'
+Plugin 'liuchengxu/vim-which-key'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'matbme/JABS.nvim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'mhinz/vim-grepper'
 Plugin 'neovim/nvim-lspconfig'
+Plugin 'numToStr/Comment.nvim'
 Plugin 'nvim-lua/completion-nvim'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plugin 'preservim/nerdcommenter'
-Plugin 'preservim/nerdtree'
 Plugin 'preservim/tagbar'
+Plugin 'quangnguyen30192/cmp-nvim-ultisnips'
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'rcarriga/nvim-notify'
 Plugin 'reedes/vim-thematic'
 Plugin 'skywind3000/vim-quickui'
 Plugin 'tomtom/tlib_vim'
@@ -81,6 +96,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vimwiki/vimwiki'
 Plugin 'wadackel/vim-dogrun'
+Plugin 'windwp/nvim-spectre'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 Plugin 'zacanger/angr.vim'
@@ -139,15 +155,20 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <leader>   :<c-u>WhichKey ','<CR>
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
+nnoremap <leader>j  :JABSOpen<CR>
 nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
+nnoremap <leader>t1 :1ToggleTerm<CR>
+nnoremap <leader>t2 :2ToggleTerm direction=float<CR>
 nnoremap <leader>tb :TagbarOpenAutoClose<CR>
 nnoremap <leader>td :execute '50vs ' .. luaeval('require"minilua.user".vimwiki_path .. "TODO/index.md"')<CR>
 nnoremap <leader>yf :let @* = expand('%:p')<CR>
 nnoremap <leader>yp :let @* = expand('%:p:h')<CR>
+tnoremap <leader>tt <C-\><C-N>:ToggleTermCloseAll<CR>
 " }}}
 
 " {{{ NVIM Specific
@@ -173,23 +194,32 @@ au Filetype vim set foldmethod=marker
 au Filetype python set foldmethod=indent
 au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" ? "<cr><esc>O" : "<cr>"
 
-function! LuaFunc(funcname, ...)
-    call call(luaeval(a:funcname), a:000)
+function! ColorBackup(clrname)
+    let from_file = $VIMRUNTIME . '\colors\' . a:clrname . '.vim'
+    let to_file = $VIMRUNTIME . '\colors_backup\' . a:clrname . '.vim'
+    execute '!move ' . from_file . ' ' . to_file
 endfunction
-command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
+command! -nargs=* ColorBackup call ColorBackup(<f-args>)
 " }}}
 
 " {{{ Sources
+" source $VIM/.vimrc.d/NERDTree.vim
 " source $VIM/.vimrc.d/anyfold.vim
 " source $VIM/.vimrc.d/asyncomplete.vim
 " source $VIM/.vimrc.d/toggle-terminal.vim
-lua require('focus').setup({cursorline = false})
-lua require('minilua.lsp')
-lua require('minilua.lsp-lua')
-lua require('minilua.toggleterm')
-lua require('minilua.vimwiki')
+lua require'Comment'.setup()
+lua require'focus'.setup({cursorline = false})
+lua require'gitsigns'.setup()
+lua require'jabs'.setup()
+lua require'minilua.cmp'
+lua require'minilua.lsp'
+lua require'minilua.lsp-lua'
+lua require'minilua.toggleterm'
+lua require'minilua.vimwiki'
+lua require'nvim-tree'.setup()
+lua require'nvim-web-devicons'.setup()
+lua vim.notify = require'notify'
 source $VIM/.vimrc.d/AutoComplPop.vim
-source $VIM/.vimrc.d/NERDTree.vim
 source $VIM/.vimrc.d/YouCompleteMe.vim
 source $VIM/.vimrc.d/airline.vim
 source $VIM/.vimrc.d/auto-pairs.vim
@@ -207,6 +237,7 @@ source $VIM/.vimrc.d/kite.vim
 source $VIM/.vimrc.d/localvimrc.vim
 source $VIM/.vimrc.d/multiple-cursors.vim
 source $VIM/.vimrc.d/nerdcommenter.vim
+source $VIM/.vimrc.d/nvim-tree.vim
 source $VIM/.vimrc.d/quickui.vim
 source $VIM/.vimrc.d/rainbow.vim
 source $VIM/.vimrc.d/sneak.vim

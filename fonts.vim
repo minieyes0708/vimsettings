@@ -11,11 +11,11 @@ if has('nvim')
     " set guifont=Monofur\ for\ Powerline:h16:cANSI:qDRAFT
     " set guifont=Noto\ Mono\ for\ Powerline:h14:cANSI:qDRAFT
     if $COMPUTERNAME == 'MINIEYESNB1' && $USERNAME == '怡哲'
-        set guifont=Noto\ Mono\ for\ Powerline:h14:cANSI:qDRAFT
+        set guifont=FiraCode\ Nerd\ Font\ Mono:h14:cANSI:qDRAFT
     elseif $COMPUTERNAME == 'NVT02863_NB' && $USERNAME == 'NVT02863'
         set guifont=Noto\ Mono\ for\ Powerline:h14:cANSI:qDRAFT
-    else
-        set guifont=Noto\ Mono\ for\ Powerline:h16:cANSI:qDRAFT
+    elseif $COMPUTERNAME == 'MINIEYES-PC2' && $USERNAME == 'chenv'
+        set guifont=FiraCode\ Nerd\ Font\ Mono:h16:cANSI:qDRAFT
     endif
     " set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16:cANSI:qDRAFT
     " set guifont=Space\ Mono\ for\ Powerline:h16
