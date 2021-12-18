@@ -39,6 +39,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Shatur/neovim-ayu'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
+Plugin 'akinsho/bufferline.nvim'
 Plugin 'akinsho/toggleterm.nvim'
 Plugin 'alvan/vim-closetag'
 Plugin 'beauwilliams/focus.nvim'
@@ -209,6 +210,7 @@ command! -nargs=* ColorBackup call ColorBackup(<f-args>)
 " source $VIM/.vimrc.d/asyncomplete.vim
 " source $VIM/.vimrc.d/toggle-terminal.vim
 lua require'Comment'.setup()
+lua require'bufferline'.setup()
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
 lua require'jabs'.setup()
