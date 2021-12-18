@@ -210,10 +210,10 @@ command! -nargs=* ColorBackup call ColorBackup(<f-args>)
 " source $VIM/.vimrc.d/asyncomplete.vim
 " source $VIM/.vimrc.d/toggle-terminal.vim
 lua require'Comment'.setup()
-lua require'bufferline'.setup()
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
 lua require'jabs'.setup()
+lua require'minilua.bufferline'
 lua require'minilua.cmp'
 lua require'minilua.lsp'
 lua require'minilua.lsp-lua'
