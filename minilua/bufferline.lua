@@ -1,7 +1,9 @@
 require'bufferline'.setup({
-    numbers = function(opts)
-        return string.format('%s|%s.)', opts.id, opts.raise(opts.ordinal))
-    end,
+    options = {
+        numbers = function(opts)
+            return string.format('%s|%s', opts.id, opts.raise(opts.ordinal))
+        end,
+    }
 })
 
 vim.api.nvim_set_keymap('n', '<leader>1', ':BufferLineGoToBuffer 1<CR>', {})
