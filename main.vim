@@ -163,7 +163,6 @@ nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>j  :JABSOpen<CR>
-nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
 nnoremap <leader>t1 :1ToggleTerm<CR>
 nnoremap <leader>t2 :2ToggleTerm direction=float<CR>
 nnoremap <leader>tb :TagbarOpenAutoClose<CR>
@@ -210,16 +209,15 @@ command! -nargs=* ColorBackup call ColorBackup(<f-args>)
 " source $VIM/.vimrc.d/asyncomplete.vim
 " source $VIM/.vimrc.d/toggle-terminal.vim
 lua require'Comment'.setup()
-lua require'bufferline'.setup()
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
 lua require'jabs'.setup()
+lua require'minilua.bufferline'
 lua require'minilua.cmp'
 lua require'minilua.lsp'
 lua require'minilua.lsp-lua'
 lua require'minilua.toggleterm'
 lua require'minilua.vimwiki'
-lua require'nvim-tree'.setup()
 lua require'nvim-web-devicons'.setup()
 lua vim.notify = require'notify'
 source $VIM/.vimrc.d/AutoComplPop.vim
