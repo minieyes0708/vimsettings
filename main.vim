@@ -219,6 +219,7 @@ lua require'minilua.lsp-lua'
 lua require'minilua.toggleterm'
 lua require'minilua.vimwiki'
 lua require'nvim-web-devicons'.setup()
+lua require'nvim_context_vt'.setup()
 lua vim.notify = require'notify'
 source $VIM/.vimrc.d/AutoComplPop.vim
 source $VIM/.vimrc.d/YouCompleteMe.vim
