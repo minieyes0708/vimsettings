@@ -216,6 +216,7 @@ lua require'minilua.bufferline'
 lua require'minilua.cmp'
 lua require'minilua.lsp'
 lua require'minilua.lsp-lua'
+lua require'minilua.lsp-omnisharp'
 lua require'minilua.toggleterm'
 lua require'minilua.vimwiki'
 lua require'nvim-web-devicons'.setup()
