@@ -1,7 +1,7 @@
 require'bufferline'.setup({
     options = {
         numbers = function(opts)
-            return string.format('%s|%s', opts.id, opts.raise(opts.ordinal))
+            return string.format('%s|%s', opts.raise(opts.ordinal), opts.id)
         end,
     }
 })
