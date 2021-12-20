@@ -21,7 +21,7 @@ let $GIT_SSL_NO_VERIFY = 'true'
 " }}}
 
 " {{{ Plugins
-filetype off                        " required before Vundle
+filetype off                              " required before Vundle
 set rtp+=$VIMRUNTIME/bundle/Vundle.vim    " set runtime path
 call vundle#begin($VIMRUNTIME .. "/bundle")
 " (
@@ -157,7 +157,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <leader> :<c-u>WhichKey ','<CR>
+nnoremap <leader>   :<c-u>WhichKey ','<CR>
 nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
