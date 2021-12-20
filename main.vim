@@ -1,7 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-let g:colors_name = 'one-dark'
+let g:colors_name = 'PaperColor'
 lua package.path = package.path .. vim.env.VIM .. '/.vimrc.d/?.lua;'
 
 " {{{ Environment
@@ -39,6 +39,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Shatur/neovim-ayu'
 Plugin 'SirVer/ultisnips'
 Plugin 'Yggdroot/indentLine'
+Plugin 'akinsho/bufferline.nvim'
 Plugin 'akinsho/toggleterm.nvim'
 Plugin 'alvan/vim-closetag'
 Plugin 'beauwilliams/focus.nvim'
@@ -53,6 +54,11 @@ Plugin 'haringsrob/nvim_context_vt'
 Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'honza/vim-snippets'
+Plugin 'hrsh7th/cmp-buffer'
+Plugin 'hrsh7th/cmp-cmdline'
+Plugin 'hrsh7th/cmp-nvim-lsp'
+Plugin 'hrsh7th/cmp-path'
+Plugin 'hrsh7th/nvim-cmp'
 Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'jiangmiao/auto-pairs'
@@ -79,6 +85,7 @@ Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'preservim/tagbar'
+Plugin 'quangnguyen30192/cmp-nvim-ultisnips'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'rcarriga/nvim-notify'
 Plugin 'reedes/vim-thematic'
@@ -91,6 +98,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vimwiki/vimwiki'
 Plugin 'wadackel/vim-dogrun'
 Plugin 'windwp/nvim-spectre'
+Plugin 'xiyaowong/nvim-cursorword'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 Plugin 'zacanger/angr.vim'
@@ -155,7 +163,6 @@ nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
 nnoremap <leader>j  :JABSOpen<CR>
-nnoremap <leader>pg :belowright 10sp ~/.bashrc.d/user/programs.txt<CR>
 nnoremap <leader>t1 :1ToggleTerm<CR>
 nnoremap <leader>t2 :2ToggleTerm direction=float<CR>
 nnoremap <leader>tb :TagbarOpenAutoClose<CR>
@@ -188,10 +195,12 @@ au Filetype vim set foldmethod=marker
 au Filetype python set foldmethod=indent
 au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" ? "<cr><esc>O" : "<cr>"
 
-function! LuaFunc(funcname, ...)
-    call call(luaeval(a:funcname), a:000)
+function! ColorBackup(clrname)
+    let from_file = $VIMRUNTIME . '\colors\' . a:clrname . '.vim'
+    let to_file = $VIMRUNTIME . '\colors_backup\' . a:clrname . '.vim'
+    execute '!move ' . from_file . ' ' . to_file
 endfunction
-command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
+command! -nargs=* ColorBackup call ColorBackup(<f-args>)
 " }}}
 
 " {{{ Sources
@@ -203,11 +212,13 @@ lua require'Comment'.setup()
 lua require'focus'.setup({cursorline = false})
 lua require'gitsigns'.setup()
 lua require'jabs'.setup()
+lua require'minilua.bufferline'
+lua require'minilua.cmp'
 lua require'minilua.lsp'
 lua require'minilua.lsp-lua'
+lua require'minilua.lsp-omnisharp'
 lua require'minilua.toggleterm'
 lua require'minilua.vimwiki'
-lua require'nvim-tree'.setup()
 lua require'nvim-web-devicons'.setup()
 lua vim.notify = require'notify'
 source $VIM/.vimrc.d/AutoComplPop.vim

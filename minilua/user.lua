@@ -7,8 +7,12 @@ if user == 'NVT02863_NB-NVT02863' then
     this.sumneko_binary_path = 'D:/minieyes_chen/software/lua-language-server/bin/Windows/lua-language-server.exe'
 elseif user == 'MINIEYES-PC2-chenv' then
     this.vimwiki_path = '~/OneDrive/文件/vimwiki/'
-    this.sumneko_root_path = 'L:/bin/lua-language-server/bin/Windows'
+    this.sumneko_root_path = 'L:/bin/lua-language-server'
     this.sumneko_binary_path = 'L:/bin/lua-language-server/bin/Windows/lua-language-server.exe'
+elseif user == 'MINIEYESNB1-怡哲' then
+    this.vimwiki_path = '~/OneDrive/文件/vimwiki/'
+    this.sumneko_root_path = 'D:/minieyes/bin/lua-language-server'
+    this.sumneko_binary_path = 'D:/minieyes/bin/lua-language-server/bin/Windows/lua-language-server.exe'
 end
 
 this.fzf_with_cb = function(pathname, callback)
