@@ -200,6 +200,10 @@ function! ColorBackup(clrname)
     let to_file = $VIMRUNTIME . '\colors_backup\' . a:clrname . '.vim'
     execute '!move ' . from_file . ' ' . to_file
 endfunction
+function! LuaFunc(funcname, ...)
+    call call(luaeval(a:funcname), a:000)
+endfunction
+command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 command! -nargs=* ColorBackup call ColorBackup(<f-args>)
 " }}}
 
