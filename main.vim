@@ -184,7 +184,7 @@ endif
 " au GUIEnter * source $VIMRUNTIME\delmenu.vim
 " au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
-au GUIEnter * RandomColorScheme
+au VimEnter * RandomColorScheme
 
 au BufWinEnter,WinEnter term://* startinsert
 
@@ -195,15 +195,15 @@ au Filetype vim set foldmethod=marker
 au Filetype python set foldmethod=indent
 au Filetype html inoremap <expr> <CR> getline(".")[col(".")-2:col(".")-1]=="><" ? "<cr><esc>O" : "<cr>"
 
+function! LuaFunc(funcname, ...)
+    call call(luaeval(a:funcname), a:000)
+endfunction
+command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 function! ColorBackup(clrname)
     let from_file = $VIMRUNTIME . '\colors\' . a:clrname . '.vim'
     let to_file = $VIMRUNTIME . '\colors_backup\' . a:clrname . '.vim'
     execute '!move ' . from_file . ' ' . to_file
 endfunction
-function! LuaFunc(funcname, ...)
-    call call(luaeval(a:funcname), a:000)
-endfunction
-command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 command! -nargs=* ColorBackup call ColorBackup(<f-args>)
 " }}}
 
