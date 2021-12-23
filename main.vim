@@ -158,7 +158,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>   :<c-u>WhichKey ','<CR>
-nnoremap <leader>bg :highlight Normal guibg='#000000'<CR>
+nnoremap <leader>bg :highlight Normal ctermbg=NONE<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gg :LazyGit<CR>
