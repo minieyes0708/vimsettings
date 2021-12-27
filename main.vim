@@ -184,7 +184,7 @@ endif
 " au GUIEnter * source $VIMRUNTIME\delmenu.vim
 " au GUIEnter * source $VIMRUNTIME\menu.vim
 au GUIEnter * simalt ~x " startup maximized window
-au GUIEnter * RandomColorScheme
+au VimEnter * RandomColorScheme
 
 au BufWinEnter,WinEnter term://* startinsert
 
