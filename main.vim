@@ -101,7 +101,6 @@ Plugin 'windwp/nvim-spectre'
 Plugin 'xiyaowong/nvim-cursorword'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
-Plugin 'zacanger/angr.vim'
 " )
 call vundle#end()
 " }}}
