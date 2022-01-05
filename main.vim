@@ -73,7 +73,7 @@ Plugin 'kyazdani42/nvim-web-devicons'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'lewis6991/gitsigns.nvim'
 Plugin 'liuchengxu/vim-which-key'
-Plugin 'ludovicchabant/vim-gutentags'
+" Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'matbme/JABS.nvim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mg979/vim-visual-multi'
@@ -119,6 +119,7 @@ set diffopt+=iwhite
 set encoding=utf8
 set expandtab
 set exrc
+set foldcolumn=2
 set hidden
 set history=50
 set hlsearch
