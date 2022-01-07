@@ -104,6 +104,10 @@ Plugin 'xolox/vim-misc'
 call vundle#end()
 " }}}
 
+" {{{ Custom Plugins
+set rtp+=$VIM/.vimrc.d/fold-indent
+" }}}
+
 " {{{ Settings
 syntax on
 filetype plugin indent on
