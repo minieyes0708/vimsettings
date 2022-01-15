@@ -204,9 +204,19 @@ function! LuaFunc(funcname, ...)
 endfunction
 command! -nargs=* LuaFuncCommand call LuaFunc(<f-args>)
 function! ColorBackup(clrname)
-    let from_file = $VIMRUNTIME . '\colors\' . a:clrname . '.vim'
-    let to_file = $VIMRUNTIME . '\colors_backup\' . a:clrname . '.vim'
-    execute '!move ' . from_file . ' ' . to_file
+    let color_paths = [
+        \ $VIMRUNTIME . '\colors',
+        \ $VIMRUNTIME . '\bundle\awesome-vim-colorschemes\colors',
+        \]
+    for path in color_paths
+        let from_file = path . '\' . a:clrname . '.vim'
+        let to_file = path . '_backup\' . a:clrname . '.vim'
+        if filereadable(from_file)
+            echom '!move ' . from_file . ' ' . to_file
+            execute '!move ' . from_file . ' ' . to_file
+            return
+        endif
+    endfor
 endfunction
 command! -nargs=* ColorBackup call ColorBackup(<f-args>)
 " }}}
