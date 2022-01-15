@@ -5,19 +5,10 @@ let g:colors_name = 'PaperColor'
 lua package.path = package.path .. vim.env.VIM .. '/.vimrc.d/?.lua;'
 
 " {{{ Environment
-let mapleader=','
-if has("gui_running")
-    let &pythonthreedll='C:/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
-elseif !has('nvim')
-    let &pythonthreedll='/c/Users/'..$USERNAME..'/AppData/Local/Programs/Python/Python36-32/python36.dll'
-endif
-if has('nvim') && executable('nvr')
-  let $GIT_EDITOR = "nvr -l -cc split --remote-wait +'set bufhidden=wipe'"
-endif
-let $TMP=$VIM .. '\\temp'
-let $TEMP=$VIM .. '\\temp'
-set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
+let $GIT_EDITOR = "nvr -l -cc split --remote-wait +'set bufhidden=wipe'"
 let $GIT_SSL_NO_VERIFY = 'true'
+let mapleader=','
+set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%<\ %
 " }}}
 
 " {{{ Plugins
