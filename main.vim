@@ -46,6 +46,7 @@ Plugin 'beauwilliams/focus.nvim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dbeecham/ctrlp-commandpalette.vim'
 Plugin 'dracula/vim', {'name': 'dracula'}
+Plugin 'dstein64/nvim-scrollview'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'embear/vim-localvimrc'
 Plugin 'ervandew/supertab'
@@ -96,12 +97,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vimwiki/vimwiki'
-Plugin 'wadackel/vim-dogrun'
 Plugin 'windwp/nvim-spectre'
 Plugin 'xiyaowong/nvim-cursorword'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
-Plugin 'zacanger/angr.vim'
 " )
 call vundle#end()
 " }}}
