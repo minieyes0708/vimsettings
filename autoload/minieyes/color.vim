@@ -8,10 +8,10 @@ function! minieyes#color#backup(clrname)
         let to_file = path . '_backup\' . a:clrname . '.vim'
         if filereadable(from_file)
             execute '!move ' . from_file . ' ' . to_file
-            echo '!move ' . from_file . ' ' . to_file
             return
         endif
     endfor
+    echom 'Color Not Found: ' . a:clrname
 endfunction
 function! minieyes#color#restore(clrname)
     let color_paths = [
@@ -23,8 +23,8 @@ function! minieyes#color#restore(clrname)
         let to_file = path . '\' . a:clrname . '.vim'
         if filereadable(from_file)
             execute '!move ' . from_file . ' ' . to_file
-            echo '!move ' . from_file . ' ' . to_file
             return
         endif
     endfor
+    echom 'Color Not Found: ' . a:clrname
 endfunction
