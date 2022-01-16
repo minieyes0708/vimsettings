@@ -11,7 +11,7 @@ function! minieyes#color#backup(clrname)
             return
         endif
     endfor
-    echom 'Color Not Found: ' . a:clrname
+    lua vim.notify 'Color Not Found: ' . a:clrname
 endfunction
 function! minieyes#color#restore(clrname)
     let color_paths = [
@@ -26,5 +26,5 @@ function! minieyes#color#restore(clrname)
             return
         endif
     endfor
-    echom 'Color Not Found: ' . a:clrname
+    lua vim.notify 'Color Not Found: ' . a:clrname
 endfunction
