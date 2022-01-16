@@ -1,0 +1,2 @@
+lua require'jabs'.setup()
+
