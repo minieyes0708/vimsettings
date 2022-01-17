@@ -2,7 +2,7 @@
 let g:quickui_show_tip = 1
 
 function! quickui#SelectProject(callback)
-    call fzf#run(fzf#wrap({'source': readfile($VIM .. '/.vimrc.d/quickui.projects'), 'center': 10, 'sink': a:callback}))
+    call fzf#run(fzf#wrap({'source': readfile($VIM .. '/.vimrc.d/plugin_settings/quickui.projects'), 'center': 10, 'sink': a:callback}))
 endfunction
 
 call quickui#menu#reset()

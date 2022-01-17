@@ -1,0 +1,2 @@
+lua require'gitsigns'.setup()
+
