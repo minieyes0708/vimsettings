@@ -1,7 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-let g:colors_name = 'PaperColor'
+let g:colors_name = 'default'
 lua package.path = package.path .. vim.env.VIM .. '/.vimrc.d/?.lua;'
 
 let $GIT_EDITOR = "nvr -l -cc split --remote-wait +'set bufhidden=wipe'"
