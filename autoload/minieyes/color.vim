@@ -28,4 +28,3 @@ function! minieyes#color#restore(clrname)
     endfor
     exe 'lua' 'vim.notify' . "('Color Not Found: " . a:clrname . "', 'error')"
 endfunction
-
