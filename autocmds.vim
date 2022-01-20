@@ -1,6 +1,6 @@
+au BufNewFile,BufRead * RltvNmbr
 au BufWinEnter,WinEnter term://* startinsert
 au VimEnter * RandomColorScheme
-au VimEnter * RltvNmbr
 
 au Filetype c set foldmethod=syntax
 au Filetype lua set foldmethod=indent
