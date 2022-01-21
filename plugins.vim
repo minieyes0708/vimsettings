@@ -1,4 +1,5 @@
 filetype off                              " required before Vundle
+set rtp+=$VIM/.vimrc.d
 set rtp+=$VIMRUNTIME/bundle/Vundle.vim    " set runtime path
 call vundle#begin($VIMRUNTIME .. "/bundle")
 " (
