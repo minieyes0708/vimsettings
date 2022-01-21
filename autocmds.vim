@@ -1,5 +1,5 @@
 augroup minieyes
-    au BufNewFile,BufRead * let b:rltvnmbrmode=1
+    au BufNewFile,BufRead * RltvNmbr
     au BufWinEnter,WinEnter term://* startinsert
     au VimEnter * RandomColorScheme
 
