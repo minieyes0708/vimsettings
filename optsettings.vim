@@ -33,6 +33,7 @@ set mouse=a
 set nobackup
 set number
 set path=.\**,,~\.bashrc.d\**,~\.vifm\**,$VIM\.vimrc.d\**
+set relativenumber
 set ruler
 set runtimepath^=$VIM/.vimrc.d
 set shiftwidth=4
