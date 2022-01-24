@@ -13,6 +13,7 @@ let mapleader=','
 syntax on
 set autoindent
 set autoread
+set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set completeopt=menuone,noinsert,noselect shm+=c
