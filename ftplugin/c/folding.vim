@@ -1,1 +1,1 @@
-au Filetype c setlocal foldmethod=syntax
+setlocal foldmethod=syntax

@@ -1,1 +1,1 @@
-au Filetype lua setlocal foldmethod=indent
+setlocal foldmethod=indent
