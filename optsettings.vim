@@ -12,6 +12,7 @@ let mapleader=','
 
 syntax on
 set autoindent
+set autoread
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set completeopt=menuone,noinsert,noselect shm+=c
@@ -32,7 +33,9 @@ set mouse=a
 set nobackup
 set number
 set path=.\**,,~\.bashrc.d\**,~\.vifm\**,$VIM\.vimrc.d\**
+set relativenumber
 set ruler
+set runtimepath^=$VIM/.vimrc.d
 set shiftwidth=4
 set showcmd
 set smartcase

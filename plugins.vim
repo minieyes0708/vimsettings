@@ -1,5 +1,4 @@
 filetype off                              " required before Vundle
-set rtp+=$VIM/.vimrc.d
 set rtp+=$VIMRUNTIME/bundle/Vundle.vim    " set runtime path
 call vundle#begin($VIMRUNTIME .. "/bundle")
 " (
@@ -61,6 +60,7 @@ Plugin 'neovim/nvim-lspconfig'
 Plugin 'numToStr/Comment.nvim'
 Plugin 'nvim-lua/completion-nvim'
 Plugin 'nvim-lua/plenary.nvim'
+Plugin 'nvim-telescope/telescope-fzf-native.nvim'
 Plugin 'nvim-telescope/telescope.nvim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'preservim/tagbar'
