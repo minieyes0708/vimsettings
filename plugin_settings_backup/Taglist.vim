@@ -1,0 +1,13 @@
+let Tlist_Auto_Open = 0
+let Tlist_Show_One = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Ctags_Cmd='"C:\Program Files\Vim\vim74\ctags.exe"'
+let Tlist_File_Fold_Auto_Close = 1
+let Tlist_GainFocus_On_ToggleOpen = 0
+let Tlist_Close_On_Select = 0
+set tags+=tags
+set tags+=$VIM/vimfiles/tags/libc.tags
+set tags+=$VIM/vimfiles/tags/susv2.tags
+set tags+=$VIM/vimfiles/tags/glib.tags
+set tags+=$VIM/vimfiles/tags/cpp.tags
+set tags+=$VIM/vimfiles/tags/gtk+.vim

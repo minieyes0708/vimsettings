@@ -1,2 +1,1 @@
 lua require'Comment'.setup()
-

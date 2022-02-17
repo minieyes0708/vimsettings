@@ -1,18 +1,19 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-
+let g:colors_name = 'default'
 lua package.path = package.path .. vim.env.VIM .. '/.vimrc.d/?.lua;'
+
 let $GIT_EDITOR = "nvr -l -cc split --remote-wait +'set bufhidden=wipe'"
 let $GIT_SSL_NO_VERIFY = 'true'
 let $TEMP=$VIM .. '\\temp'
 let $TMP=$VIM .. '\\temp'
-let g:colors_name='one'
 let mapleader=','
 
 syntax on
 set autoindent
 set autoread
+set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set completeopt=menuone,noinsert,noselect shm+=c
