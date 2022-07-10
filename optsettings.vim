@@ -42,6 +42,7 @@ set showcmd
 set smartcase
 set splitright
 set tabstop=4
+set termguicolors
 set viewdir=$VIMRUNTIME/viewdir
 if has("cscope")
     set cscopequickfix=s-,c-,d-,i-,t-,e-
