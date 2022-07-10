@@ -13,6 +13,10 @@ elseif user == 'MINIEYESNB1-怡哲' then
     this.vimwiki_path = '~/OneDrive/文件/vimwiki/'
     this.sumneko_root_path = 'D:/minieyes/bin/lua-language-server'
     this.sumneko_binary_path = 'D:/minieyes/bin/lua-language-server/bin/Windows/lua-language-server.exe'
+elseif user == 'LAPTOP-0U8DPE2D-chenv' then
+    this.vimwiki_path = '~/OneDrive/文件/vimwiki/'
+    this.sumneko_root_path = 'D:/minieyes/software/lua-language-server'
+    this.sumneko_binary_path = 'D:/minieyes/software/lua-language-server/bin/Windows/lua-language-server.exe'
 end
 
 this.fzf_with_cb = function(pathname, callback)
