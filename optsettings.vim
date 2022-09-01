@@ -22,7 +22,6 @@ set diffopt+=iwhite
 set encoding=utf8
 set expandtab
 set exrc
-set foldcolumn=2
 set hidden
 set history=50
 set hlsearch
