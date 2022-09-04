@@ -33,7 +33,7 @@ set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%
 set mouse=a
 set nobackup
 set number
-set path=.\**,,~\.bashrc.d\**,~\.vifm\**,$VIM\.vimrc.d\**
+set path=.,,~/.bashrc.d/**,~/.vifm/**,$VIM/.vimrc.d/**,~/.config/**
 set relativenumber
 set ruler
 set runtimepath^=$VIM/.vimrc.d
