@@ -15,7 +15,7 @@ if has('nvim')
     elseif $COMPUTERNAME == 'NVT02863_NB' && $USERNAME == 'NVT02863'
         set guifont=FiraCode\ Nerd\ Font\ Mono:h16:cANSI:qDRAFT
     elseif $COMPUTERNAME == 'MINIEYES-PC2' && $USERNAME == 'chenv'
-        set guifont=FiraCode\ Nerd\ Font\ Mono:h16:cANSI:qDRAFT
+        set guifont=FiraCode\ Nerd\ Font\ Mono:h12:cANSI:qDRAFT
     elseif $COMPUTERNAME == 'LAPTOP-0U8DPE2D' && $USERNAME == 'chenv'
         set guifont=FiraMono\ Nerd\ Font\ Mono:h10:cANSI:qDRAFT
     endif
