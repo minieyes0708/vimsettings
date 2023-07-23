@@ -1,5 +1,5 @@
 source $VIM/.vimrc.d/optsettings.vim
-source $VIM/.vimrc.d/plugins.vim
+lua require('plugins')
 source $VIM/.vimrc.d/mappings.vim
 source $VIM/.vimrc.d/autocmds.vim
 source $VIM/.vimrc.d/commands.vim
