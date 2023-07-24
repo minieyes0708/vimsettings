@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
     use 'akinsho/toggleterm.nvim'
     use 'alvan/vim-closetag'
     use 'beauwilliams/focus.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
     use 'ctrlpvim/ctrlp.vim'
     use 'dbeecham/ctrlp-commandpalette.vim'
     use {'dracula/vim', as = 'dracula'}
