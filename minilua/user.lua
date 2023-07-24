@@ -2,7 +2,7 @@ local this = {}
 local user = vim.env.COMPUTERNAME .. '-' .. vim.env.USERNAME
 
 if user == 'NVT02863_NB-NVT02863' then
-    this.vimwiki_path = 'P:/vimwiki/'
+    this.vimwiki_path = 'P:/vimwiki/Notes'
     this.sumneko_root_path = 'D:/minieyes_chen/software/lua-language-server'
     this.sumneko_binary_path = 'D:/minieyes_chen/software/lua-language-server/bin/Windows/lua-language-server.exe'
 elseif user == 'MINIEYES-PC2-chenv' then
