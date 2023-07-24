@@ -34,8 +34,8 @@ this.open_project = function(pathname)
     if pathname == 'D:/minieyes_chen/program' then
         this.fzf_with_cb(pathname, 'LuaFuncCommand require"minilua.user".open_project ')
     else
-        vim.api.nvim_command('cd ' .. pathname)
-        require('telescope.builtin').find_files()
+        vim.api.nvim_command('tabnew ' .. pathname)
+        -- require('telescope.builtin').find_files()
     end
 end
 this.peek_project = function(pathname)

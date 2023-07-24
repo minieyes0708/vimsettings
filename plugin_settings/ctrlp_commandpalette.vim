@@ -1,6 +1,10 @@
 nmap <C-S-P> :CtrlPCommandPalette<CR>
 nmap <space><space> :CtrlPCommandPalette<CR>
 
+function! ctrlp_commandPalette#SelectProject(callback)
+    call fzf#run(fzf#wrap({'source': readfile($BookMarks), 'center': 10, 'sink': a:callback}))
+endfunction
+
 let g:ctrlp_commandpalette_autoload_commands = 0
 let g:commandPalette = {
             \ 'cmd terminal'            : 'vsplit term://cmd',
@@ -26,4 +30,7 @@ let g:commandPalette = {
             \ 'Show Invisible Chars'    : 'set list',
             \ 'Hide Invisible Chars'    : 'set nolist',
             \ 'Toggle Indent Lines'     : 'IndentLinesToggle',
+            \ 'Open Project'            : "call ctrlp_commandPalette#SelectProject(luaeval('require\"minilua.user\".open_project'))",
+            \ 'Peek Project'            : "call ctrlp_commandPalette#SelectProject(luaeval('require\"minilua.user\".peek_project'))",
+            \ 'Goto Project'            : "call ctrlp_commandPalette#SelectProject(luaeval('require\"minilua.user\".goto_project'))",
 \}
