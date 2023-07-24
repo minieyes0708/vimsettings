@@ -44,6 +44,9 @@ set splitright
 set tabstop=4
 set termguicolors
 set viewdir=$VIMRUNTIME/viewdir
+set list
+set listchars=tab:>\ ,space:.
+highlight Whitespace guifg=gray
 if has("cscope")
     set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif

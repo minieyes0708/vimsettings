@@ -1,6 +1,7 @@
 augroup minieyes
+    " au VimEnter * RandomColorScheme
+    au BufNewFile,BufRead *.lua FoldIndent
     au BufWinEnter,WinEnter term://* startinsert
-    au VimEnter * RandomColorScheme
 
     " notification after file change
     au FileChangedShellPost * lua vim.notify "File changed. Buffer reloaded."
