@@ -13,6 +13,7 @@ let mapleader=','
 syntax on
 set autoindent
 set autoread
+set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard=unnamed
 set completeopt=menuone,noinsert,noselect shm+=c
@@ -22,6 +23,7 @@ set diffopt+=iwhite
 set encoding=utf8
 set expandtab
 set exrc
+set foldcolumn=2
 set hidden
 set history=50
 set hlsearch
@@ -31,7 +33,7 @@ set makeprg=g++\ \-Wall\ -Wall\ -Werror\ -Wpedantic\ -std=c++17\ -g\ -o\ build/%
 set mouse=a
 set nobackup
 set number
-set path=.\**,,~\.bashrc.d\**,~\.vifm\**,$VIM\.vimrc.d\**
+set path=.,,~/.bashrc.d/**,~/.vifm/**,$VIM/.vimrc.d/**,~/.config/**
 set relativenumber
 set ruler
 set runtimepath^=$VIM/.vimrc.d
@@ -40,6 +42,7 @@ set showcmd
 set smartcase
 set splitright
 set tabstop=4
+set termguicolors
 set viewdir=$VIMRUNTIME/viewdir
 set list
 set listchars=tab:>\ ,space:.
