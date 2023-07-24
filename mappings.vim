@@ -13,6 +13,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <C-S> :w<CR>
+nnoremap <C-S-S> :mksession!<CR>
 nnoremap <leader>   :<c-u>WhichKey ','<CR>
 nnoremap <leader>bg :highlight Normal ctermbg=NONE<CR>
 nnoremap <leader>cd :execute 'cd ' .. expand('%:p:h')<CR>
