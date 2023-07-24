@@ -1,3 +1,4 @@
+nmap <C-S-P> :CtrlPCommandPalette<CR>
 nmap <space><space> :CtrlPCommandPalette<CR>
 
 let g:ctrlp_commandpalette_autoload_commands = 0
