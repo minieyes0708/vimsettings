@@ -29,4 +29,5 @@ let g:commandPalette = {
             \ 'Open Project'            : "lua require'minilua.user'.select_bookmark(require'minilua.user'.open_project)",
             \ 'Peek Project'            : "lua require'minilua.user'.select_bookmark(require'minilua.user'.peek_project)",
             \ 'Goto Project'            : "lua require'minilua.user'.select_bookmark(require'minilua.user'.goto_project)",
+            \ 'ES Files'                : "lua require'minilua.user'.esfiles()",
 \}
