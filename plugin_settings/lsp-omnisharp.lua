@@ -7,7 +7,7 @@ if user == 'MINIEYESNB1-怡哲' then
 elseif user == 'MINIEYES-PC2-chenv' then
     omnisharp_bin = "L:\\omnisharp-win-x64\\OmniSharp.exe"
 elseif user == 'NVT02863_NB-NVT02863' then
-    omnisharp_bin = "D:\\minieyes_chen\\software\\Neovim\\share\\nvim\\runtime\\bundle\\YouCompleteMe\\third_party\\ycmd\\third_party\\omnisharp-roslyn\\OmniSharp.exe"
+    omnisharp_bin = "D:\\minieyes_chen\\software\\Neovim_v0.8.0\\share\\nvim\\runtime\\bundle\\YouCompleteMe\\third_party\\ycmd\\third_party\\omnisharp-roslyn\\OmniSharp.exe"
 elseif user == 'LAPTOP-0U8DPE2D-chenv' then
     omnisharp_bin = "C:\\ProgramData\\chocolatey\\bin\\OmniSharp.exe"
 end
