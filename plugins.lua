@@ -2,6 +2,7 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
+    -- use 'beauwilliams/focus.nvim'
     -- use 'codota/tabnine-vim'
     -- use 'garbas/vim-snipmate'
     -- use 'jiangmiao/auto-pairs'
@@ -19,7 +20,6 @@ return require('packer').startup(function(use)
     use 'akinsho/bufferline.nvim'
     use 'akinsho/toggleterm.nvim'
     use 'alvan/vim-closetag'
-    use 'beauwilliams/focus.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use 'ctrlpvim/ctrlp.vim'
     use 'dbeecham/ctrlp-commandpalette.vim'
